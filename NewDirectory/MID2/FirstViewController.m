@@ -37,6 +37,13 @@
     [self CheckMenOrWomen];
     [self CheckBestuurder];
     
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"root2"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"root1"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
 }
 
 - (void)viewDidLoad
@@ -48,7 +55,7 @@
     label2.alpha = 0;
     label3.alpha = 0;
     label4.alpha = 0;
-    label5.alpha = 0;
+  
     button.alpha = 0;
     segment.alpha = 0;
     _Bestuurder.alpha = 0;
@@ -75,7 +82,7 @@
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:2.5];
-    [label5 setAlpha:1];
+    [firstbutton setAlpha:1];
     [UIView commitAnimations];
     
     [UIView beginAnimations:nil context:NULL];

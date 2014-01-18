@@ -39,75 +39,39 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cup-gE-kKV">
-                                <rect key="frame" x="11" y="310" width="295" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="If you would like to use this app. You have to set your weight.                                        " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz4-6i-TIL">
-                                <rect key="frame" x="20" y="171" width="286" height="45"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Click next if you want to use this app!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAj-Xx-Sg0">
+                                <rect key="frame" x="20" y="168" width="286" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pi-ZL-eju">
-                                <rect key="frame" x="142" y="348" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nv-97-RO6">
+                                <rect key="frame" x="147" y="222" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="DoneButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="X2s-aL-jCM"/>
-                                    <segue destination="5Q3-KQ-Nb1" kind="modal" modalTransitionStyle="crossDissolve" id="AXd-vC-efv"/>
+                                    <segue destination="OrN-OR-HYs" kind="modal" modalTransitionStyle="flipHorizontal" id="1EZ-9g-32G"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KGZ-vl-dyG">
-                                <rect key="frame" x="11" y="255" width="299" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <segments>
-                                    <segment title="Man"/>
-                                    <segment title="Woman"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="switch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Qsz-cD-6HP"/>
-                                </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GSD-2N-sTZ">
-                                <rect key="frame" x="11" y="219" width="299" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Starting Driver"/>
-                                    <segment title="Experienced Driver"/>
-                                </segments>
-                                <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="BestuurderSwitched:" destination="vXZ-lx-hvc" eventType="valueChanged" id="oer-3w-5fM"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Mx-wD-59F"/>
                     <connections>
-                        <outlet property="Bestuurder" destination="GSD-2N-sTZ" id="snp-rV-cbX"/>
-                        <outlet property="button" destination="6Pi-ZL-eju" id="hJw-ZX-9O8"/>
+                        <outlet property="firstbutton" destination="5nv-97-RO6" id="P1D-DC-Bg5"/>
                         <outlet property="label1" destination="rYH-ud-tcl" id="KUs-Gn-eaR"/>
                         <outlet property="label2" destination="NSz-rS-Tlc" id="lkN-u2-jKr"/>
                         <outlet property="label3" destination="6hU-mY-hcD" id="vf5-5W-qdg"/>
-                        <outlet property="label4" destination="tz4-6i-TIL" id="dty-Bb-A4u"/>
-                        <outlet property="label5" destination="cup-gE-kKV" id="YRL-G0-9dF"/>
-                        <outlet property="segment" destination="KGZ-vl-dyG" id="5Rx-hM-23D"/>
+                        <outlet property="label4" destination="zAj-Xx-Sg0" id="dWE-ip-llJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="648" y="-24"/>
+            <point key="canvasLocation" x="104" y="-1"/>
         </scene>
         <!--View Controller - Alcohol Test-->
         <scene sceneID="DXP-zU-NIV">
@@ -174,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbw-A0-WtV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="-24"/>
+            <point key="canvasLocation" x="868" y="-64"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="yH7-Ur-aZc">
@@ -296,7 +260,168 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5k9-9f-VYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="-24"/>
+            <point key="canvasLocation" x="883" y="-685"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="SuO-yO-ef1">
+            <objects>
+                <viewController id="OrN-OR-HYs" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9jt-Zs-D1A"/>
+                        <viewControllerLayoutGuide type="bottom" id="NHA-cg-q6Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HOT-dm-kiJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-dY-f33">
+                                <rect key="frame" x="11" y="87" width="299" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Starting Driver"/>
+                                    <segment title="Experienced Driver"/>
+                                </segments>
+                                <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="BestuurderSwitched:" destination="OrN-OR-HYs" eventType="valueChanged" id="9hP-sf-62w"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUb-C6-0qy">
+                                <rect key="frame" x="144" y="145" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4ya-RV-3hf" kind="modal" modalTransitionStyle="flipHorizontal" id="eJi-Lg-Meg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starter or Experienced?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itu-Vm-c7T">
+                                <rect key="frame" x="14" y="27" width="293" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bgE-fr-Ak6"/>
+                    <connections>
+                        <outlet property="Bestuurder" destination="gHa-dY-f33" id="6dU-io-xQY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLO-y1-c4P" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="648"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="F8N-8A-xN7">
+            <objects>
+                <viewController id="4ya-RV-3hf" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Frp-GH-zMN"/>
+                        <viewControllerLayoutGuide type="bottom" id="jTT-HX-D5o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kfr-su-2Jg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubn-a9-2rC">
+                                <rect key="frame" x="144" y="145" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9On-kv-dzn" kind="modal" modalTransitionStyle="flipHorizontal" id="Zgm-Vs-WHT"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rjO-7H-aXd">
+                                <rect key="frame" x="11" y="87" width="299" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="Man"/>
+                                    <segment title="Woman"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="switch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="dFY-sM-50m"/>
+                                    <action selector="switch:" destination="4ya-RV-3hf" eventType="valueChanged" id="zw6-Nm-Zcc"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Man or Woman?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj7-dc-7Ug">
+                                <rect key="frame" x="14" y="20" width="293" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gb3-6e-6Iq"/>
+                    <connections>
+                        <outlet property="segment" destination="rjO-7H-aXd" id="Qfp-R2-UjX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WqC-7o-Cef" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="648"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="G32-gQ-8ks">
+            <objects>
+                <viewController id="9On-kv-dzn" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OR0-Qj-Cl1"/>
+                        <viewControllerLayoutGuide type="bottom" id="BOA-Yt-ren"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pHh-LU-7KB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oV-oe-hTH">
+                                <rect key="frame" x="144" y="145" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DoneButtonClicked:" destination="9On-kv-dzn" eventType="touchUpInside" id="U53-Wd-nEJ"/>
+                                    <segue destination="5Q3-KQ-Nb1" kind="modal" id="vb0-6C-MPJ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Your weight in kg" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-IP-ecb">
+                                <rect key="frame" x="14" y="83" width="292" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-Qd-gLf">
+                                <rect key="frame" x="14" y="20" width="293" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a4v-9a-ThR"/>
+                    <connections>
+                        <outlet property="button" destination="9oV-oe-hTH" id="10d-rR-FkW"/>
+                        <outlet property="label5" destination="zfB-IP-ecb" id="ZoX-CK-q1b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8n-lZ-KhL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="653"/>
         </scene>
     </scenes>
     <resources>

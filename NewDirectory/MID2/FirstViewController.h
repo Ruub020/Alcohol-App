@@ -18,6 +18,7 @@
     __weak IBOutlet UIButton *button;
     __weak IBOutlet UISegmentedControl *segment;
     float manvrouw2;
+    __weak IBOutlet UIButton *firstbutton;
     
     
     
