@@ -9,7 +9,8 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
-
+@property (strong, nonatomic) IBOutlet NSString *MenWomen;
+@property (strong, nonatomic) IBOutlet NSString *MenWomenForContinue;
 @end
 
 @implementation FirstViewController
@@ -32,6 +33,7 @@
     //Sla gewicht op
     [Prefs setObject:Weight forKey:@"Weight"];
     [Prefs synchronize];
+    [self CheckMenOrWomen];
     
 }
 
@@ -117,28 +119,37 @@
     
 }
 -(IBAction)switch:(id)sender {
+    [self CheckMenOrWomen];
+}
+-(void)CheckMenOrWomen
+{
+    
     switch (segment.selectedSegmentIndex) {
         case 0:
             manvrouw2 = 0.72;
             NSLog(@"Manvrouw is 0.72");
+            _MenWomen = @"MAN";
             [self performSelector:@selector(check)];
+            
             break;
         case 1:
             manvrouw2 = 0.61;
             NSLog(@"Manvrouw is 0.61");
+             _MenWomen = @"WOMEN";
             [self performSelector:@selector(check)];
+           
             break;
         default:
             break;
             
-    
+            
     }
-
-
 }
 -(void)check {
     [[NSUserDefaults standardUserDefaults] setFloat:manvrouw2 forKey:@"keyfloat"];
     NSLog(@"checked");
+    [[NSUserDefaults standardUserDefaults] setObject:_MenWomen forKey:@"MenWomen"];
+    
 }
 
 

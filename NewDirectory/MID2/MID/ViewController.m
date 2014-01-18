@@ -52,6 +52,7 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self DownloadGewicht];
     [StandaardGlazen resignFirstResponder];
     [AantalUren resignFirstResponder];
     if ([StandaardGlazen.text, AantalUren.text length] > 0) {
@@ -86,31 +87,35 @@
         if (test < 0.1) {
             _infolabel.selectable = YES;
             NSLog(@"promile is > 0.1");
-                #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
-                    self.view.backgroundColor = Rgb2UIColor(125, 239, 74);
+
             PromileLabel.text=@"0";
             [self NiksOp];
+            [self GroeneAchtergrond];
         }
         if (test > 0.1) {
             _infolabel.selectable = YES;
             NSLog(@"promile is > 0.1");
             self.view.backgroundColor = [UIColor greenColor];
             [self GemiddeldOp];
+            [self GroeneAchtergrond];
         }
         if (test > 0.2) {
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.2");
             [self GemiddeldOp];
+            [self GroeneAchtergrond];
         }
         if (test > 0.3) {
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.3");
             [self GemiddeldOp];
+            [self GroeneAchtergrond];
         }
         if (test > 0.4) {
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.4");
             [self BijnaTeveelOp];
+            [self GroeneAchtergrond];
 
         }
         if (test > 0.5) {
@@ -130,7 +135,11 @@
         
     }
 }
-
+-(void)GroeneAchtergrond
+{
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+    self.view.backgroundColor = Rgb2UIColor(125, 239, 74);
+}
 -(void)NiksOp
 {
     _infolabel.text = NSLocalizedString(@"Well Done! Drive safely!", @"Well Done! Drive safely!");
@@ -148,7 +157,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drunk something! Take c
 }
 -(void)TeveelOp
 {
- _infolabel.text = NSLocalizedString(@"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!");
+ _infolabel.text = NSLocalizedString(@"Oh Oh! You have had too much to drink! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!");
     
     _infolabel.selectable = NO;
     
