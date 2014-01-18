@@ -116,5 +116,30 @@
     
     
 }
+-(IBAction)switch:(id)sender {
+    switch (segment.selectedSegmentIndex) {
+        case 0:
+            manvrouw2 = 0.72;
+            NSLog(@"Manvrouw is 0.72");
+            [self performSelector:@selector(check)];
+            break;
+        case 1:
+            manvrouw2 = 0.61;
+            NSLog(@"Manvrouw is 0.61");
+            [self performSelector:@selector(check)];
+            break;
+        default:
+            break;
+            
+    
+    }
+
+
+}
+-(void)check {
+    [[NSUserDefaults standardUserDefaults] setFloat:manvrouw2 forKey:@"keyfloat"];
+    NSLog(@"checked");
+}
+
 
 @end

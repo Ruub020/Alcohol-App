@@ -17,12 +17,15 @@
     __weak IBOutlet UITextField *label5;
     __weak IBOutlet UIButton *button;
     __weak IBOutlet UISegmentedControl *segment;
-    
+    float manvrouw2;
     
     
     
 
 }
+
+-(IBAction)switch:(id)sender;
+-(void)check;
 
 
 @end

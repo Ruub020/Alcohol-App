@@ -24,6 +24,9 @@
     //output
     __weak IBOutlet UILabel *PromileLabel;
     
+    float manvrouw;
+    
+    
 }
 - (IBAction)CalculatePressed:(id)sender;
 
