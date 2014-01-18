@@ -28,6 +28,7 @@
 		6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */; };
 		6F6A6A07188A924300E9E4B9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A06188A924300E9E4B9 /* AdSupport.framework */; };
 		6FC66C69188A9B2000671FCC /* iOS7-4inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC66C68188A9B1F00671FCC /* iOS7-4inch.storyboard */; };
+		6FDCFFA7188B31E900D0DCEE /* landen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCFFA6188B31E900D0DCEE /* landen.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6F6A6A06188A924300E9E4B9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		6FC66C68188A9B1F00671FCC /* iOS7-4inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "iOS7-4inch.storyboard"; sourceTree = "<group>"; };
+		6FDCFFA6188B31E900D0DCEE /* landen.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = landen.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		6F3529D51889E19100CFB7EA = {
 			isa = PBXGroup;
 			children = (
+				6FDCFFA6188B31E900D0DCEE /* landen.plist */,
 				6F6A69F7188A7BBB00E9E4B9 /* images */,
 				6F6A69F2188A73C600E9E4B9 /* Storyboards */,
 				6F3529E71889E19300CFB7EA /* MID */,
@@ -278,6 +281,7 @@
 				6F3529FA1889E19300CFB7EA /* Images.xcassets in Resources */,
 				45570626188ABA4400E9AA10 /* settings.png in Resources */,
 				6F3529EC1889E19300CFB7EA /* InfoPlist.strings in Resources */,
+				6FDCFFA7188B31E900D0DCEE /* landen.plist in Resources */,
 				6FC66C69188A9B2000671FCC /* iOS7-4inch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

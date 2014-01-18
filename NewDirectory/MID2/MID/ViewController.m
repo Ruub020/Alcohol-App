@@ -13,6 +13,7 @@
 @property (nonatomic, retain) IBOutlet NSString *Gewicht;
 @property (nonatomic, retain) IBOutlet NSString *StandaardGlazenString;
 @property (nonatomic, retain) IBOutlet NSString *AantalurenGeleden;
+@property (weak, nonatomic) IBOutlet UIPickerView *arrayPicker;
 @property (nonatomic, retain) IBOutlet NSString *Promile;
 @property (nonatomic, retain) IBOutlet NSString *Bestuurder;
 @property (weak, nonatomic) IBOutlet UILabel *ScoreLabel;
@@ -23,6 +24,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Init the picker view.
+    pick= [[UIPickerView alloc] init];
+    [pick setDataSource:self];
+    [pick setDelegate:self];
 	// Do any additional setup after loading the view, typically from a nib.
 
     /*CGFloat y = self.view.frame.size.height - 50.0;
@@ -31,6 +37,11 @@
     PromileLabel.alpha = 0;
     CalculateBtn.alpha = 0;
     
+    NSString *path = [[NSBundle mainBundle] pathForResource:
+                      @"landen" ofType:@"plist"];
+    NSMutableArray *array2 = [[NSMutableArray alloc] initWithContentsOfFile:path];
+    for (NSString *str in array2)
+        NSLog(@"--%@", path);
 
 //Download het gewicht
     [self DownloadGewicht];
@@ -297,5 +308,40 @@ _infolabel.text = NSLocalizedString(@"Oeh! You almost drunk too much! Are you su
 {
     _infolabel.text = NSLocalizedString(@"Are you out of your mind?!", @"Are you out of your mind?!");
 }
+-(void)awakeFromNib {
+    NSString *path = [[NSBundle mainBundle] pathForResource:
+                      @"landen" ofType:@"plist"];
+    array2 = [[NSMutableArray alloc] initWithContentsOfFile:path];
+    
+    myDataDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+    NSLog(@"MyDict:%@",[myDataDictionary description]);
+    
+    array2 = [myDataDictionary description];
+    
+    myDataDictionary2 = [myDataDictionary description];
+    
+    [pick selectRow:0 inComponent:0 animated:NO];
+    NSLog(@"%@",array2);
+    
+    
+    
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [array2 count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [array2 objectAtIndex:row];
+    NSLog(@"You selected this: %@", [array2 objectAtIndex: row]);
+}
+
 
 @end

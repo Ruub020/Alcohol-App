@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
     UIViewController *firstViewController;
-
+    NSMutableArray *array2;
+    NSMutableDictionary *myDataDictionary;
+    NSMutableDictionary *myDataDictionary2;
     //Input
     
     __weak IBOutlet UITextField *StandaardGlazen;
@@ -25,6 +27,7 @@
     float manvrouw;
     float bestuurderfloat;
     IBOutlet UITextView *Info;
+    IBOutlet UIPickerView *pick;
     
 }
 
