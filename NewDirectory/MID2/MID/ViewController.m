@@ -86,7 +86,8 @@
         if (test < 0.1) {
             _infolabel.selectable = YES;
             NSLog(@"promile is > 0.1");
-            self.view.backgroundColor = [UIColor greenColor];
+                #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+                    self.view.backgroundColor = Rgb2UIColor(125, 239, 74);
             PromileLabel.text=@"0";
             [self NiksOp];
         }
@@ -116,6 +117,8 @@
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.5");
             [self TeveelOp];
+              #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+            self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
         }
         
        
@@ -130,7 +133,7 @@
 
 -(void)NiksOp
 {
-    _infolabel.text = @"Well Done! Drive safely!";
+    _infolabel.text = NSLocalizedString(@"Well Done! Drive safely!", @"Well Done! Drive safely!");
     
     _infolabel.selectable = NO;
     
@@ -138,21 +141,21 @@
 }
 -(void)GemiddeldOp
 {
-    _infolabel.text = @"Well, You sure did drunk something! Take caution, but for now you are free to drive...";
+_infolabel.text = NSLocalizedString(@"Well, You sure did drunk something! Take caution, but for now you are free to drive...", @"Well, You sure did drunk something! Take caution, but for now you are free to drive...");
     
     _infolabel.selectable = NO;
     
 }
 -(void)TeveelOp
 {
-    _infolabel.text = @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!";
+ _infolabel.text = NSLocalizedString(@"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!");
     
     _infolabel.selectable = NO;
     
 }
 -(void)BijnaTeveelOp
 {
-    _infolabel.text = @"Oeh! You almost drunk too much! Are you sure it is completely safe to drive?";
+_infolabel.text = NSLocalizedString(@"Oeh! You almost drunk too much! Are you sure it is completely safe to drive?", @"Oeh! You almost drunk too much! Are you sure it is completely safe to drive?");
     
     _infolabel.selectable = NO;
    
