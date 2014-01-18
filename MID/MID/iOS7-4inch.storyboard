@@ -33,32 +33,27 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;intoxication decreases driving performance.&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hU-mY-hcD">
-                                <rect key="frame" x="-43" y="136" width="406" height="44"/>
+                                <rect key="frame" x="-43" y="143" width="406" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cup-gE-kKV">
-                                <rect key="frame" x="17" y="231" width="286" height="30"/>
+                                <rect key="frame" x="17" y="270" width="286" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
-<<<<<<< HEAD
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="If you would like to use this app. You have to set your weight and your gender." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tz4-6i-TIL">
-                                <rect key="frame" x="20" y="171" width="286" height="60"/>
-=======
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="If you would like to use this app. You have to set your weight.                                        " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tz4-6i-TIL">
                                 <rect key="frame" x="20" y="210" width="286" height="45"/>
->>>>>>> 3a8e015f3a650317c8c9ecc147eda7b0d5259a22
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pi-ZL-eju">
-                                <rect key="frame" x="142" y="298" width="37" height="30"/>
+                                <rect key="frame" x="142" y="308" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,14 +63,6 @@
                                     <segue destination="5Q3-KQ-Nb1" kind="modal" modalTransitionStyle="crossDissolve" id="AXd-vC-efv"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="doK-T0-PTh">
-                                <rect key="frame" x="103" y="269" width="121" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Men"/>
-                                    <segment title="Woman"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -87,7 +74,6 @@
                         <outlet property="label3" destination="6hU-mY-hcD" id="vf5-5W-qdg"/>
                         <outlet property="label4" destination="tz4-6i-TIL" id="dty-Bb-A4u"/>
                         <outlet property="label5" destination="cup-gE-kKV" id="YRL-G0-9dF"/>
-                        <outlet property="segment" destination="doK-T0-PTh" id="OQ9-UH-dpX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -113,29 +99,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Standaard Glazen" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phR-Ft-XKp">
-                                <rect key="frame" x="20" y="145" width="280" height="30"/>
+                                <rect key="frame" x="20" y="130" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Aantal uren" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gK-3n-b64">
-                                <rect key="frame" x="20" y="269" width="280" height="30"/>
+                                <rect key="frame" x="20" y="168" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cv-Ry-HQQ">
-                                <rect key="frame" x="128" y="307" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="CalculatePressed:" destination="XyI-0r-cfB" eventType="touchUpInside" id="0SL-bP-XJX"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAG-oh-eDL">
-                                <rect key="frame" x="20" y="427" width="280" height="21"/>
+                                <rect key="frame" x="20" y="230" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -147,7 +123,6 @@
                     <navigationItem key="navigationItem" title="Test" id="apL-gd-PHB"/>
                     <connections>
                         <outlet property="AantalUren" destination="0gK-3n-b64" id="Rkg-yd-Oq7"/>
-                        <outlet property="CalculateBtn" destination="2cv-Ry-HQQ" id="JFb-cR-2g7"/>
                         <outlet property="PromileLabel" destination="hAG-oh-eDL" id="UxP-BY-X3p"/>
                         <outlet property="StandaardGlazen" destination="phR-Ft-XKp" id="Lyg-Ze-ntS"/>
                     </connections>

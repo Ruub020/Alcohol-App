@@ -23,10 +23,9 @@
     __weak IBOutlet UIButton *CalculateBtn;
     //output
     __weak IBOutlet UILabel *PromileLabel;
-
+    
 }
 - (IBAction)CalculatePressed:(id)sender;
-
 
 
 @end
