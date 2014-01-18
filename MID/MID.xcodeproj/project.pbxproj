@@ -24,7 +24,7 @@
 		6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */; };
 		6F6A69FA188A821700E9E4B9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A69F9188A821700E9E4B9 /* FirstViewController.m */; };
 		6F6A6A02188A91EF00E9E4B9 /* libTapForTap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A69FC188A91EF00E9E4B9 /* libTapForTap.a */; };
-		6F6A6A03188A91EF00E9E4B9 /* libTapForTapAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A69FD188A91EF00E9E4B9 /* libTapForTapAdMob.a */; };
+		6F6A6A03188A91EF00E9E4B9 /* libTapForTapAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A69FD188A91EF00E9E4B9 /* libTapForTapAdMob.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */; };
 		6F6A6A07188A924300E9E4B9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A06188A924300E9E4B9 /* AdSupport.framework */; };
 		6FC66C69188A9B2000671FCC /* iOS7-4inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC66C68188A9B1F00671FCC /* iOS7-4inch.storyboard */; };
