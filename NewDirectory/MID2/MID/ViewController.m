@@ -84,30 +84,36 @@
         
         
         if (test < 0.1) {
+            _infolabel.selectable = YES;
             NSLog(@"promile is > 0.1");
             self.view.backgroundColor = [UIColor greenColor];
             PromileLabel.text=@"0";
             [self NiksOp];
         }
         if (test > 0.1) {
+            _infolabel.selectable = YES;
             NSLog(@"promile is > 0.1");
             self.view.backgroundColor = [UIColor greenColor];
             [self GemiddeldOp];
         }
         if (test > 0.2) {
+            _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.2");
             [self GemiddeldOp];
         }
         if (test > 0.3) {
+            _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.3");
             [self GemiddeldOp];
         }
         if (test > 0.4) {
+            _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.4");
             [self BijnaTeveelOp];
 
         }
         if (test > 0.5) {
+            _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.5");
             [self TeveelOp];
             self.view.backgroundColor = [UIColor redColor];
@@ -127,21 +133,29 @@
 {
     _infolabel.text = @"Well Done! Drive safely!";
     
+    _infolabel.selectable = NO;
+    
 
 }
 -(void)GemiddeldOp
 {
     _infolabel.text = @"Well, You sure did drunk something! Take caution, but for now you are free to drive...";
     
+    _infolabel.selectable = NO;
+    
 }
 -(void)TeveelOp
 {
     _infolabel.text = @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!";
     
+    _infolabel.selectable = NO;
+    
 }
 -(void)BijnaTeveelOp
 {
     _infolabel.text = @"Oeh! You almost drunk too much! Are you sure it is completely safe to drive?";
+    
+    _infolabel.selectable = NO;
    
 }
 
