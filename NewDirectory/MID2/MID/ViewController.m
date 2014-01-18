@@ -64,7 +64,7 @@
         float GlazenFloat = [_StandaardGlazenString floatValue];
         float UrenFloat = [_AantalurenGeleden floatValue];
         
-        float test = (GlazenFloat *10) / (GewichtFloat *0.72) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
+        float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
         
         
         NSString *PromileString = [NSString stringWithFormat:@"%f",test];
@@ -87,23 +87,29 @@
             NSLog(@"promile is > 0.1");
             self.view.backgroundColor = [UIColor greenColor];
             PromileLabel.text=@"0";
+            [self NiksOp];
         }
         if (test > 0.1) {
             NSLog(@"promile is > 0.1");
             self.view.backgroundColor = [UIColor greenColor];
+            [self GemiddeldOp];
         }
         if (test > 0.2) {
             NSLog(@"Promile is > 0.2");
+            [self GemiddeldOp];
         }
         if (test > 0.3) {
             NSLog(@"Promile is > 0.3");
+            [self GemiddeldOp];
         }
         if (test > 0.4) {
             NSLog(@"Promile is > 0.4");
+            [self BijnaTeveelOp];
+
         }
         if (test > 0.5) {
             NSLog(@"Promile is > 0.5");
-            
+            [self TeveelOp];
             self.view.backgroundColor = [UIColor redColor];
         }
         
@@ -117,35 +123,25 @@
     }
 }
 
-- (IBAction)CalculatePressed:(id)sender {
-    [StandaardGlazen resignFirstResponder];
-    [AantalUren resignFirstResponder];
-    _StandaardGlazenString = StandaardGlazen.text;
-    _AantalurenGeleden = AantalUren.text;
-    
-    float GewichtFloat = [_Gewicht floatValue];
-    float GlazenFloat = [_StandaardGlazenString floatValue];
-    float UrenFloat = [_AantalurenGeleden floatValue];
-    
-    float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
-    
-    
-    NSString *PromileString = [NSString stringWithFormat:@"%f",test];
-    _Promile = PromileString;
-    
-    PromileLabel.text = _Promile;
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:.5];
-    [StandaardGlazen setAlpha:0];
-    [UIView commitAnimations];
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:1.0];
-    [AantalUren setAlpha:0];
-    [UIView commitAnimations];
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:1.5];
-    [PromileLabel setAlpha:1];
-    [UIView commitAnimations];
+-(void)NiksOp
+{
+    Info.text = @"Well Done! Drive safely!";
+
+}
+-(void)GemiddeldOp
+{
+    Info.text = @"Well, You sure did drunk something! Take caution, but for now you are free to drive...";
     
 }
+-(void)TeveelOp
+{
+    Info.text = @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!";
+    
+}
+-(void)BijnaTeveelOp
+{
+        Info.text = @"Oeh! You almost drunk too much! Are you sure it is completely safe to drive?";
+   
+}
+
 @end

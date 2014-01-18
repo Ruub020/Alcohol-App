@@ -24,9 +24,10 @@
     
     float manvrouw;
     
+    __strong IBOutlet UITextView *Info;
     
 }
-- (IBAction)CalculatePressed:(id)sender;
+
 
 
 @end
