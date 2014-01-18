@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F224C42188AB64100684AA9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F224C41188AB64100684AA9 /* CoreLocation.framework */; };
 		6F3529E21889E19300CFB7EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3529E11889E19300CFB7EA /* Foundation.framework */; };
 		6F3529E41889E19300CFB7EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3529E31889E19300CFB7EA /* CoreGraphics.framework */; };
 		6F3529E61889E19300CFB7EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3529E51889E19300CFB7EA /* UIKit.framework */; };
@@ -22,8 +23,6 @@
 		6F352A0D1889E19300CFB7EA /* MIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F352A0C1889E19300CFB7EA /* MIDTests.m */; };
 		6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */; };
 		6F6A69FA188A821700E9E4B9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A69F9188A821700E9E4B9 /* FirstViewController.m */; };
-		6F6A6A02188A91EF00E9E4B9 /* libTapForTap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A69FC188A91EF00E9E4B9 /* libTapForTap.a */; };
-		6F6A6A03188A91EF00E9E4B9 /* libTapForTapAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A69FD188A91EF00E9E4B9 /* libTapForTapAdMob.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */; };
 		6F6A6A07188A924300E9E4B9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A06188A924300E9E4B9 /* AdSupport.framework */; };
 		6FC66C69188A9B2000671FCC /* iOS7-4inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC66C68188A9B1F00671FCC /* iOS7-4inch.storyboard */; };
@@ -40,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F224C41188AB64100684AA9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6F3529DE1889E19200CFB7EA /* MID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3529E11889E19300CFB7EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F3529E31889E19300CFB7EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,12 +61,6 @@
 		6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "iOS7-3,5inch.storyboard"; path = "../iOS7-3,5inch.storyboard"; sourceTree = "<group>"; };
 		6F6A69F8188A821700E9E4B9 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../FirstViewController.h; sourceTree = "<group>"; };
 		6F6A69F9188A821700E9E4B9 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../FirstViewController.m; sourceTree = "<group>"; };
-		6F6A69FC188A91EF00E9E4B9 /* libTapForTap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTapForTap.a; sourceTree = "<group>"; };
-		6F6A69FD188A91EF00E9E4B9 /* libTapForTapAdMob.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTapForTapAdMob.a; sourceTree = "<group>"; };
-		6F6A69FE188A91EF00E9E4B9 /* TFTAppWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTAppWall.h; sourceTree = "<group>"; };
-		6F6A69FF188A91EF00E9E4B9 /* TFTBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTBanner.h; sourceTree = "<group>"; };
-		6F6A6A00188A91EF00E9E4B9 /* TFTInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTInterstitial.h; sourceTree = "<group>"; };
-		6F6A6A01188A91EF00E9E4B9 /* TFTTapForTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTTapForTap.h; sourceTree = "<group>"; };
 		6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6F6A6A06188A924300E9E4B9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		6FC66C68188A9B1F00671FCC /* iOS7-4inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "iOS7-4inch.storyboard"; sourceTree = "<group>"; };
@@ -77,13 +71,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F3529E21889E19300CFB7EA /* Foundation.framework in Frameworks */,
+				6F224C42188AB64100684AA9 /* CoreLocation.framework in Frameworks */,
 				6F6A6A07188A924300E9E4B9 /* AdSupport.framework in Frameworks */,
 				6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */,
 				6F3529E41889E19300CFB7EA /* CoreGraphics.framework in Frameworks */,
-				6F6A6A03188A91EF00E9E4B9 /* libTapForTapAdMob.a in Frameworks */,
-				6F6A6A02188A91EF00E9E4B9 /* libTapForTap.a in Frameworks */,
 				6F3529E61889E19300CFB7EA /* UIKit.framework in Frameworks */,
-				6F3529E21889E19300CFB7EA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +96,6 @@
 		6F3529D51889E19100CFB7EA = {
 			isa = PBXGroup;
 			children = (
-				6F6A69FB188A91EF00E9E4B9 /* TapForTap */,
 				6F6A69F7188A7BBB00E9E4B9 /* images */,
 				6F6A69F2188A73C600E9E4B9 /* Storyboards */,
 				6F3529E71889E19300CFB7EA /* MID */,
@@ -125,6 +117,7 @@
 		6F3529E01889E19200CFB7EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F224C41188AB64100684AA9 /* CoreLocation.framework */,
 				6F6A6A06188A924300E9E4B9 /* AdSupport.framework */,
 				6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */,
 				6F3529E11889E19300CFB7EA /* Foundation.framework */,
@@ -195,19 +188,6 @@
 			);
 			name = images;
 			path = MID;
-			sourceTree = "<group>";
-		};
-		6F6A69FB188A91EF00E9E4B9 /* TapForTap */ = {
-			isa = PBXGroup;
-			children = (
-				6F6A69FC188A91EF00E9E4B9 /* libTapForTap.a */,
-				6F6A69FD188A91EF00E9E4B9 /* libTapForTapAdMob.a */,
-				6F6A69FE188A91EF00E9E4B9 /* TFTAppWall.h */,
-				6F6A69FF188A91EF00E9E4B9 /* TFTBanner.h */,
-				6F6A6A00188A91EF00E9E4B9 /* TFTInterstitial.h */,
-				6F6A6A01188A91EF00E9E4B9 /* TFTTapForTap.h */,
-			);
-			path = TapForTap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

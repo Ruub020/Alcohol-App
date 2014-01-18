@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "TFTTapForTap.h"
+
 
 @interface ViewController ()
 @property (nonatomic, retain) IBOutlet NSString *Gewicht;
@@ -42,9 +42,7 @@
     NSLog(@"%f", manvrouw);
     NSLog(@"Manvrouw");
     
-    CGFloat y = self.view.frame.size.height - 50.0;
-    TFTBanner *banner = [TFTBanner bannerWithFrame: CGRectMake(0, y, 320, 50) delegate: self];
-    [self.view addSubview: banner];
+ 
 
 }
 

@@ -7,14 +7,14 @@
 //
 
 #import "AppDelegate.h"
-# import "TFTTapForTap.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [TFTTapForTap initializeWithAPIKey: @"03beca480c9f59c39fc4468271ce45ab"];
+    
     // Override point for customization after application launch.
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
     {

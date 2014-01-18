@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AdSupport/AdSupport.h>
-#import <SystemConfiguration/SystemConfiguration.h>
-#import "TFTAppWall.h"
+
 
 @interface ViewController : UIViewController {
     UIViewController *firstViewController;
