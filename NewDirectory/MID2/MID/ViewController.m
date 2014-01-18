@@ -86,6 +86,7 @@
         if (test < 0.1) {
             NSLog(@"promile is > 0.1");
             self.view.backgroundColor = [UIColor greenColor];
+            PromileLabel.text=@"0";
         }
         if (test > 0.1) {
             NSLog(@"promile is > 0.1");
