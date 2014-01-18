@@ -16,6 +16,10 @@
     __weak IBOutlet UITextView *label4;
     __weak IBOutlet UITextField *label5;
     __weak IBOutlet UIButton *button;
+    __weak IBOutlet UISegmentedControl *segment;
+    
+    
+    
     
 
 }

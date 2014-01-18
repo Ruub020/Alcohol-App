@@ -7,11 +7,14 @@
 //
 
 #import "AppDelegate.h"
+# import "TFTTapForTap.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [TFTTapForTap initializeWithAPIKey: @"03beca480c9f59c39fc4468271ce45ab"];
     // Override point for customization after application launch.
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
     {
@@ -33,9 +36,7 @@
                 
                 self.window.rootViewController = viewController;
                 [self.window makeKeyAndVisible];
-                
-                [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"root1"];
-                [[NSUserDefaults standardUserDefaults] synchronize];
+               
             }
             else {
                 UIViewController *viewController = [iPhone35Storyboard instantiateViewControllerWithIdentifier:@"default"];

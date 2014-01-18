@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TFTTapForTap.h"
 
 @interface ViewController ()
 
@@ -18,7 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
+    /*CGFloat y = self.view.frame.size.height - 50.0;
+    TFTBanner *banner = [TFTBanner bannerWithFrame: CGRectMake(0, y, 320, 50) delegate: self];
+    [self.view addSubview: banner];*/
+    
 }
 
 - (void)didReceiveMemoryWarning

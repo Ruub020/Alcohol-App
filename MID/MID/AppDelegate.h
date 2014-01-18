@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+# import "TFTTapForTap.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
