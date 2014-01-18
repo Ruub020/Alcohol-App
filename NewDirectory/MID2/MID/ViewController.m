@@ -15,6 +15,7 @@
 @property (nonatomic, retain) IBOutlet NSString *AantalurenGeleden;
 @property (nonatomic, retain) IBOutlet NSString *Promile;
 @property (nonatomic, retain) IBOutlet NSString *Bestuurder;
+@property (weak, nonatomic) IBOutlet UILabel *ScoreLabel;
 @end
 
 @implementation ViewController
@@ -99,6 +100,7 @@
             PromileLabel.text=@"0";
             [self NiksOp];
             [self GroeneAchtergrond];
+            [self ScoreUp];
         }
         if (test > 0.1) {
             _infolabel.selectable = YES;
@@ -106,35 +108,46 @@
             self.view.backgroundColor = [UIColor greenColor];
             [self GemiddeldOp];
             [self GroeneAchtergrond];
+            [self ScoreUp];
         }
         if (test > 0.2) {
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.2");
             [self GemiddeldOp];
             [self GroeneAchtergrond];
+            [self ScoreUp];
         }
         if (test > 0.3) {
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.3");
             [self GemiddeldOp];
             [self GroeneAchtergrond];
+            [self ScoreUp];
         }
         if (test > 0.4) {
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.4");
             [self BijnaTeveelOp];
             [self GroeneAchtergrond];
+            [self ScoreUp];
             
         }
         if (test > 0.5) {
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.5");
             [self TeveelOp];
+            [self ScoreDown];
 #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
             self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
         }
         
-        
+        if (test > 2.0) {
+            NSLog(@"Promile is > 1.0");
+            [self VeelteVeelOp];
+            [self ScoreDown];
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+            self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
+        }
         if ([_StandaardGlazenString isEqualToString:@"0"]) {
             PromileLabel.text = @"0";
         }
@@ -192,6 +205,7 @@
             PromileLabel.text=@"0";
             [self NiksOp];
             [self GroeneAchtergrond];
+            [self ScoreUp];
         }
         if (test > 0.1) {
             _infolabel.selectable = YES;
@@ -199,21 +213,51 @@
             self.view.backgroundColor = [UIColor greenColor];
             [self GemiddeldOp];
             [self GroeneAchtergrond];
+            [self ScoreUp];
         }
         if (test > 0.2) {
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.2");
             [self TeveelOp];
-            [self GroeneAchtergrond];
+            [self ScoreDown];
+
             #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
             self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
         
         if ([_StandaardGlazenString isEqualToString:@"0"]) {
             PromileLabel.text = @"0";
+            
         }
+        
+            if (test > 1.0) {
+                NSLog(@"Promile is > 1.0");
+                [self VeelteVeelOp];
+                [self ScoreDown];
+    #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+                self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
+            }
+            
+            
     }
 }
     
+}
+
+-(void)ScoreDown
+{
+    int currentscore = [_ScoreLabel.text intValue];
+    int newscore = currentscore - 1;
+    
+    NSString *NewScoreString = [NSString stringWithFormat:@"%d",newscore];
+    _ScoreLabel.text = NewScoreString;
+}
+-(void)ScoreUp
+{
+    int currentscore = [_ScoreLabel.text intValue];
+    int newscore = currentscore + 1;
+    
+    NSString *NewScoreString = [NSString stringWithFormat:@"%d",newscore];
+    _ScoreLabel.text = NewScoreString;
 }
 -(void)GroeneAchtergrond
 {
@@ -230,7 +274,7 @@
 }
 -(void)GemiddeldOp
 {
-_infolabel.text = NSLocalizedString(@"Well, You sure did drunk something! Take caution, but for now you are free to drive...", @"Well, You sure did drunk something! Take caution, but for now you are free to drive...");
+_infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take caution, but for now you are free to drive...", @"Well, You sure did drunk something! Take caution, but for now you are free to drive...");
     
     _infolabel.selectable = NO;
     
@@ -248,6 +292,10 @@ _infolabel.text = NSLocalizedString(@"Oeh! You almost drunk too much! Are you su
     
     _infolabel.selectable = NO;
    
+}
+-(void)VeelteVeelOp
+{
+    _infolabel.text = NSLocalizedString(@"Are you out of your mind?!", @"Are you out of your mind?!");
 }
 
 @end
