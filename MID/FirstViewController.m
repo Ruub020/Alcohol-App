@@ -25,6 +25,15 @@
     
     return self;
 }
+- (IBAction)DoneButtonClicked:(id)sender {
+    NSUserDefaults *Prefs = [NSUserDefaults standardUserDefaults];
+    //Gewicht
+    NSString *Weight = label5.text;
+    //Sla gewicht op
+    [Prefs setObject:Weight forKey:@"Weight"];
+    [Prefs synchronize];
+    
+}
 
 - (void)viewDidLoad
 {

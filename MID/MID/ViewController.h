@@ -10,7 +10,17 @@
 
 @interface ViewController : UIViewController {
     UIViewController *firstViewController;
+    //Input
     
+    __weak IBOutlet UITextField *StandaardGlazen;
+    __weak IBOutlet UITextField *AantalUren;
+    //calc
+    
+    __weak IBOutlet UIButton *CalculateBtn;
+    //output
+    __weak IBOutlet UILabel *PromileLabel;
 }
+- (IBAction)CalculatePressed:(id)sender;
+
 
 @end
