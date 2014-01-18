@@ -10,6 +10,7 @@
 
 @interface FirstViewController ()
 @property (strong, nonatomic) IBOutlet NSString *MenWomen;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *Bestuurder;
 @property (strong, nonatomic) IBOutlet NSString *MenWomenForContinue;
 @end
 
@@ -34,6 +35,7 @@
     [Prefs setObject:Weight forKey:@"Weight"];
     [Prefs synchronize];
     [self CheckMenOrWomen];
+    [self CheckBestuurder];
     
 }
 
@@ -49,6 +51,7 @@
     label5.alpha = 0;
     button.alpha = 0;
     segment.alpha = 0;
+    _Bestuurder.alpha = 0;
     NSLog(@"Start fading");
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.5];
@@ -77,6 +80,11 @@
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:3.0];
+    [_Bestuurder setAlpha:1];
+    [UIView commitAnimations];
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:3.5];
     [segment setAlpha:1];
     [UIView commitAnimations];
     
@@ -90,7 +98,20 @@
 
 	// Do any additional setup after loading the view.
 }
-
+- (IBAction)BestuurderSwitched:(id)sender {
+    [self CheckBestuurder];
+}
+-(void)CheckBestuurder
+{
+    NSString *BestuurderString;
+    if (_Bestuurder.selectedSegmentIndex == 0) {
+        BestuurderString = @"0";
+    }
+    if (_Bestuurder.selectedSegmentIndex == 1) {
+        BestuurderString = @"1";
+    }
+    [[NSUserDefaults standardUserDefaults]setObject:BestuurderString forKey:@"Driver"];
+}
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [label5 resignFirstResponder];
     NSLog(@"End of editon, button alpha to 1 if the lenght is > 0");

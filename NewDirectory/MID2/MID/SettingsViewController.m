@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *WeightField;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segment;
 @property (strong, nonatomic) IBOutlet NSString *MenWomen;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *DriverSegment;
+@property (nonatomic, retain) IBOutlet NSString *Bestuurder;
 
 @end
 
@@ -47,8 +49,30 @@
     _WeightField.inputAccessoryView = SaveWeight;
 
     manvrouw2 = [[NSUserDefaults standardUserDefaults] floatForKey:@"keyfloat"];
+    [self DownloadDriver];
 
 }
+-(void)DownloadDriver
+{
+    _Bestuurder = [[NSUserDefaults standardUserDefaults] objectForKey:@"Driver"];
+
+    if ([_Bestuurder isEqualToString:@"0"]) {
+        _DriverSegment.selectedSegmentIndex = 0;
+    }else{
+        _DriverSegment.selectedSegmentIndex = 1;
+    }
+}
+- (IBAction)DriverClicked:(id)sender {
+        NSString *BestuurderString;
+        if (_DriverSegment.selectedSegmentIndex == 0) {
+            BestuurderString = @"0";
+        }
+        if (_DriverSegment.selectedSegmentIndex == 1) {
+            BestuurderString = @"1";
+        }
+        [[NSUserDefaults standardUserDefaults]setObject:BestuurderString forKey:@"Driver"];
+}
+
 -(void)SetSegentVoid
 {
     _MenWomen = [[NSUserDefaults standardUserDefaults] objectForKey:@"MenWomen"];

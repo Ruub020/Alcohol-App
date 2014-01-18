@@ -14,6 +14,7 @@
 @property (nonatomic, retain) IBOutlet NSString *StandaardGlazenString;
 @property (nonatomic, retain) IBOutlet NSString *AantalurenGeleden;
 @property (nonatomic, retain) IBOutlet NSString *Promile;
+@property (nonatomic, retain) IBOutlet NSString *Bestuurder;
 @end
 
 @implementation ViewController
@@ -42,7 +43,13 @@
     NSLog(@"%f", manvrouw);
     NSLog(@"Manvrouw");
     
- 
+    _Bestuurder = [[NSUserDefaults standardUserDefaults] objectForKey:@"Driver"];
+    if ([_Bestuurder isEqualToString:@"0"]) {
+        bestuurderfloat = 0;
+    }
+    if ([_Bestuurder isEqualToString:@"1"]) {
+        bestuurderfloat = 1;
+    }
 
 }
 
@@ -51,13 +58,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)ErvarenBestuurder
+{
     [self DownloadGewicht];
     [StandaardGlazen resignFirstResponder];
     [AantalUren resignFirstResponder];
     if ([StandaardGlazen.text, AantalUren.text length] > 0) {
-       
-       
+        
+        
         _StandaardGlazenString = StandaardGlazen.text;
         _AantalurenGeleden = AantalUren.text;
         
@@ -87,7 +95,7 @@
         if (test < 0.1) {
             _infolabel.selectable = YES;
             NSLog(@"promile is > 0.1");
-
+            
             PromileLabel.text=@"0";
             [self NiksOp];
             [self GroeneAchtergrond];
@@ -116,24 +124,96 @@
             NSLog(@"Promile is > 0.4");
             [self BijnaTeveelOp];
             [self GroeneAchtergrond];
-
+            
         }
         if (test > 0.5) {
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.5");
             [self TeveelOp];
-              #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
             self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
         }
         
-       
+        
         if ([_StandaardGlazenString isEqualToString:@"0"]) {
             PromileLabel.text = @"0";
         }
-
-        
         
     }
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    if (bestuurderfloat == 0) {
+        [self BeginnendBestuurder];
+    }else{
+    [self ErvarenBestuurder];
+    }
+    [StandaardGlazen resignFirstResponder];
+    [AantalUren resignFirstResponder];
+}
+-(void)BeginnendBestuurder
+{
+    [self DownloadGewicht];
+    [StandaardGlazen resignFirstResponder];
+    [AantalUren resignFirstResponder];
+    if ([StandaardGlazen.text, AantalUren.text length] > 0) {
+        
+        
+        _StandaardGlazenString = StandaardGlazen.text;
+        _AantalurenGeleden = AantalUren.text;
+        
+        float GewichtFloat = [_Gewicht floatValue];
+        float GlazenFloat = [_StandaardGlazenString floatValue];
+        float UrenFloat = [_AantalurenGeleden floatValue];
+        
+        float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
+        
+        
+        NSString *PromileString = [NSString stringWithFormat:@"%f",test];
+        _Promile = PromileString;
+        
+        NSRange stringRange = {0, MIN([_Promile length], 4)};
+        stringRange = [_Promile rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [_Promile substringWithRange:stringRange];
+        
+        PromileLabel.text = shortString;
+        
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:1.0];
+        [PromileLabel setAlpha:1];
+        [UIView commitAnimations];
+        
+        
+        if (test < 0.1) {
+            _infolabel.selectable = YES;
+            NSLog(@"promile is < 0.1");
+            
+            PromileLabel.text=@"0";
+            [self NiksOp];
+            [self GroeneAchtergrond];
+        }
+        if (test > 0.1) {
+            _infolabel.selectable = YES;
+            NSLog(@"promile is > 0.1");
+            self.view.backgroundColor = [UIColor greenColor];
+            [self GemiddeldOp];
+            [self GroeneAchtergrond];
+        }
+        if (test > 0.2) {
+            _infolabel.selectable = YES;
+            NSLog(@"Promile is > 0.2");
+            [self TeveelOp];
+            [self GroeneAchtergrond];
+            #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+            self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
+        
+        if ([_StandaardGlazenString isEqualToString:@"0"]) {
+            PromileLabel.text = @"0";
+        }
+    }
+}
+    
 }
 -(void)GroeneAchtergrond
 {

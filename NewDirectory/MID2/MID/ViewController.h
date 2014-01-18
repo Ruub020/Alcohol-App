@@ -23,7 +23,7 @@
     __weak IBOutlet UILabel *PromileLabel;
     
     float manvrouw;
-    
+    float bestuurderfloat;
     IBOutlet UITextView *Info;
     
 }

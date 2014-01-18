@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cup-gE-kKV">
-                                <rect key="frame" x="17" y="279" width="286" height="30"/>
+                                <rect key="frame" x="11" y="310" width="295" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -54,7 +54,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pi-ZL-eju">
-                                <rect key="frame" x="142" y="317" width="37" height="30"/>
+                                <rect key="frame" x="142" y="348" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KGZ-vl-dyG">
-                                <rect key="frame" x="17" y="243" width="286" height="29"/>
+                                <rect key="frame" x="11" y="274" width="299" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -78,11 +78,24 @@
                                     <action selector="switch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Qsz-cD-6HP"/>
                                 </connections>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GSD-2N-sTZ">
+                                <rect key="frame" x="11" y="238" width="299" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Starting Driver"/>
+                                    <segment title="Experienced Driver"/>
+                                </segments>
+                                <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="BestuurderSwitched:" destination="vXZ-lx-hvc" eventType="valueChanged" id="oer-3w-5fM"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Mx-wD-59F"/>
                     <connections>
+                        <outlet property="Bestuurder" destination="GSD-2N-sTZ" id="snp-rV-cbX"/>
                         <outlet property="button" destination="6Pi-ZL-eju" id="hJw-ZX-9O8"/>
                         <outlet property="label1" destination="rYH-ud-tcl" id="KUs-Gn-eaR"/>
                         <outlet property="label2" destination="NSz-rS-Tlc" id="lkN-u2-jKr"/>
@@ -161,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbw-A0-WtV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1406" y="-24"/>
+            <point key="canvasLocation" x="991" y="-24"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="yH7-Ur-aZc">
@@ -232,6 +245,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xMs-7w-L22" id="CeE-fh-hMP">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wj8-uv-Muh">
+                                                    <rect key="frame" x="11" y="8" width="299" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <segments>
+                                                        <segment title="Starting Driver"/>
+                                                        <segment title="Experienced Driver"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="BestuurderSwitched:" destination="vXZ-lx-hvc" eventType="valueChanged" id="dpF-Ja-FE0"/>
+                                                        <action selector="DriverClicked:" destination="Op6-g9-3kW" eventType="valueChanged" id="BJP-6o-97T"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -244,13 +271,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="cW2-yv-omL"/>
                     <connections>
+                        <outlet property="DriverSegment" destination="wj8-uv-Muh" id="wvl-M2-Etj"/>
                         <outlet property="WeightField" destination="Aep-2k-4d8" id="BmD-Re-MTI"/>
                         <outlet property="segment" destination="fQ2-rk-995" id="T5H-sh-eoy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCV-fb-v7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="-24"/>
+            <point key="canvasLocation" x="1213" y="-24"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IEZ-xA-8W4">
@@ -268,7 +296,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5k9-9f-VYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="-24"/>
+            <point key="canvasLocation" x="991" y="-24"/>
         </scene>
     </scenes>
     <resources>
