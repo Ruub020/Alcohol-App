@@ -125,22 +125,23 @@
 
 -(void)NiksOp
 {
-    Info.text = @"Well Done! Drive safely!";
+    _infolabel.text = @"Well Done! Drive safely!";
+    
 
 }
 -(void)GemiddeldOp
 {
-    Info.text = @"Well, You sure did drunk something! Take caution, but for now you are free to drive...";
+    _infolabel.text = @"Well, You sure did drunk something! Take caution, but for now you are free to drive...";
     
 }
 -(void)TeveelOp
 {
-    Info.text = @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!";
+    _infolabel.text = @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!";
     
 }
 -(void)BijnaTeveelOp
 {
-        Info.text = @"Oeh! You almost drunk too much! Are you sure it is completely safe to drive?";
+    _infolabel.text = @"Oeh! You almost drunk too much! Are you sure it is completely safe to drive?";
    
 }
 

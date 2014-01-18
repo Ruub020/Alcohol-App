@@ -24,10 +24,11 @@
     
     float manvrouw;
     
-    __strong IBOutlet UITextView *Info;
+    IBOutlet UITextView *Info;
     
 }
 
+@property (weak, nonatomic) IBOutlet UITextView *infolabel;
 
 
 @end
