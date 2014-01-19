@@ -74,7 +74,7 @@
     }
     
     NSArray *recipents = [[strFromInt componentsSeparatedByString: @","] mutableCopy];
-    NSString *message = [NSString stringWithFormat:@"Just sent the  file to your email. Please check!"];
+    NSString *message = [NSString stringWithFormat:@"I've had to much to drink. Could you pick me up? %@", urlAddress];
     
     MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
     messageController.messageComposeDelegate = self;
