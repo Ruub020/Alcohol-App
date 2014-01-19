@@ -52,7 +52,7 @@
     NSString *Prommilage = cell.detailTextLabel.text;
     NSString *MessageBody = [NSString stringWithFormat:@"%@%@%@",@"You have set ", ChosenCountry, @" as default country"];
     
-    [self performSegueWithIdentifier:@"Next" sender:self];
+    
     UIAlertView *Chosen = [[UIAlertView alloc] initWithTitle:nil message:MessageBody delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK",nil];
     [Chosen show];
     
