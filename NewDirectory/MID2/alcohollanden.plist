@@ -4,411 +4,537 @@
 <array>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Albania</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Algeria</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.1</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Argentina</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Armenia</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.4</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Australia</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Azerbaijan</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.0</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Barbados</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.0</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Belarus</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.29</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Belgium</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Bolivia</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.49</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Bosnia and Herzegovina</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.3</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Botswana</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Brazil</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.0</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Bulgaria</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Cambodia</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Canada</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Chile</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.3</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>China</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Colombia</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.2</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Costa Rica</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Croatia</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Czech Republic</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.0</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Denmark</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Ecuador</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.3</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>El Salvador</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Estonia</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.2</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Ethiopia</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Finland</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>France</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Georgia</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.2</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Germany</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Greece</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Guatemala</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Guyana</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Honduras</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.7</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Hungary</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.0</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Iceland</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>India</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.3</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Ireland</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Israel</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Italy</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Japan</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.3</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Kenya</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Kyrgyzstan</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Latvia</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Lithuania</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.4</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Luxembourg</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Macedonia</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Malaysia</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Malta</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Mauritius</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Mexico</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.4</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Moldova</string>
 		<key>Promil</key>
-		<string>0.5</string>
+		<string>0.3</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Mongolia</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Montenegro</string>
 		<key>Promil</key>
 		<string>0.5</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Nepal</string>
+		<key>Promil</key>
+		<string>0.0</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>The Netherlands</string>
 		<key>Promil</key>
 		<string>0.5</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>New Zealand</string>
+		<key>Promil</key>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Nicaragua</string>
 		<key>Promil</key>
 		<string>0.5</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Norway</string>
+		<key>Promil</key>
+		<string>0.2</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Panama</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Paraguay</string>
 		<key>Promil</key>
+		<string>0.1</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Peru</string>
+		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Phillipines</string>
 		<key>Promil</key>
 		<string>0.5</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Poland</string>
+		<key>Promil</key>
+		<string>0.2</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Portugal</string>
+		<key>Promil</key>
+		<string>0.49</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Puerto Rico</string>
+		<key>Promil</key>
+		<string>0.8</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Romania</string>
+		<key>Promil</key>
+		<string>0.0</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Russia</string>
+		<key>Promil</key>
+		<string>0.0</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Serbia</string>
+		<key>Promil</key>
+		<string>0.3</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Singapore</string>
+		<key>Promil</key>
+		<string>0.8</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Slovakia</string>
+		<key>Promil</key>
+		<string>0.0</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Slovenia</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>South Africa</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>South Korea</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Spain</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Suriname</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Sweden</string>
 		<key>Promil</key>
+		<string>0.2</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Switzerland</string>
+		<key>Promil</key>
 		<string>0.5</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Tanzania</string>
+		<key>Promil</key>
+		<string>0.8</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Thailand</string>
 		<key>Promil</key>
 		<string>0.5</string>
 	</dict>
 	<dict>
 		<key>Land</key>
-		<string>Nederland</string>
+		<string>Turkey</string>
 		<key>Promil</key>
 		<string>0.5</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Turkmenistan</string>
+		<key>Promil</key>
+		<string>0.3</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Uganda</string>
+		<key>Promil</key>
+		<string>0.3</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>United Kingdom</string>
+		<key>Promil</key>
+		<string>0.8</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>United States</string>
+		<key>Promil</key>
+		<string>0.8</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Uruguay</string>
+		<key>Promil</key>
+		<string>0.3</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Venezuela</string>
+		<key>Promil</key>
+		<string>0.8</string>
+	</dict>
+	<dict>
+		<key>Land</key>
+		<string>Zimbabwe</string>
+		<key>Promil</key>
+		<string>0.8</string>
 	</dict>
 </array>
 </plist>
