@@ -29,6 +29,8 @@
     
     int eenscore;
     int tweescore;
+    IBOutlet UITextField *numbertextfield;
+    int phonenumber;
     
     
     

@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
     
-    
+    whereami.alpha = 0;
     // Init the picker view.
     pick= [[UIPickerView alloc] init];
     [pick setDataSource:self];
@@ -223,6 +223,8 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
  _infolabel.text = NSLocalizedString(@"Oh Oh! You have had too much to drink! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!");
     
     _infolabel.selectable = NO;
+    
+    whereami.alpha = .7;
     
     if (test == 1) {
         NSLog(@"VIBRATE");

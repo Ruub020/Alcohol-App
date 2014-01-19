@@ -20,6 +20,7 @@
     __weak IBOutlet UITextField *StandaardGlazen;
     __weak IBOutlet UITextField *AantalUren;
     //calc
+    __weak IBOutlet UIButton *whereami;
     
     __weak IBOutlet UIButton *CalculateBtn;
     //output

@@ -81,6 +81,25 @@
     
     tomuch.text = [NSString stringWithFormat:@"%i", eenscore];
     perfect.text = [NSString stringWithFormat:@"%i", tweescore];
+    
+    //Add a Bar ontop of the Textfield
+    UIToolbar* SaveNumber = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    SaveNumber.barStyle = UIBarStyleBlackTranslucent;
+    SaveNumber.items = [NSArray arrayWithObjects:
+                        [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(SaveNumber)],
+                        [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                        [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(ResignTextfield)],
+                        nil];
+    [SaveNumber sizeToFit];
+    numbertextfield.inputAccessoryView = SaveNumber;
+    
+    phonenumber = numbertextfield.text;
+    
+    phonenumber = [[NSUserDefaults standardUserDefaults] integerForKey:@"Phonenumber"];
+    NSLog(@"%i", phonenumber);
+    
+    numbertextfield.text = [NSString stringWithFormat:@"%i",phonenumber];
+
    
 
 }
@@ -135,6 +154,7 @@
 -(void)ResignTextfield
 {
     [_WeightField resignFirstResponder];
+    [numbertextfield resignFirstResponder];
 }
 -(void)SaveWeight
 {
@@ -145,6 +165,14 @@
     [Prefs setObject:Weight forKey:@"Weight"];
     [Prefs synchronize];
     [_WeightField resignFirstResponder];
+}
+-(void)SaveNumber{
+    phonenumber = [[numbertextfield text] intValue];
+    [[NSUserDefaults standardUserDefaults] setInteger:phonenumber forKey:@"Phonenumber"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    NSLog(@"phonenumer: %i", phonenumber);
+    [numbertextfield resignFirstResponder];
+
 }
 
 
@@ -274,5 +302,7 @@
        
     }
    }
+
+
 
 @end
