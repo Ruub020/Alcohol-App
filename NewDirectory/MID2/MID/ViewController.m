@@ -70,117 +70,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)ErvarenBestuurder
-{
-    [self DownloadGewicht];
-    [StandaardGlazen resignFirstResponder];
-    [AantalUren resignFirstResponder];
-    if ([StandaardGlazen.text, AantalUren.text length] > 0) {
-        
-        
-        _StandaardGlazenString = StandaardGlazen.text;
-        _AantalurenGeleden = AantalUren.text;
-        
-        float GewichtFloat = [_Gewicht floatValue];
-        float GlazenFloat = [_StandaardGlazenString floatValue];
-        float UrenFloat = [_AantalurenGeleden floatValue];
-        
-        float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
-        
-        
-        NSString *PromileString = [NSString stringWithFormat:@"%f",test];
-        _Promile = PromileString;
-        
-        NSRange stringRange = {0, MIN([_Promile length], 4)};
-        stringRange = [_Promile rangeOfComposedCharacterSequencesForRange:stringRange];
-        NSString *shortString = [_Promile substringWithRange:stringRange];
-        
-        PromileLabel.text = shortString;
-        
-        
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:1.0];
-        [PromileLabel setAlpha:1];
-        [UIView commitAnimations];
-        
-        
-        if (test < 0.1) {
-            _infolabel.selectable = YES;
-            NSLog(@"promile is > 0.1");
-            
-            PromileLabel.text=@"0";
-            [self NiksOp];
-            [self GroeneAchtergrond];
-            [self ScoreUp];
-        }
-        if (test > 0.1) {
-            _infolabel.selectable = YES;
-            NSLog(@"promile is > 0.1");
-            self.view.backgroundColor = [UIColor greenColor];
-            [self GemiddeldOp];
-            [self GroeneAchtergrond];
-            [self ScoreUp];
-        }
-        if (test > 0.2) {
-            _infolabel.selectable = YES;
-            NSLog(@"Promile is > 0.2");
-            [self GemiddeldOp];
-            [self GroeneAchtergrond];
-            [self ScoreUp];
-        }
-        if (test > 0.3) {
-            _infolabel.selectable = YES;
-            NSLog(@"Promile is > 0.3");
-            [self GemiddeldOp];
-            [self GroeneAchtergrond];
-            [self ScoreUp];
-        }
-        if (test > 0.4) {
-            _infolabel.selectable = YES;
-            NSLog(@"Promile is > 0.4");
-            [self BijnaTeveelOp];
-            [self GroeneAchtergrond];
-            [self ScoreUp];
-            
-        }
-        if (test > 0.5) {
-            _infolabel.selectable = YES;
-            NSLog(@"Promile is > 0.5");
-            [self TeveelOp];
-            [self ScoreDown];
-#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
-            self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
-        }
-        
-        if (test > 2.0) {
-            NSLog(@"Promile is > 1.0");
-            [self VeelteVeelOp];
-            [self ScoreDown];
-#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
-            self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
-        }
-        if ([_StandaardGlazenString isEqualToString:@"0"]) {
-            PromileLabel.text = @"0";
-        }
-        
-    }
-}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if (bestuurderfloat == 0) {
-        [self BeginnendBestuurder];
-    }else{
-    [self ErvarenBestuurder];
-    }
-    [StandaardGlazen resignFirstResponder];
-    [AantalUren resignFirstResponder];
-}
--(void)BeginnendBestuurder
-{
-    
-    
-    //promile en country ophalen uit de andere class
-    
     NSUserDefaults *promile = [NSUserDefaults standardUserDefaults];
     float promileaantal = [promile floatForKey:@"PromileKey"];
     
@@ -248,23 +139,21 @@
             NSLog(@"Promile is > 0.2");
             [self TeveelOp];
             [self ScoreDown];
-
-            #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+            
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
             self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
-        
-        if ([_StandaardGlazenString isEqualToString:@"0"]) {
-            PromileLabel.text = @"0";
+            
+            if ([_StandaardGlazenString isEqualToString:@"0"]) {
+                PromileLabel.text = @"0";
+                
+            }
             
         }
-            
-            
-        
-            
-            
     }
+    [StandaardGlazen resignFirstResponder];
+    [AantalUren resignFirstResponder];
 }
-    
-}
+
 
 -(void)ScoreDown
 {
@@ -308,17 +197,6 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     
     _infolabel.selectable = NO;
     
-}
--(void)BijnaTeveelOp
-{
-_infolabel.text = NSLocalizedString(@"Oeh! You almost drunk too much! Are you sure it is completely safe to drive?", @"Oeh! You almost drunk too much! Are you sure it is completely safe to drive?");
-    
-    _infolabel.selectable = NO;
-   
-}
--(void)VeelteVeelOp
-{
-    _infolabel.text = NSLocalizedString(@"Are you out of your mind?!", @"Are you out of your mind?!");
 }
 -(void)awakeFromNib {
     
