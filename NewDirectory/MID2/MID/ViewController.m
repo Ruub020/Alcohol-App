@@ -203,6 +203,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     NSLog(@"+1, %i", een);
+    whereami.alpha = 0;
 
 }
 -(void)GemiddeldOp
@@ -216,6 +217,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
 
     
     NSLog(@"+1, %i", een);
+    whereami.alpha = 0;
     
 }
 -(void)TeveelOp

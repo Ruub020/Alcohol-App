@@ -93,7 +93,7 @@
     [SaveNumber sizeToFit];
     numbertextfield.inputAccessoryView = SaveNumber;
     
-    phonenumber = numbertextfield.text;
+    
     
     phonenumber = [[NSUserDefaults standardUserDefaults] integerForKey:@"Phonenumber"];
     NSLog(@"%i", phonenumber);
