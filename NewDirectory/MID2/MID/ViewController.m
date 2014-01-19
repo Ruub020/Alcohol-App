@@ -177,6 +177,13 @@
 }
 -(void)BeginnendBestuurder
 {
+    
+    
+    //promile en country ophalen uit de andere class
+    
+    NSUserDefaults *promile = [NSUserDefaults standardUserDefaults];
+    float promileaantal = [promile floatForKey:@"PromileKey"];
+    
     [self DownloadGewicht];
     [StandaardGlazen resignFirstResponder];
     [AantalUren resignFirstResponder];
@@ -209,7 +216,9 @@
         [UIView commitAnimations];
         
         
-        if (test < 0.1) {
+        if (test == 0) {
+            
+            promiletest = 1;
             _infolabel.selectable = YES;
             NSLog(@"promile is < 0.1");
             
@@ -218,7 +227,8 @@
             [self GroeneAchtergrond];
             [self ScoreUp];
         }
-        if (test > 0.1) {
+        if (test < promileaantal) {
+            promiletest = 2;
             _infolabel.selectable = YES;
             NSLog(@"promile is > 0.1");
             self.view.backgroundColor = [UIColor greenColor];
@@ -226,7 +236,9 @@
             [self GroeneAchtergrond];
             [self ScoreUp];
         }
-        if (test > 0.2) {
+        if (test > promileaantal) {
+            
+            promiletest = 3;
             _infolabel.selectable = YES;
             NSLog(@"Promile is > 0.2");
             [self TeveelOp];
@@ -240,13 +252,6 @@
             
         }
         
-            if (test > 1.0) {
-                NSLog(@"Promile is > 1.0");
-                [self VeelteVeelOp];
-                [self ScoreDown];
-    #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
-                self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
-            }
             
             
     }
@@ -259,7 +264,7 @@
     int currentscore = [_ScoreLabel.text intValue];
     int newscore = currentscore - 1;
     
-    NSString *NewScoreString = [NSString stringWithFormat:@"%d",newscore];
+    NSString *NewScoreString = [NSString stringWithFormat:@"Score: %d",newscore];
     _ScoreLabel.text = NewScoreString;
 }
 -(void)ScoreUp
@@ -267,7 +272,7 @@
     int currentscore = [_ScoreLabel.text intValue];
     int newscore = currentscore + 1;
     
-    NSString *NewScoreString = [NSString stringWithFormat:@"%d",newscore];
+    NSString *NewScoreString = [NSString stringWithFormat:@"Score: %d",newscore];
     _ScoreLabel.text = NewScoreString;
 }
 -(void)GroeneAchtergrond
@@ -309,39 +314,13 @@ _infolabel.text = NSLocalizedString(@"Oeh! You almost drunk too much! Are you su
     _infolabel.text = NSLocalizedString(@"Are you out of your mind?!", @"Are you out of your mind?!");
 }
 -(void)awakeFromNib {
-    NSString *path = [[NSBundle mainBundle] pathForResource:
-                      @"landen" ofType:@"plist"];
-    array2 = [[NSMutableArray alloc] initWithContentsOfFile:path];
-    
-    myDataDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-    NSLog(@"MyDict:%@",[myDataDictionary description]);
-    
-    array2 = [myDataDictionary description];
-    
-    myDataDictionary2 = [myDataDictionary description];
-    
-    [pick selectRow:0 inComponent:0 animated:NO];
-    NSLog(@"%@",array2);
     
     
     
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-}
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return [array2 count];
-}
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [array2 objectAtIndex:row];
-    NSLog(@"You selected this: %@", [array2 objectAtIndex: row]);
-}
 
 
 @end

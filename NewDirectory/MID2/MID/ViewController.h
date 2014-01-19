@@ -24,10 +24,16 @@
     //output
     __weak IBOutlet UILabel *PromileLabel;
     
+    int promiletest;
+    
+    
     float manvrouw;
     float bestuurderfloat;
     IBOutlet UITextView *Info;
     IBOutlet UIPickerView *pick;
+    
+    
+    
     
 }
 

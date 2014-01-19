@@ -31,6 +31,7 @@
 		6FDCFFA7188B31E900D0DCEE /* landen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCFFA6188B31E900D0DCEE /* landen.plist */; };
 		6FDCFFAD188BBF0A00D0DCEE /* LandenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCFFAC188BBF0A00D0DCEE /* LandenViewController.m */; };
 		6FDCFFAF188BC05A00D0DCEE /* alcohollanden.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */; };
+		6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		6FDCFFAB188BBF0A00D0DCEE /* LandenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandenViewController.h; path = ../LandenViewController.h; sourceTree = "<group>"; };
 		6FDCFFAC188BBF0A00D0DCEE /* LandenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandenViewController.m; path = ../LandenViewController.m; sourceTree = "<group>"; };
 		6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = alcohollanden.plist; sourceTree = "<group>"; };
+		6FDCFFB0188BEBB500D0DCEE /* BeginlandenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeginlandenViewController.h; path = ../BeginlandenViewController.h; sourceTree = "<group>"; };
+		6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeginlandenViewController.m; path = ../BeginlandenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 		6F3529E71889E19300CFB7EA /* MID */ = {
 			isa = PBXGroup;
 			children = (
+				6FDCFFB0188BEBB500D0DCEE /* BeginlandenViewController.h */,
+				6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */,
 				6FDCFFAB188BBF0A00D0DCEE /* LandenViewController.h */,
 				6FDCFFAC188BBF0A00D0DCEE /* LandenViewController.m */,
 				6F3529F01889E19300CFB7EA /* AppDelegate.h */,
@@ -313,6 +318,7 @@
 				6F3529F81889E19300CFB7EA /* ViewController.m in Sources */,
 				6F3529F21889E19300CFB7EA /* AppDelegate.m in Sources */,
 				6FDCFFAD188BBF0A00D0DCEE /* LandenViewController.m in Sources */,
+				6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */,
 				45570629188ABADF00E9AA10 /* SettingsViewController.m in Sources */,
 				6F3529EE1889E19300CFB7EA /* main.m in Sources */,
 				6F6A69FA188A821700E9E4B9 /* FirstViewController.m in Sources */,

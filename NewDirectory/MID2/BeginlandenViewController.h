@@ -1,5 +1,5 @@
 //
-//  LandenViewController.h
+//  BeginlandenViewController.h
 //  MID
 //
 //  Created by Boike Damhuis on 19-01-14.
@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LandenViewController : UITableViewController {
-    float country;
-    float promile;
-    
+@interface BeginlandenViewController : UITableViewController{
+float country;
+float promile;
+
 }
 @property (strong, nonatomic) NSArray *content;
 

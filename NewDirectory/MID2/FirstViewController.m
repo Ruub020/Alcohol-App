@@ -55,6 +55,7 @@
     label2.alpha = 0;
     label3.alpha = 0;
     label4.alpha = 0;
+    firstbutton.alpha = 0;
   
     button.alpha = 0;
     segment.alpha = 0;
