@@ -11,6 +11,7 @@
 @interface SettingsViewController : UITableViewController
 {
     float manvrouw2;
+    __weak IBOutlet UILabel *ChosenCountryLabel;
 }
 
 @end

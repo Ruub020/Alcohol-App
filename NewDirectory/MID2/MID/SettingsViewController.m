@@ -50,7 +50,23 @@
 
     manvrouw2 = [[NSUserDefaults standardUserDefaults] floatForKey:@"keyfloat"];
     [self DownloadDriver];
+    [NSTimer scheduledTimerWithTimeInterval:0.1
+                                     target:self
+                                   selector:@selector(DownloadCountry)
+                                   userInfo:nil
+                                    repeats:YES];
+    
 
+}
+-(void)DownloadCountry
+{
+    NSString *Country = [[NSUserDefaults standardUserDefaults] objectForKey:@"COUNTRY"];
+    NSString *Prommilage = [[NSUserDefaults standardUserDefaults] objectForKey:@"PROMMILAGE"];
+    NSString *CellText = [NSString stringWithFormat:@"%@%@%@",Country , @" - ", Prommilage];
+    
+    
+    ChosenCountryLabel.text = CellText;
+    
 }
 -(void)DownloadDriver
 {

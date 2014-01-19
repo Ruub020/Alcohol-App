@@ -43,7 +43,23 @@
     cell.detailTextLabel.text = [[self.content objectAtIndex:indexPath.row] valueForKey:@"Promil"];
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    NSString *ChosenCountry = cell.textLabel.text;
+    NSString *Prommilage = cell.detailTextLabel.text;
+    NSString *MessageBody = [NSString stringWithFormat:@"%@%@%@",@"You have set ", ChosenCountry, @" as default country"];
+    
+    
+    UIAlertView *Chosen = [[UIAlertView alloc] initWithTitle:nil message:MessageBody delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK",nil];
+    [Chosen show];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:ChosenCountry forKey:@"COUNTRY"];
+    [[NSUserDefaults standardUserDefaults] setObject:Prommilage forKey:@"PROMMILAGE"];
 
+}
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
