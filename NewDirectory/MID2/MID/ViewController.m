@@ -25,6 +25,7 @@
 {
     [super viewDidLoad];
     
+    
     // Init the picker view.
     pick= [[UIPickerView alloc] init];
     [pick setDataSource:self];
@@ -42,6 +43,10 @@
     NSMutableArray *array2 = [[NSMutableArray alloc] initWithContentsOfFile:path];
     for (NSString *str in array2)
         NSLog(@"--%@", path);
+    
+    
+    twee = [[NSUserDefaults standardUserDefaults] integerForKey:@"Tomuch"];
+    een = [[NSUserDefaults standardUserDefaults] integerForKey:@"Perfect"];
 
 //Download het gewicht
     [self DownloadGewicht];
@@ -62,6 +67,9 @@
     if ([_Bestuurder isEqualToString:@"1"]) {
         bestuurderfloat = 1;
     }
+    test = [[NSUserDefaults standardUserDefaults] floatForKey:@"key"];
+    
+    
 
 }
 
@@ -110,35 +118,44 @@
             PromileLabel.text=@"0";
             [self NiksOp];
             [self GroeneAchtergrond];
-            [self ScoreUp];
+            
+            
+            
+            NSLog(@"TEST IS NUL");
         }
         if (test == 0) {
             
             promiletest = 1;
             _infolabel.selectable = YES;
-            NSLog(@"promile is < 0.1");
+            
             
             PromileLabel.text=@"0";
             [self NiksOp];
             [self GroeneAchtergrond];
-            [self ScoreUp];
+            
+            NSLog(@"TEST IS PRECIES NUL");
+            
         }
-        if (test < promileaantal) {
+        if (test < promileaantal && test > 0) {
             promiletest = 2;
             _infolabel.selectable = YES;
-            NSLog(@"promile is > 0.1");
+            
             self.view.backgroundColor = [UIColor greenColor];
             [self GemiddeldOp];
             [self GroeneAchtergrond];
-            [self ScoreUp];
+            
+            NSLog(@"TEST IS LAGER DAN PROMILE");
+            
+            
         }
         if (test > promileaantal) {
             
             promiletest = 3;
             _infolabel.selectable = YES;
-            NSLog(@"Promile is > 0.2");
+            
             [self TeveelOp];
-            [self ScoreDown];
+            
+            NSLog(@"TEST IS HOGER DAN PROMILE");
             
 #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
             self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
@@ -181,7 +198,11 @@
     _infolabel.text = NSLocalizedString(@"Well Done! Drive safely!", @"Well Done! Drive safely!");
     
     _infolabel.selectable = NO;
+    een = een +1;
+    [[NSUserDefaults standardUserDefaults] setInteger:een forKey:@"Perfect"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
+    NSLog(@"+1, %i", een);
 
 }
 -(void)GemiddeldOp
@@ -189,6 +210,12 @@
 _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take caution, but for now you are free to drive...", @"Well, You sure did drunk something! Take caution, but for now you are free to drive...");
     
     _infolabel.selectable = NO;
+    een = een +1;
+    [[NSUserDefaults standardUserDefaults] setInteger:een forKey:@"Perfect"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    
+    NSLog(@"+1, %i", een);
     
 }
 -(void)TeveelOp
@@ -197,11 +224,23 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     
     _infolabel.selectable = NO;
     
+    if (test == 1) {
+        NSLog(@"VIBRATE");
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    }
+    twee = twee +1;
+    [[NSUserDefaults standardUserDefaults] setInteger:twee forKey:@"Tomuch"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSLog(@"+1 %i", twee);
+    
 }
 -(void)awakeFromNib {
+ 
+ 
     
-    
-    
+ 
+
 }
 
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		45570626188ABA4400E9AA10 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 45570625188ABA4400E9AA10 /* settings.png */; };
 		45570629188ABADF00E9AA10 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45570628188ABADF00E9AA10 /* SettingsViewController.m */; };
+		6F1C9A6E188C33C5003F59E3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1C9A6D188C33C5003F59E3 /* AudioToolbox.framework */; };
 		6F224C42188AB64100684AA9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F224C41188AB64100684AA9 /* CoreLocation.framework */; };
 		6F3529E21889E19300CFB7EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3529E11889E19300CFB7EA /* Foundation.framework */; };
 		6F3529E41889E19300CFB7EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3529E31889E19300CFB7EA /* CoreGraphics.framework */; };
@@ -48,6 +49,7 @@
 		45570625188ABA4400E9AA10 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		45570627188ABADF00E9AA10 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		45570628188ABADF00E9AA10 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		6F1C9A6D188C33C5003F59E3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6F224C41188AB64100684AA9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6F3529DE1889E19200CFB7EA /* MID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3529E11889E19300CFB7EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F1C9A6E188C33C5003F59E3 /* AudioToolbox.framework in Frameworks */,
 				6F3529E21889E19300CFB7EA /* Foundation.framework in Frameworks */,
 				6F224C42188AB64100684AA9 /* CoreLocation.framework in Frameworks */,
 				6F6A6A07188A924300E9E4B9 /* AdSupport.framework in Frameworks */,
@@ -134,6 +137,7 @@
 		6F3529E01889E19200CFB7EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F1C9A6D188C33C5003F59E3 /* AudioToolbox.framework */,
 				6F224C41188AB64100684AA9 /* CoreLocation.framework */,
 				6F6A6A06188A924300E9E4B9 /* AdSupport.framework */,
 				6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */,

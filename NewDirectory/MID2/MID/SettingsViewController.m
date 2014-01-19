@@ -29,6 +29,8 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     NSUserDefaults *Defaults = [NSUserDefaults standardUserDefaults];
@@ -56,6 +58,30 @@
                                    userInfo:nil
                                     repeats:YES];
     
+    
+    test = [[NSUserDefaults standardUserDefaults] floatForKey:@"key"];
+    if (test == 1) {
+        [Switch setOn:YES animated:NO];
+        NSLog(@"Switch goes on");
+        
+    }
+    if (test == 2) {
+        [Switch setOn:NO animated:NO];
+        
+        NSLog(@"Switch goes off");
+    }
+    
+    
+    
+    eenscore = [[NSUserDefaults standardUserDefaults] integerForKey:@"Tomuch"];
+    tweescore = [[NSUserDefaults standardUserDefaults] integerForKey:@"Perfect"];
+    NSLog(@"%i", eenscore);
+    NSLog(@"%i", tweescore);
+
+    
+    tomuch.text = [NSString stringWithFormat:@"%i", eenscore];
+    perfect.text = [NSString stringWithFormat:@"%i", tweescore];
+   
 
 }
 -(void)DownloadCountry
@@ -156,6 +182,97 @@
     [[NSUserDefaults standardUserDefaults] setFloat:manvrouw2 forKey:@"keyfloat"];
 
         [[NSUserDefaults standardUserDefaults] setObject:_MenWomen forKey:@"MenWomen"];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+
 }
+
+
+-(void)awakeFromNib {
+    
+    test = [[NSUserDefaults standardUserDefaults] floatForKey:@"key"];
+    if (test == 1) {
+        [Switch setOn:YES animated:NO];
+        NSLog(@"Switch goes on");
+        
+    }
+    if (test == 2) {
+        [Switch setOn:NO animated:NO];
+        
+        NSLog(@"Switch goes off");
+    }
+
+
+}
+
+- (IBAction)Switch2:(id)sender {
+    
+    
+    if (!(Switch.isOn)) {
+        NSLog(@"Switch is off");
+        
+        test = 2;
+        
+        
+        
+        [[NSUserDefaults standardUserDefaults] setFloat:test forKey:@"key"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        NSLog(@"Float is %f 1", test);
+        
+        
+        
+        
+        
+    }
+    if (Switch.isOn) {
+        NSLog(@"Switch is on");
+        
+        test = 1;
+        
+        
+        
+        [[NSUserDefaults standardUserDefaults] setFloat:test forKey:@"key"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        NSLog(@"Float is %f 2", test);
+        
+        
+        
+        
+        
+    }
+    
+}
+-(IBAction)resetstats:(id)sender {
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Sure?"
+                          message:@"Are you sure want to reset all the data?"
+                          delegate:self
+                          cancelButtonTitle:@"No"
+                          otherButtonTitles:@"Yes", nil];
+    [alert show];
+    
+    
+}
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        eenscore = 0;
+        tweescore = 0;
+        
+        NSLog(@"%i", eenscore);
+        NSLog(@"%i", tweescore);
+        
+        
+        tomuch.text = [NSString stringWithFormat:@"%i", eenscore];
+        perfect.text = [NSString stringWithFormat:@"%i", tweescore];
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:eenscore forKey:@"Tomuch"];
+        [[NSUserDefaults standardUserDefaults] setInteger:tweescore forKey:@"Perfect"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
+       
+    }
+   }
 
 @end

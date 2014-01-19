@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 
 @interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
@@ -31,6 +32,20 @@
     float bestuurderfloat;
     IBOutlet UITextView *Info;
     IBOutlet UIPickerView *pick;
+    
+    
+    
+    int *switchinteger;
+    float test;
+    
+    NSString *switchstring;
+    
+    float *tomuchint;
+    float *perfectint;
+    
+    
+    int een;
+    int twee;
     
     
     

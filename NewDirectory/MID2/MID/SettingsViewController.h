@@ -12,6 +12,29 @@
 {
     float manvrouw2;
     __weak IBOutlet UILabel *ChosenCountryLabel;
+    __weak IBOutlet UISwitch *Switch;
+    
+    
+    float *switchint;
+    
+    NSString *switchcheck;
+    
+    IBOutlet UILabel *tomuch;
+    IBOutlet UILabel *perfect;
+    
+    int *tomuchint;
+    int *perfectint;
+    
+    float test;
+    
+    int eenscore;
+    int tweescore;
+    
+    
+    
+    
 }
+- (IBAction)Switch2:(id)sender;
+- (IBAction)resetstats:(id)sender;
 
 @end
