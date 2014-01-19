@@ -213,30 +213,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xMs-7w-L22">
-                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xMs-7w-L22" id="CeE-fh-hMP">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wj8-uv-Muh">
-                                                    <rect key="frame" x="11" y="8" width="299" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segments>
-                                                        <segment title="Starting Driver"/>
-                                                        <segment title="Experienced Driver"/>
-                                                    </segments>
-                                                    <connections>
-                                                        <action selector="BestuurderSwitched:" destination="vXZ-lx-hvc" eventType="valueChanged" id="dpF-Ja-FE0"/>
-                                                        <action selector="DriverClicked:" destination="Op6-g9-3kW" eventType="valueChanged" id="BJP-6o-97T"/>
-                                                    </connections>
-                                                </segmentedControl>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="q79-eG-JAY">
-                                        <rect key="frame" x="0.0" y="187" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q79-eG-JAY" id="dKj-jk-dh0">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -256,7 +234,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Dan-8J-ipf">
-                                        <rect key="frame" x="0.0" y="231" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="187" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dan-8J-ipf" id="2jH-28-9S5">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -280,7 +258,7 @@
                             <tableViewSection headerTitle="Disclaimer" id="hno-36-XVb">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rhZ-Mm-iCA">
-                                        <rect key="frame" x="0.0" y="323" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="279" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rhZ-Mm-iCA" id="biw-lH-u5k">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -310,7 +288,6 @@
                     <navigationItem key="navigationItem" title="Settings" id="cW2-yv-omL"/>
                     <connections>
                         <outlet property="ChosenCountryLabel" destination="dvC-MO-GH9" id="ILR-iD-2F4"/>
-                        <outlet property="DriverSegment" destination="wj8-uv-Muh" id="wvl-M2-Etj"/>
                         <outlet property="WeightField" destination="Aep-2k-4d8" id="BmD-Re-MTI"/>
                         <outlet property="segment" destination="fQ2-rk-995" id="T5H-sh-eoy"/>
                     </connections>
@@ -404,60 +381,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5k9-9f-VYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="883" y="-685"/>
-        </scene>
-        <!--First View Controller-->
-        <scene sceneID="SuO-yO-ef1">
-            <objects>
-                <viewController storyboardIdentifier="Next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OrN-OR-HYs" customClass="FirstViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9jt-Zs-D1A"/>
-                        <viewControllerLayoutGuide type="bottom" id="NHA-cg-q6Q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HOT-dm-kiJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-dY-f33">
-                                <rect key="frame" x="11" y="87" width="299" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Starting Driver"/>
-                                    <segment title="Experienced Driver"/>
-                                </segments>
-                                <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="BestuurderSwitched:" destination="OrN-OR-HYs" eventType="valueChanged" id="9hP-sf-62w"/>
-                                </connections>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUb-C6-0qy">
-                                <rect key="frame" x="144" y="145" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4ya-RV-3hf" kind="modal" modalTransitionStyle="flipHorizontal" id="eJi-Lg-Meg"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starter or Experienced?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itu-Vm-c7T">
-                                <rect key="frame" x="14" y="27" width="293" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="bgE-fr-Ak6"/>
-                    <connections>
-                        <outlet property="Bestuurder" destination="gHa-dY-f33" id="6dU-io-xQY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yLO-y1-c4P" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="294" y="648"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="F8N-8A-xN7">
@@ -588,10 +511,10 @@
                                             <state key="normal" title="Next">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="4ya-RV-3hf" kind="modal" identifier="Next" modalTransitionStyle="flipHorizontal" id="pOs-bM-nf8"/>
+                                            </connections>
                                         </button>
-                                        <connections>
-                                            <segue destination="OrN-OR-HYs" kind="modal" identifier="Next" modalTransitionStyle="crossDissolve" id="KYg-WB-n4O"/>
-                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>

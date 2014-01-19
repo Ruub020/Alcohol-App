@@ -217,6 +217,9 @@
         
         if (test < 0) {
             PromileLabel.text=@"0";
+            [self NiksOp];
+            [self GroeneAchtergrond];
+            [self ScoreUp];
         }
         if (test == 0) {
             
