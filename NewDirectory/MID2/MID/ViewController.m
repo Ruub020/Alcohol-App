@@ -215,7 +215,9 @@
         [PromileLabel setAlpha:1];
         [UIView commitAnimations];
         
-        
+        if (test < 0) {
+            PromileLabel.text=@"0";
+        }
         if (test == 0) {
             
             promiletest = 1;
@@ -251,6 +253,8 @@
             PromileLabel.text = @"0";
             
         }
+            
+            
         
             
             
