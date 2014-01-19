@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="-6"/>
+            <point key="canvasLocation" x="448" y="-6"/>
         </scene>
         <!--View Controller - Alcohol Test-->
         <scene sceneID="DXP-zU-NIV">
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbw-A0-WtV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568" y="11"/>
+            <point key="canvasLocation" x="1094" y="11"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="yH7-Ur-aZc">
@@ -255,11 +255,11 @@
                                             <segue destination="edh-jk-Kej" kind="push" id="tbs-ky-uBW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Dan-8J-ipf">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Dan-8J-ipf">
                                         <rect key="frame" x="0.0" y="231" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dan-8J-ipf" id="2jH-28-9S5">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reset" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp8-7R-gtn">
@@ -271,6 +271,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="modal" id="Lzx-Vx-qD9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -314,7 +317,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCV-fb-v7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897" y="11"/>
+            <point key="canvasLocation" x="1605" y="34"/>
         </scene>
         <!--Landen View Controller - Country settings-->
         <scene sceneID="7S6-1x-BJU">
@@ -333,7 +336,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Op6-g9-3kW" kind="modal" identifier="Next" modalTransitionStyle="flipHorizontal" id="Yuk-0t-u6t"/>
+                                    <segue destination="Op6-g9-3kW" kind="modal" identifier="" modalTransitionStyle="flipHorizontal" id="Yuk-0t-u6t"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dEo-gT-hoU">
@@ -363,7 +366,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koT-Hx-36E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1578" y="290"/>
+            <point key="canvasLocation" x="2104" y="290"/>
         </scene>
         <!--View Controller - Disclaimer-->
         <scene sceneID="OWz-dS-a0n">
@@ -374,7 +377,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M9H-36-nAE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="akO-Fj-cYT">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -382,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acl-jP-KlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="-182"/>
+            <point key="canvasLocation" x="2326" y="-182"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IEZ-xA-8W4">
@@ -645,6 +648,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="toD-0F-I01"/>
+        <segue reference="Yuk-0t-u6t"/>
     </inferredMetricsTieBreakers>
 </document>
