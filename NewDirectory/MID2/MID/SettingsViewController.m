@@ -95,10 +95,10 @@
     
     
     
-    phonenumber = [[NSUserDefaults standardUserDefaults] integerForKey:@"Phonenumber"];
-    NSLog(@"%i", phonenumber);
+    phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"NUMBER"];
+    NSLog(@"%@", phoneNumber);
     
-    numbertextfield.text = [NSString stringWithFormat:@"%i",phonenumber];
+    numbertextfield.text = [NSString stringWithFormat:@"%@",phoneNumber];
 
    
 
@@ -167,10 +167,13 @@
     [_WeightField resignFirstResponder];
 }
 -(void)SaveNumber{
-    phonenumber = [[numbertextfield text] intValue];
-    [[NSUserDefaults standardUserDefaults] setInteger:phonenumber forKey:@"Phonenumber"];
+    phoneNumber = [numbertextfield text];
+    [[NSUserDefaults standardUserDefaults] setObject:phoneNumber forKey:@"NUMBER"];
+    
+    
     [[NSUserDefaults standardUserDefaults]synchronize];
-    NSLog(@"phonenumer: %i", phonenumber);
+    
+    NSLog(@"phonenumer: %@", phoneNumber);
     [numbertextfield resignFirstResponder];
 
 }

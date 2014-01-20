@@ -19,7 +19,7 @@
     float latitude;
     float longitude;
     
-    int phonenumber;
+    NSString *phonenumber;
     NSArray *nummer;
 
 }

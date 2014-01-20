@@ -42,8 +42,8 @@
     NSLog(@"%f", longitude);
     NSLog(@"%f", latitude);
     
-    phonenumber = [[NSUserDefaults standardUserDefaults] integerForKey:@"Phonenumber"];
-    NSLog(@"Phonnumber: %i", phonenumber);
+    phonenumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"NUMBER"];
+    NSLog(@"Phonnumber: %@", phonenumber);
 }
 
 - (void)didReceiveMemoryWarning
