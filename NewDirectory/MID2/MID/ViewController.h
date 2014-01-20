@@ -28,6 +28,9 @@
     
     int promiletest;
     
+    IBOutlet UIWebView *webView;
+    
+    
     
     float manvrouw;
     float bestuurderfloat;

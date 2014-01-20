@@ -25,6 +25,12 @@
 {
     [super viewDidLoad];
     
+    
+    NSString *pdfPath = [[NSBundle mainBundle] pathForResource:@"d" ofType:@"pdf"];
+    NSURL *url = [NSURL URLWithString:pdfPath];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:[NSURLRequest requestWithURL:url]];
+    
     whereami.alpha = 0;
     // Init the picker view.
     pick= [[UIPickerView alloc] init];
