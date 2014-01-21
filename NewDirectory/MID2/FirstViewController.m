@@ -37,12 +37,12 @@
     [self CheckMenOrWomen];
     [self CheckBestuurder];
     
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"root2"];
+   /* [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"root2"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"root1"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSUserDefaults standardUserDefaults] synchronize];*/
     
 }
 

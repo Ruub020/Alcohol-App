@@ -42,5 +42,13 @@
     NSString *Number = PhoneNumber.text;
     [[NSUserDefaults standardUserDefaults] setObject:Number forKey:@"NUMBER"];
     [PhoneNumber resignFirstResponder];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"root2"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"root1"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
 }
 @end
