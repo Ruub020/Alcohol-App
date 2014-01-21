@@ -177,6 +177,7 @@
     
     if ([StandaardGlazen.text isEqualToString:@"0"]) {
         PromileLabel.text = @"0";
+        [self NiksOp];
     }
     [StandaardGlazen resignFirstResponder];
     [AantalUren resignFirstResponder];

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5037" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--First View Controller-->
@@ -20,6 +20,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="579"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5t-KY-uBo">
+                                <rect key="frame" x="59" y="250" width="208" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                <state key="normal" title="-Disclaimer-">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qyR-pw-rjW" kind="modal" modalTransitionStyle="flipHorizontal" id="5gG-oc-ciS"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your alcohol test in your pocket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sp6-ek-0JA">
                                 <rect key="frame" x="0.0" y="75" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -44,9 +56,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYQ-m0-tCw">
-                                <rect key="frame" x="147" y="288" width="32" height="30"/>
+                                <rect key="frame" x="82" y="288" width="156" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="I accept the disclaimer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,7 +72,7 @@
                     <navigationItem key="navigationItem" id="Hld-pK-t0D"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="firstbutton" destination="SYQ-m0-tCw" id="XVI-kQ-Rd2"/>
+                        <outlet property="firstbutton" destination="M5t-KY-uBo" id="8H1-aO-MCj"/>
                         <outlet property="label1" destination="sp6-ek-0JA" id="wDE-PF-X59"/>
                         <outlet property="label2" destination="bG4-0v-Xtc" id="JjS-Hc-Qay"/>
                         <outlet property="label3" destination="HWw-0U-oqq" id="xuY-Bu-kU6"/>
@@ -988,6 +1000,51 @@
             </objects>
             <point key="canvasLocation" x="-915" y="-654"/>
         </scene>
+        <!--Disclaimer View Controller - Disclaimer-->
+        <scene sceneID="pAt-pG-2FV">
+            <objects>
+                <viewController id="qyR-pw-rjW" customClass="disclaimerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QU7-WF-Jk5"/>
+                        <viewControllerLayoutGuide type="bottom" id="44k-db-X47"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uwj-Qg-8iq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ux-A7-8sV">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSu-Og-PXL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Disclaimer" id="77b-GW-FIr">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="yag-hT-iYV">
+                                            <connections>
+                                                <segue destination="ThJ-6k-dGg" kind="modal" modalTransitionStyle="flipHorizontal" id="D46-qK-dVf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Disclaimer" id="vZq-VC-wCV"/>
+                    <connections>
+                        <outlet property="webview2" destination="2Ux-A7-8sV" id="Yrf-Dz-R4q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flR-ib-9p5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-614" y="-273"/>
+        </scene>
     </scenes>
     <resources>
         <image name="blauw.png" width="100" height="100"/>
@@ -1000,8 +1057,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="g5j-Ah-f9E"/>
-        <segue reference="xZx-7D-ns5"/>
         <segue reference="H6q-qJ-eje"/>
+        <segue reference="g5j-Ah-f9E"/>
+        <segue reference="D46-qK-dVf"/>
     </inferredMetricsTieBreakers>
 </document>

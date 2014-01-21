@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5037" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--First View Controller-->
@@ -44,9 +44,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nv-97-RO6">
-                                <rect key="frame" x="147" y="288" width="32" height="30"/>
+                                <rect key="frame" x="82" y="280" width="156" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="I accept the disclaimer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -54,12 +54,24 @@
                                     <segue destination="5w5-yj-ZtM" kind="modal" modalTransitionStyle="flipHorizontal" id="OkI-OT-FnO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsY-mF-2ku">
+                                <rect key="frame" x="56" y="242" width="208" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                <state key="normal" title="-Disclaimer-">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wc6-M2-eCL" kind="modal" modalTransitionStyle="flipHorizontal" id="HbP-Gn-x5X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Mx-wD-59F"/>
                     <connections>
-                        <outlet property="firstbutton" destination="5nv-97-RO6" id="P1D-DC-Bg5"/>
+                        <outlet property="firstbutton" destination="vsY-mF-2ku" id="eLg-jp-1XE"/>
                         <outlet property="label1" destination="rYH-ud-tcl" id="KUs-Gn-eaR"/>
                         <outlet property="label2" destination="NSz-rS-Tlc" id="lkN-u2-jKr"/>
                         <outlet property="label3" destination="6hU-mY-hcD" id="vf5-5W-qdg"/>
@@ -976,6 +988,48 @@
             </objects>
             <point key="canvasLocation" x="-915" y="-654"/>
         </scene>
+        <!--Disclaimer View Controller - Disclaimer-->
+        <scene sceneID="O9T-Dk-BUA">
+            <objects>
+                <viewController id="Wc6-M2-eCL" customClass="disclaimerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oeg-5M-G5g"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohm-Ul-hiM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N0F-1r-4ys">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pec-31-7pO">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yI5-Fh-jfz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Disclaimer" id="AxA-Ts-bjM">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="B1b-td-Kex">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="flipHorizontal" id="gMz-OQ-5C3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Disclaimer" id="KE7-W3-q5q"/>
+                    <connections>
+                        <outlet property="webview2" destination="pec-31-7pO" id="VGP-SB-Hhd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlE-ez-BSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-523" y="-112"/>
+        </scene>
     </scenes>
     <resources>
         <image name="blauw.png" width="100" height="100"/>
@@ -988,8 +1042,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Lzx-Vx-qD9"/>
         <segue reference="toD-0F-I01"/>
         <segue reference="vb0-6C-MPJ"/>
+        <segue reference="gMz-OQ-5C3"/>
     </inferredMetricsTieBreakers>
 </document>
