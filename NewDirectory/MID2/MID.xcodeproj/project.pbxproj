@@ -31,6 +31,14 @@
 		6F352A031889E19300CFB7EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3529E51889E19300CFB7EA /* UIKit.framework */; };
 		6F352A0B1889E19300CFB7EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F352A091889E19300CFB7EA /* InfoPlist.strings */; };
 		6F352A0D1889E19300CFB7EA /* MIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F352A0C1889E19300CFB7EA /* MIDTests.m */; };
+		6F50E928188EC8570029DAAE /* slpash4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E926188EC8570029DAAE /* slpash4.png */; };
+		6F50E92B188EC8650029DAAE /* splash25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E92A188EC8650029DAAE /* splash25.png */; };
+		6F50E92E188EC8D00029DAAE /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F50E92D188EC8D00029DAAE /* LoadingViewController.m */; };
+		6F50E930188ECA240029DAAE /* blauw.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E92F188ECA240029DAAE /* blauw.png */; };
+		6F50E932188ECCB70029DAAE /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E931188ECCB70029DAAE /* 120.png */; };
+		6F50E934188ECCCA0029DAAE /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E933188ECCCA0029DAAE /* 80.png */; };
+		6F50E936188ECCDE0029DAAE /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E935188ECCDE0029DAAE /* 58.png */; };
+		6F50E939188ECE260029DAAE /* DCModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F50E938188ECE260029DAAE /* DCModalSegue.m */; };
 		6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */; };
 		6F6A69FA188A821700E9E4B9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A69F9188A821700E9E4B9 /* FirstViewController.m */; };
 		6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */; };
@@ -87,6 +95,16 @@
 		6F352A081889E19300CFB7EA /* MIDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MIDTests-Info.plist"; sourceTree = "<group>"; };
 		6F352A0A1889E19300CFB7EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6F352A0C1889E19300CFB7EA /* MIDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIDTests.m; sourceTree = "<group>"; };
+		6F50E926188EC8570029DAAE /* slpash4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slpash4.png; sourceTree = "<group>"; };
+		6F50E92A188EC8650029DAAE /* splash25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash25.png; sourceTree = "<group>"; };
+		6F50E92C188EC8D00029DAAE /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = ../LoadingViewController.h; sourceTree = "<group>"; };
+		6F50E92D188EC8D00029DAAE /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = ../LoadingViewController.m; sourceTree = "<group>"; };
+		6F50E92F188ECA240029DAAE /* blauw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blauw.png; sourceTree = "<group>"; };
+		6F50E931188ECCB70029DAAE /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
+		6F50E933188ECCCA0029DAAE /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80.png; sourceTree = "<group>"; };
+		6F50E935188ECCDE0029DAAE /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
+		6F50E937188ECE260029DAAE /* DCModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCModalSegue.h; sourceTree = "<group>"; };
+		6F50E938188ECE260029DAAE /* DCModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCModalSegue.m; sourceTree = "<group>"; };
 		6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "iOS7-3,5inch.storyboard"; path = "../iOS7-3,5inch.storyboard"; sourceTree = "<group>"; };
 		6F6A69F8188A821700E9E4B9 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../FirstViewController.h; sourceTree = "<group>"; };
 		6F6A69F9188A821700E9E4B9 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../FirstViewController.m; sourceTree = "<group>"; };
@@ -178,6 +196,10 @@
 		6F3529E71889E19300CFB7EA /* MID */ = {
 			isa = PBXGroup;
 			children = (
+				6F50E937188ECE260029DAAE /* DCModalSegue.h */,
+				6F50E938188ECE260029DAAE /* DCModalSegue.m */,
+				6F50E92C188EC8D00029DAAE /* LoadingViewController.h */,
+				6F50E92D188EC8D00029DAAE /* LoadingViewController.m */,
 				6F2B0582188D95C700363471 /* disclaimerViewController.h */,
 				6F2B0583188D95C700363471 /* disclaimerViewController.m */,
 				6F1C9A6F188C49E9003F59E3 /* WhereAmIViewController.h */,
@@ -244,7 +266,13 @@
 		6F6A69F7188A7BBB00E9E4B9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6F50E935188ECCDE0029DAAE /* 58.png */,
+				6F50E933188ECCCA0029DAAE /* 80.png */,
+				6F50E931188ECCB70029DAAE /* 120.png */,
+				6F50E92F188ECA240029DAAE /* blauw.png */,
+				6F50E926188EC8570029DAAE /* slpash4.png */,
 				45570625188ABA4400E9AA10 /* settings.png */,
+				6F50E92A188EC8650029DAAE /* splash25.png */,
 			);
 			name = images;
 			path = MID;
@@ -326,14 +354,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F50E934188ECCCA0029DAAE /* 80.png in Resources */,
 				6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */,
 				6F2B0581188D876A00363471 /* d.pdf in Resources */,
 				6F3529FA1889E19300CFB7EA /* Images.xcassets in Resources */,
+				6F50E928188EC8570029DAAE /* slpash4.png in Resources */,
 				6FDCFFAF188BC05A00D0DCEE /* alcohollanden.plist in Resources */,
 				45570626188ABA4400E9AA10 /* settings.png in Resources */,
 				6F3529EC1889E19300CFB7EA /* InfoPlist.strings in Resources */,
+				6F50E936188ECCDE0029DAAE /* 58.png in Resources */,
 				6FDCFFA7188B31E900D0DCEE /* landen.plist in Resources */,
 				6FC66C69188A9B2000671FCC /* iOS7-4inch.storyboard in Resources */,
+				6F50E932188ECCB70029DAAE /* 120.png in Resources */,
+				6F50E930188ECA240029DAAE /* blauw.png in Resources */,
+				6F50E92B188EC8650029DAAE /* splash25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,10 +392,12 @@
 				6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */,
 				6F1C9A71188C49E9003F59E3 /* WhereAmIViewController.m in Sources */,
 				4504D471188EA101005CE027 /* ContactViewController.m in Sources */,
+				6F50E939188ECE260029DAAE /* DCModalSegue.m in Sources */,
 				6F2B0584188D95C700363471 /* disclaimerViewController.m in Sources */,
 				45570629188ABADF00E9AA10 /* SettingsViewController.m in Sources */,
 				6F3529EE1889E19300CFB7EA /* main.m in Sources */,
 				6F6A69FA188A821700E9E4B9 /* FirstViewController.m in Sources */,
+				6F50E92E188EC8D00029DAAE /* LoadingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +514,6 @@
 		6F352A111889E19300CFB7EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MID/MID-Prefix.pch";
@@ -495,7 +530,6 @@
 		6F352A121889E19300CFB7EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MID/MID-Prefix.pch";

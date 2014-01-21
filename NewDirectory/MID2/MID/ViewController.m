@@ -24,8 +24,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
+    #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+
+    self.view.backgroundColor = Rgb2UIColor(83, 152, 255);
     NSString *pdfPath = [[NSBundle mainBundle] pathForResource:@"d" ofType:@"pdf"];
     NSURL *url = [NSURL URLWithString:pdfPath];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
@@ -172,6 +173,10 @@
             }
             
         }
+    }
+    
+    if ([StandaardGlazen.text isEqualToString:@"0"]) {
+        PromileLabel.text = @"0";
     }
     [StandaardGlazen resignFirstResponder];
     [AantalUren resignFirstResponder];

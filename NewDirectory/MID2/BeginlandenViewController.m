@@ -46,8 +46,8 @@
     cell.detailTextLabel.text = [[self.content objectAtIndex:indexPath.row] valueForKey:@"Promil"];
     cell.textColor=[UIColor whiteColor];
     cell.textLabel.font = [UIFont fontWithName:@"Heiti SC" size:14];
-    cell.backgroundColor = Rgb2UIColor(0, 124, 247);
-    self.view.backgroundColor = Rgb2UIColor(0, 124, 247);
+    cell.backgroundColor = Rgb2UIColor(83, 152, 255);
+    self.view.backgroundColor = Rgb2UIColor(83, 152, 255);
 
     cell.detailTextLabel.textColor = [UIColor whiteColor];
     return cell;
