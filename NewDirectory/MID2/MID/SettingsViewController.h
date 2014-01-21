@@ -38,5 +38,6 @@
 }
 - (IBAction)Switch2:(id)sender;
 - (IBAction)resetstats:(id)sender;
+-(IBAction)yes:(id)sender;
 
 @end

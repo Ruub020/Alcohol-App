@@ -306,6 +306,15 @@
     }
    }
 
+-(IBAction)yes:(id)sender {
+    
+    phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"NUMBER"];
+    NSLog(@"%@", phoneNumber);
+    
+    numbertextfield.text = [NSString stringWithFormat:@"%@",phoneNumber];
+    
+}
+
 
 
 @end

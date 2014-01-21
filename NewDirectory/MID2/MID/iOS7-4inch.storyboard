@@ -261,7 +261,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="emergency number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5if-pz-YGY">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="06" borderStyle="roundedRect" placeholder="emergency number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5if-pz-YGY">
                                                     <rect key="frame" x="138" y="7" width="162" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
@@ -777,7 +777,7 @@
                                 </state>
                                 <connections>
                                     <action selector="DoneButtonClicked:" destination="9On-kv-dzn" eventType="touchUpInside" id="U53-Wd-nEJ"/>
-                                    <segue destination="5Q3-KQ-Nb1" kind="modal" modalTransitionStyle="flipHorizontal" id="vb0-6C-MPJ"/>
+                                    <segue destination="GPy-IB-yjN" kind="modal" id="bee-nM-xve"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Your weight in kg" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-IP-ecb">
@@ -1043,7 +1043,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="toD-0F-I01"/>
-        <segue reference="vb0-6C-MPJ"/>
-        <segue reference="gMz-OQ-5C3"/>
+        <segue reference="Lzx-Vx-qD9"/>
     </inferredMetricsTieBreakers>
 </document>
