@@ -10,7 +10,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 
-@interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
+@interface ViewController : UIViewController <UIAlertViewDelegate> {
     UIViewController *firstViewController;
     NSMutableArray *array2;
     NSMutableDictionary *myDataDictionary;
@@ -50,7 +50,8 @@
     
     int een;
     int twee;
-    
+    //Define The alert.
+    IBOutlet UIAlertView *ReviewMe;
     
     
     

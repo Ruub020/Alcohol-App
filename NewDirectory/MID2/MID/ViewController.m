@@ -23,6 +23,9 @@
 
 - (void)viewDidLoad
 {
+    [self CreateMessage];
+    [self Rate];
+    [self DidLaunch];
     [super viewDidLoad];
     #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
@@ -251,12 +254,64 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     NSLog(@"+1 %i", twee);
     
 }
+
 -(void)awakeFromNib {
  
  
     
  
 
+}
+-(void)DidLaunch
+{
+    NSUserDefaults *Defaults = [NSUserDefaults standardUserDefaults];
+    NSString *CurrentLaunch = [Defaults objectForKey:@"LAUNCHNUMBER"];
+    int CurrentLaunchInteger = [CurrentLaunch intValue];
+    int NewLaunchInteger = CurrentLaunchInteger +1;
+    NSString *NewLaunch = [NSString stringWithFormat:@"%d", NewLaunchInteger];
+    [Defaults setObject:NewLaunch forKey:@"LAUNCHNUMBER"];
+    [Defaults synchronize];
+}
+-(void)CreateMessage
+{
+    //Create the User Message
+    ReviewMe = [[UIAlertView alloc] initWithTitle:@"Rate this App" message:@"If you like this App, please rate us on the App Store!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Yes!",@"No :(", nil];
+}
+-(void)Rate
+{
+    NSUserDefaults *Defaults = [NSUserDefaults standardUserDefaults];
+    NSString *CurrentLaunch = [Defaults objectForKey:@"LAUNCHNUMBER"];
+    int LaunchNumerInteger = [CurrentLaunch intValue];
+    
+    if (LaunchNumerInteger == 5) {
+        [ReviewMe show];
+    }
+    NSLog(@"%d",LaunchNumerInteger);
+    
+}
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if (buttonIndex == 0) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"//URL//"]];
+        NSUserDefaults *Defaults = [NSUserDefaults standardUserDefaults];
+        NSString *CurrentLaunch = [Defaults objectForKey:@"LAUNCHNUMBER"];
+        int CurrentLaunchInteger = [CurrentLaunch intValue];
+        int NewLaunchInteger = CurrentLaunchInteger + 999999999;
+        NSString *NewLaunch = [NSString stringWithFormat:@"%d", NewLaunchInteger];
+        [Defaults setObject:NewLaunch forKey:@"LAUNCHNUMBER"];
+        [Defaults synchronize];
+        
+    }
+    if (buttonIndex == 1) {
+        NSUserDefaults *Defaults = [NSUserDefaults standardUserDefaults];
+        NSString *CurrentLaunch = [Defaults objectForKey:@"LAUNCHNUMBER"];
+        int CurrentLaunchInteger = [CurrentLaunch intValue];
+        int NewLaunchInteger = CurrentLaunchInteger + 999999999;
+        NSString *NewLaunch = [NSString stringWithFormat:@"%d", NewLaunchInteger];
+        [Defaults setObject:NewLaunch forKey:@"LAUNCHNUMBER"];
+        [Defaults synchronize];
+    }
 }
 
 
