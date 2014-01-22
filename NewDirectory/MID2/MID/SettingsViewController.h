@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface SettingsViewController : UITableViewController
+@interface SettingsViewController : UITableViewController <ABPeoplePickerNavigationControllerDelegate>
 {
     float manvrouw2;
     __weak IBOutlet UILabel *ChosenCountryLabel;

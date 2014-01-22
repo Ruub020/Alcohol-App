@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface SetPhoneNumberViewController : UIViewController
+@interface SetPhoneNumberViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
 {
     
     __weak IBOutlet UITextField *PhoneNumber;

@@ -58,8 +58,10 @@
 }
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
-     [self dismissViewControllerAnimated:YES completion:NULL];
+     [self dismissViewControllerAnimated:YES completion:nil];
+    [self viewDidLoad];
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
