@@ -42,6 +42,7 @@
 		6F50E934188ECCCA0029DAAE /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E933188ECCCA0029DAAE /* 80.png */; };
 		6F50E936188ECCDE0029DAAE /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E935188ECCDE0029DAAE /* 58.png */; };
 		6F50E939188ECE260029DAAE /* DCModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F50E938188ECE260029DAAE /* DCModalSegue.m */; };
+		6F538820189169F10016E40E /* UPPlatformSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F53881F189169F10016E40E /* UPPlatformSDK.framework */; };
 		6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */; };
 		6F6A69FA188A821700E9E4B9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A69F9188A821700E9E4B9 /* FirstViewController.m */; };
 		6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */; };
@@ -112,6 +113,7 @@
 		6F50E935188ECCDE0029DAAE /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
 		6F50E937188ECE260029DAAE /* DCModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCModalSegue.h; sourceTree = "<group>"; };
 		6F50E938188ECE260029DAAE /* DCModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCModalSegue.m; sourceTree = "<group>"; };
+		6F53881F189169F10016E40E /* UPPlatformSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UPPlatformSDK.framework; sourceTree = "<group>"; };
 		6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "iOS7-3,5inch.storyboard"; path = "../iOS7-3,5inch.storyboard"; sourceTree = "<group>"; };
 		6F6A69F8188A821700E9E4B9 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../FirstViewController.h; sourceTree = "<group>"; };
 		6F6A69F9188A821700E9E4B9 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../FirstViewController.m; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */,
 				6F3529E41889E19300CFB7EA /* CoreGraphics.framework in Frameworks */,
 				6F3529E61889E19300CFB7EA /* UIKit.framework in Frameworks */,
+				6F538820189169F10016E40E /* UPPlatformSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +189,7 @@
 		6F3529E01889E19200CFB7EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F53881F189169F10016E40E /* UPPlatformSDK.framework */,
 				457A18C61890106E000FDC2A /* StoreKit.framework */,
 				4504D472188EA19A005CE027 /* Twitter.framework */,
 				4504D46D188E9ECD005CE027 /* Social.framework */,
@@ -529,6 +533,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/BoikeDamhuis/Alcohol-App/NewDirectory/MID2",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MID/MID-Prefix.pch";
 				INFOPLIST_FILE = "MID/MID-Info.plist";
@@ -545,6 +553,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/BoikeDamhuis/Alcohol-App/NewDirectory/MID2",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MID/MID-Prefix.pch";
 				INFOPLIST_FILE = "MID/MID-Info.plist";

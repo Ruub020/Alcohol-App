@@ -34,9 +34,17 @@
     NSString *phoneNumber;
     
     
+    __weak IBOutlet UISwitch *switchjawbone;
+    int jawboneaan;
+    int jawboneuit;
+    
+    
+    
     
     
 }
+- (IBAction)didTapLogin:(UIButton *)sender;
+- (IBAction)JawboneUP:(id)sender;
 - (IBAction)Switch2:(id)sender;
 - (IBAction)resetstats:(id)sender;
 -(IBAction)yes:(id)sender;

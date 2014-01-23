@@ -7,6 +7,10 @@
 //
 
 #import "SettingsViewController.h"
+#import <UPPlatformSDK/UPPlatformSDK.h>
+
+NSString *const kAPIExplorerID = @"3ZYR1YjGd3Q";
+NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b";
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *WeightField;
@@ -14,6 +18,8 @@
 @property (strong, nonatomic) IBOutlet NSString *MenWomen;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *DriverSegment;
 @property (nonatomic, retain) IBOutlet NSString *Bestuurder;
+
+
 
 @end
 
@@ -77,6 +83,11 @@
 }
 - (void)viewDidLoad
 {
+    
+   
+    
+
+
     NSUserDefaults *Defaults = [NSUserDefaults standardUserDefaults];
     NSString *Currentweight = [Defaults objectForKey:@"Weight"];
     _WeightField.text = Currentweight;
@@ -104,6 +115,8 @@
     
     
     test = [[NSUserDefaults standardUserDefaults] floatForKey:@"key"];
+    jawboneaan = [[NSUserDefaults standardUserDefaults] integerForKey:@"aan"];
+    jawboneuit = [[NSUserDefaults standardUserDefaults] integerForKey:@"uit"];
     if (test == 1) {
         [Switch setOn:YES animated:NO];
         NSLog(@"Switch goes on");
@@ -143,6 +156,15 @@
     NSLog(@"%@", phoneNumber);
     
     numbertextfield.text = [NSString stringWithFormat:@"%@",phoneNumber];
+    
+    
+    
+    if (jawboneaan == 1) {
+        [switchjawbone setOn:NO animated:NO];
+    }
+    if (jawboneaan == 2) {
+        [switchjawbone setOn:YES animated:NO];
+    }
 
    
 
@@ -267,6 +289,8 @@
 -(void)awakeFromNib {
     
     test = [[NSUserDefaults standardUserDefaults] floatForKey:@"key"];
+    jawboneaan = [[NSUserDefaults standardUserDefaults] integerForKey:@"aan"];
+    jawboneuit = [[NSUserDefaults standardUserDefaults] integerForKey:@"uit"];
     if (test == 1) {
         [Switch setOn:YES animated:NO];
         NSLog(@"Switch goes on");
@@ -277,7 +301,79 @@
         
         NSLog(@"Switch goes off");
     }
+    
+    if (jawboneaan == 1) {
+        [switchjawbone setOn:NO animated:NO];
+    }
+    if (jawboneaan == 2) {
+        [switchjawbone setOn:YES animated:NO];
+    }
 
+
+}
+
+- (IBAction)JawboneUP:(id)sender {
+    
+    
+    if (!(switchjawbone.isOn)) {
+        NSLog(@"Switch is off");
+        
+        jawboneaan = 1;
+        
+        
+        
+        
+        
+        [[NSUserDefaults standardUserDefaults] setFloat:jawboneaan forKey:@"aan"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        
+        
+        
+    }
+    if (switchjawbone.isOn) {
+        NSLog(@"Switch is on2");
+        
+        
+        
+        jawboneaan = 2;
+        
+        
+        
+        
+        [[NSUserDefaults standardUserDefaults] setFloat:jawboneaan forKey:@"aan"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+         [UPPlatform sharedPlatform].enableNetworkLogging = YES;
+        
+        [[UPPlatform sharedPlatform] startSessionWithClientID:kAPIExplorerID
+                                                 clientSecret:kAPIExplorerSecret
+                                                    authScope:UPPlatformAuthScopeAll
+                                                   completion:^(UPSession *session, NSError *error) {
+                                                       
+                                                      
+                                                       
+                                                       if (session != nil) {
+                                                           [self performSegueWithIdentifier:@"LoggedIn" sender:nil];
+                                                       } else {
+                                                           [[[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                       message:error.localizedDescription
+                                                                                      delegate:nil
+                                                                             cancelButtonTitle:@"OK"
+                                                                             otherButtonTitles:nil] show];
+                                                       }
+                                                   }];
+
+        
+        
+
+
+        
+        
+        
+        
+        
+        
+    }
 
 }
 
@@ -310,6 +406,7 @@
         [[NSUserDefaults standardUserDefaults] setFloat:test forKey:@"key"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         NSLog(@"Float is %f 2", test);
+        
         
         
         
@@ -358,6 +455,32 @@
     numbertextfield.text = [NSString stringWithFormat:@"%@",phoneNumber];
     
 }
+
+
+- (IBAction)didTapLogin:(UIButton *)sender {
+    
+    sender.enabled = NO;
+	
+	// Present login screen in a UIWebView.
+	[[UPPlatform sharedPlatform] startSessionWithClientID:kAPIExplorerID
+                                             clientSecret:kAPIExplorerSecret
+                                                authScope:UPPlatformAuthScopeAll
+                                               completion:^(UPSession *session, NSError *error) {
+                                                   
+                                                   sender.enabled = YES;
+                                                   
+                                                   if (session != nil) {
+                                                       [self performSegueWithIdentifier:@"LoggedIn" sender:nil];
+                                                   } else {
+                                                       [[[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                   message:error.localizedDescription
+                                                                                  delegate:nil
+                                                                         cancelButtonTitle:@"OK"
+                                                                         otherButtonTitles:nil] show];
+                                                   }
+                                               }];
+}
+
 
 
 
