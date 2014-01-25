@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <UPPlatformSDK/UPPlatformSDK.h>
 
 
 @interface ViewController : UIViewController <UIAlertViewDelegate> {
@@ -30,6 +31,7 @@
     
     IBOutlet UIWebView *webView;
     
+    __weak IBOutlet UITextView *timeRestLabel;
     
     
     float manvrouw;
@@ -37,7 +39,10 @@
     IBOutlet UITextView *Info;
     IBOutlet UIPickerView *pick;
     
-    
+    int date;
+    float GewichtFloat;
+    float GlazenFloat;
+    float UrenFloat;
     
     int *switchinteger;
     float test;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AddressBookUI/AddressBookUI.h>
+#import "AppDelegate.h"
 
 @interface SettingsViewController : UITableViewController <ABPeoplePickerNavigationControllerDelegate>
 {
@@ -37,7 +38,8 @@
     __weak IBOutlet UISwitch *switchjawbone;
     int jawboneaan;
     int jawboneuit;
-    
+    UIViewController *AdmissionsViewController;
+  
     
     
     

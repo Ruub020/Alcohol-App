@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const kUPPlatformDefaultRedirectURI;
-
 @class UPSession, UPURLRequest, UPURLResponse;
 
 typedef NS_OPTIONS(NSUInteger, UPPlatformAuthScope)
@@ -41,7 +39,6 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
 @interface UPPlatform : NSObject
 
 @property (nonatomic, readonly) UPSession *currentSession;
-@property (nonatomic, readonly) NSString *redirectURI;
 @property (nonatomic, assign) BOOL enableNetworkLogging;
 
 + (UPPlatform *)sharedPlatform;
@@ -55,7 +52,6 @@ typedef void(^UPPlatformRequestCompletion)(UPURLRequest *request, UPURLResponse 
 #else
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret completion:(UPPlatformSessionCompletion)completion;
 - (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope completion:(UPPlatformSessionCompletion)completion;
-- (void)startSessionWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret authScope:(UPPlatformAuthScope)authScope redirectURI:(NSString *)redirectURI completion:(UPPlatformSessionCompletion)completion;
 #endif
 
 - (void)endCurrentSession;

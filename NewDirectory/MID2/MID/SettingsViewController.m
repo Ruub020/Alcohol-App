@@ -9,8 +9,8 @@
 #import "SettingsViewController.h"
 #import <UPPlatformSDK/UPPlatformSDK.h>
 
-NSString *const kAPIExplorerID = @"3ZYR1YjGd3Q";
-NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b";
+
+
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *WeightField;
@@ -41,6 +41,8 @@ NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b"
     picker.peoplePickerDelegate = self;
     
     [self presentViewController:picker animated:YES completion:nil];
+    
+    
 }
 - (void)peoplePickerNavigationControllerDidCancel:
 (ABPeoplePickerNavigationController *)peoplePicker
@@ -165,6 +167,11 @@ NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b"
     if (jawboneaan == 2) {
         [switchjawbone setOn:YES animated:NO];
     }
+    
+    
+    
+    
+    
 
    
 
@@ -310,71 +317,32 @@ NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b"
     }
 
 
+
+
 }
 
 - (IBAction)JawboneUP:(id)sender {
-    
-    
     if (!(switchjawbone.isOn)) {
-        NSLog(@"Switch is off");
-        
+        NSLog(@"Jawbone switch is uit");
         jawboneaan = 1;
-        
-        
-        
-        
-        
         [[NSUserDefaults standardUserDefaults] setFloat:jawboneaan forKey:@"aan"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        
-        
-        
     }
     if (switchjawbone.isOn) {
-        NSLog(@"Switch is on2");
-        
-        
-        
+        NSLog(@"Jawbone switch is aan");
         jawboneaan = 2;
-        
-        
-        
-        
         [[NSUserDefaults standardUserDefaults] setFloat:jawboneaan forKey:@"aan"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-         [UPPlatform sharedPlatform].enableNetworkLogging = YES;
         
-        [[UPPlatform sharedPlatform] startSessionWithClientID:kAPIExplorerID
-                                                 clientSecret:kAPIExplorerSecret
-                                                    authScope:UPPlatformAuthScopeAll
+        [[UPPlatform sharedPlatform] startSessionWithClientID:@"MY_CLIENT_ID"
+                                                 clientSecret:@"MY_CLIENT_SECRET"
+                                                    authScope:(UPPlatformAuthScopeExtendedRead | UPPlatformAuthScopeMoveRead)
                                                    completion:^(UPSession *session, NSError *error) {
-                                                       
-                                                      
-                                                       
                                                        if (session != nil) {
-                                                           [self performSegueWithIdentifier:@"LoggedIn" sender:nil];
-                                                       } else {
-                                                           [[[UIAlertView alloc] initWithTitle:@"Error"
-                                                                                       message:error.localizedDescription
-                                                                                      delegate:nil
-                                                                             cancelButtonTitle:@"OK"
-                                                                             otherButtonTitles:nil] show];
+                                                           // Your code to start making API requests goes here.
                                                        }
                                                    }];
-
-        
-        
-
-
-        
-        
-        
-        
-        
-        
     }
-
 }
 
 - (IBAction)Switch2:(id)sender {
@@ -403,12 +371,12 @@ NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b"
         
         
         
+        
+        
         [[NSUserDefaults standardUserDefaults] setFloat:test forKey:@"key"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         NSLog(@"Float is %f 2", test);
-        
-        
-        
+
         
         
         
@@ -457,28 +425,16 @@ NSString *const kAPIExplorerSecret = @"4dd5b10b3a3a16dbf3082c86d5faff09e11a682b"
 }
 
 
-- (IBAction)didTapLogin:(UIButton *)sender {
+
+- (IBAction)SwitchView:(id)sender {
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    UIViewController* initialHelpView = [storyboard instantiateInitialViewController];
     
-    sender.enabled = NO;
-	
-	// Present login screen in a UIWebView.
-	[[UPPlatform sharedPlatform] startSessionWithClientID:kAPIExplorerID
-                                             clientSecret:kAPIExplorerSecret
-                                                authScope:UPPlatformAuthScopeAll
-                                               completion:^(UPSession *session, NSError *error) {
-                                                   
-                                                   sender.enabled = YES;
-                                                   
-                                                   if (session != nil) {
-                                                       [self performSegueWithIdentifier:@"LoggedIn" sender:nil];
-                                                   } else {
-                                                       [[[UIAlertView alloc] initWithTitle:@"Error"
-                                                                                   message:error.localizedDescription
-                                                                                  delegate:nil
-                                                                         cancelButtonTitle:@"OK"
-                                                                         otherButtonTitles:nil] show];
-                                                   }
-                                               }];
+    initialHelpView.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentModalViewController:initialHelpView animated:YES];
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

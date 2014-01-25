@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import <UPPlatformSDK/UPPlatformSDK.h>
 
 @interface FirstViewController ()
 @property (strong, nonatomic) IBOutlet NSString *MenWomen;
@@ -103,6 +104,8 @@
         [button setAlpha:1];
         [UIView commitAnimations];
     }
+    
+
 
 	// Do any additional setup after loading the view.
 }
@@ -180,6 +183,8 @@
     [[NSUserDefaults standardUserDefaults] setObject:_MenWomen forKey:@"MenWomen"];
     
 }
-
+-(IBAction)clicked:(id)sender {
+    
+}
 
 @end

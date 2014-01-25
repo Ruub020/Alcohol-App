@@ -32,6 +32,7 @@
     
     [_loader startAnimating];
     [self performSelector:@selector(een) withObject:nil afterDelay:4];
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -100,9 +100,9 @@
         _StandaardGlazenString = StandaardGlazen.text;
         _AantalurenGeleden = AantalUren.text;
         
-        float GewichtFloat = [_Gewicht floatValue];
-        float GlazenFloat = [_StandaardGlazenString floatValue];
-        float UrenFloat = [_AantalurenGeleden floatValue];
+        GewichtFloat = [_Gewicht floatValue];
+        GlazenFloat = [_StandaardGlazenString floatValue];
+        UrenFloat = [_AantalurenGeleden floatValue];
         
         float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
         
@@ -182,6 +182,118 @@
     }
     [StandaardGlazen resignFirstResponder];
     [AantalUren resignFirstResponder];
+    
+    
+    
+    if ([StandaardGlazen.text isEqualToString:@"1"]) {
+        date = 2;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    } else {
+        timeRestLabel.text = [NSString stringWithFormat:@"We can't calculate your time..."];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"2"]) {
+        date = 4;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"3"]) {
+        date = 6;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"4"]) {
+        date = 8;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"5"]) {
+        date = 9;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"6"]) {
+        date = 11;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"7"]) {
+        date = 13;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"8"]) {
+        date = 14;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"9"]) {
+        date = 16;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"10"]) {
+        date = 18;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"11"]) {
+        date = 19;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"12"]) {
+        date = 21;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"13"]) {
+        date = 23;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"14"]) {
+        date = 24;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"15"]) {
+        date = 26;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"16"]) {
+        date = 27;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"17"]) {
+        date = 29;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"18"]) {
+        date = 31;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"19"]) {
+        date = 33;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    if ([StandaardGlazen.text isEqualToString:@"20"]) {
+        date = 35;
+        date = date - UrenFloat;
+        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
+    }
+    
+    if (date < 1) {
+        timeRestLabel.text = [NSString stringWithFormat:@""];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:date forKey:@"date"];
+    
 }
 
 
@@ -237,6 +349,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
 {
  _infolabel.text = NSLocalizedString(@"Oh Oh! You have had too much to drink! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!");
     
+   
     _infolabel.selectable = NO;
     
     whereami.alpha = .7;
