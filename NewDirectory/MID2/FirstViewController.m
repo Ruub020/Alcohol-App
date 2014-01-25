@@ -7,7 +7,7 @@
 //
 
 #import "FirstViewController.h"
-#import <UPPlatformSDK/UPPlatformSDK.h>
+
 
 @interface FirstViewController ()
 @property (strong, nonatomic) IBOutlet NSString *MenWomen;
