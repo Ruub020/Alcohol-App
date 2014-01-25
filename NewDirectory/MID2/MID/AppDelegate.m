@@ -91,25 +91,37 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    enable = [[NSUserDefaults standardUserDefaults] integerForKey:@"aan"];
     date = [[NSUserDefaults standardUserDefaults] integerForKey:@"date"];
-    NSLog(@"%i",date);
-    if (date > 0) {
-        NSLog(@"test");
-        
-        
-        NSDate *AlarmTime = [[NSDate date] dateByAddingTimeInterval:date];
-        UIApplication *app = [UIApplication sharedApplication];
-        UILocalNotification *notifyAlarm = [[UILocalNotification alloc] init];
-        if (notifyAlarm) {
-            notifyAlarm.fireDate = AlarmTime;
-            notifyAlarm.timeZone = [NSTimeZone defaultTimeZone];
-            notifyAlarm.repeatInterval = 0;
-            notifyAlarm.soundName = @"";
-            notifyAlarm.alertBody = @"Check your BAC, we think you are free to drive!";
-            [app scheduleLocalNotification:notifyAlarm];
-        }
-    }
+    
+    if ( enable == 2) {
+        NSLog(@"Enable push");
+        if (date > 0) {
+            NSLog(@"test");
+            
+            
+            NSDate *AlarmTime = [[NSDate date] dateByAddingTimeInterval:date];
+            UIApplication *app = [UIApplication sharedApplication];
+            UILocalNotification *notifyAlarm = [[UILocalNotification alloc] init];
+            if (notifyAlarm) {
+                notifyAlarm.fireDate = AlarmTime;
+                notifyAlarm.timeZone = [NSTimeZone defaultTimeZone];
+                notifyAlarm.repeatInterval = 0;
+                notifyAlarm.soundName = @"";
+                notifyAlarm.alertBody = @"Check your BAC, we think you are free to drive!";
+                [app scheduleLocalNotification:notifyAlarm];
+                
+                date = -1;
+                [[NSUserDefaults standardUserDefaults] setInteger:date forKey:@"date"];
+            }
 
+    } else {
+        NSLog(@"Disable push");
+    }
+   
+
+}
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -122,6 +134,7 @@
     }
     date = -1;
     [[NSUserDefaults standardUserDefaults] setInteger:date forKey:@"date"];
+    enable = [[NSUserDefaults standardUserDefaults] integerForKey:@"aan"];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

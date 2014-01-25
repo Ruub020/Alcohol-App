@@ -334,14 +334,7 @@
         [[NSUserDefaults standardUserDefaults] setFloat:jawboneaan forKey:@"aan"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
-        [[UPPlatform sharedPlatform] startSessionWithClientID:@"MY_CLIENT_ID"
-                                                 clientSecret:@"MY_CLIENT_SECRET"
-                                                    authScope:(UPPlatformAuthScopeExtendedRead | UPPlatformAuthScopeMoveRead)
-                                                   completion:^(UPSession *session, NSError *error) {
-                                                       if (session != nil) {
-                                                           // Your code to start making API requests goes here.
-                                                       }
-                                                   }];
+        
     }
 }
 

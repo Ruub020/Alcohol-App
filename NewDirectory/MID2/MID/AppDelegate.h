@@ -11,6 +11,8 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     int date;
+    int enable;
+    
     
 }
 
