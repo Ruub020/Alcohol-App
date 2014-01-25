@@ -95,11 +95,14 @@
     enable = [[NSUserDefaults standardUserDefaults] integerForKey:@"aan"];
     date = [[NSUserDefaults standardUserDefaults] integerForKey:@"date"];
     
+    
+    
     if ( enable == 2) {
         NSLog(@"Enable push");
         if (date > 0) {
             NSLog(@"test");
             
+            date = date *2;
             
             NSDate *AlarmTime = [[NSDate date] dateByAddingTimeInterval:date];
             UIApplication *app = [UIApplication sharedApplication];
@@ -108,7 +111,7 @@
                 notifyAlarm.fireDate = AlarmTime;
                 notifyAlarm.timeZone = [NSTimeZone defaultTimeZone];
                 notifyAlarm.repeatInterval = 0;
-                notifyAlarm.soundName = @"";
+                notifyAlarm.soundName = @"sound.mp3";
                 notifyAlarm.alertBody = @"Check your BAC, we think you are free to drive!";
                 [app scheduleLocalNotification:notifyAlarm];
                 
@@ -127,15 +130,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    UIApplication *app = [UIApplication sharedApplication];
-    NSArray *oldNotifications = [app scheduledLocalNotifications];
-    if ([oldNotifications count] > 0) {
-        [app cancelAllLocalNotifications];
     }
-    date = -1;
-    [[NSUserDefaults standardUserDefaults] setInteger:date forKey:@"date"];
-    enable = [[NSUserDefaults standardUserDefaults] integerForKey:@"aan"];
-}
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
