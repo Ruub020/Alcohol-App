@@ -101,14 +101,11 @@
 }
 -(void)sourceWhatsapp
 {
-    NSString *strFromInt = [NSString stringWithFormat:@"%@",phonenumber];
     NSString *urlAddress = [NSString stringWithFormat:@"https://maps.google.com/maps?q=%f,%f",latitude, longitude];
-    NSArray *recipents = [[strFromInt componentsSeparatedByString: @","] mutableCopy];
-    int PhoneNumber = recipents;
     NSString *message = [NSString stringWithFormat:@"I've had to much to drink. Could you pick me up? %@", urlAddress];
     if ([WhatsAppKit isWhatsAppInstalled]) {
         //Whatsapp is installed
-        [WhatsAppKit launchWhatsAppWithAddressBookId:PhoneNumber andMessage:message];
+        [WhatsAppKit launchWhatsAppWithMessage:message];
 
     }else{
         UIAlertView *WhatsAppNotInstalledError = [[UIAlertView alloc] initWithTitle:@"Not Installed" message:@"WhatsApp is not installed on this device." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
