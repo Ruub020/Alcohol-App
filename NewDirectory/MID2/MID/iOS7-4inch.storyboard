@@ -140,7 +140,7 @@
                                     <segue destination="ly9-HM-N1U" kind="push" id="VU7-93-bR3"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="You may drive within 7 hours" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wgQ-d3-Es4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wgQ-d3-Es4">
                                 <rect key="frame" x="40" y="370" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
