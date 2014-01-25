@@ -93,16 +93,18 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     
     enable = [[NSUserDefaults standardUserDefaults] integerForKey:@"aan"];
-    date = [[NSUserDefaults standardUserDefaults] integerForKey:@"date"];
+    date = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus"];
+    date2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus2"];
     
-    
+    NSLog(@"Date integer is %i", date);
+    NSLog(@"Date2 is %i", date2);
     
     if ( enable == 2) {
         NSLog(@"Enable push");
         if (date > 0) {
             NSLog(@"test");
             
-            date = date *2;
+            date = date *360;
             
             NSDate *AlarmTime = [[NSDate date] dateByAddingTimeInterval:date];
             UIApplication *app = [UIApplication sharedApplication];
@@ -112,20 +114,36 @@
                 notifyAlarm.timeZone = [NSTimeZone defaultTimeZone];
                 notifyAlarm.repeatInterval = 0;
                 notifyAlarm.soundName = @"sound.mp3";
-                notifyAlarm.alertBody = @"Check your BAC, we think you are free to drive!";
+                notifyAlarm.alertBody = @"Check your BAC, we think it is 0!";
                 [app scheduleLocalNotification:notifyAlarm];
                 
                 date = -1;
-                [[NSUserDefaults standardUserDefaults] setInteger:date forKey:@"date"];
+                [[NSUserDefaults standardUserDefaults] setInteger:date forKey:@"plus"];
+            }
+            
+            if (date2 > 0) {
+                NSLog(@"Launch date2 push");
+                
+                date2 = date2 *360;
+                
+                NSDate *AlarmTime = [[NSDate date] dateByAddingTimeInterval:date2];
+                UIApplication *app = [UIApplication sharedApplication];
+                UILocalNotification *notifyAlarm = [[UILocalNotification alloc] init];
+                if (notifyAlarm) {
+                    notifyAlarm.fireDate = AlarmTime;
+                    notifyAlarm.timeZone = [NSTimeZone defaultTimeZone];
+                    notifyAlarm.repeatInterval = 0;
+                    notifyAlarm.soundName = @"sound.mp3";
+                    notifyAlarm.alertBody = @"Check your BAC, we think it is legal again!";
+                    [app scheduleLocalNotification:notifyAlarm];
+                    
+                    date2 = -1;
+                    [[NSUserDefaults standardUserDefaults] setInteger:date2 forKey:@"plus2"];
             }
 
-    } else {
-        NSLog(@"Disable push");
     }
-   
 
-}
-}
+}}}
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
@@ -135,6 +153,11 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    date2 = 0;
+    date = 0;
+    [[NSUserDefaults standardUserDefaults] setInteger:date2 forKey:@"plus2"];
+    [[NSUserDefaults standardUserDefaults] setInteger:date forKey:@"plus"];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

@@ -55,6 +55,8 @@
     
     twee = [[NSUserDefaults standardUserDefaults] integerForKey:@"Tomuch"];
     een = [[NSUserDefaults standardUserDefaults] integerForKey:@"Perfect"];
+    
+    NSLog(@"promileaantal == %i", array2);
 
 //Download het gewicht
     [self DownloadGewicht];
@@ -88,8 +90,11 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    plus = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus"];
+    plus2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus2"];
+    
     NSUserDefaults *promile = [NSUserDefaults standardUserDefaults];
-    float promileaantal = [promile floatForKey:@"PromileKey"];
+    promileaantal = [promile floatForKey:@"PromileKey"];
     
     [self DownloadGewicht];
     [StandaardGlazen resignFirstResponder];
@@ -176,6 +181,8 @@
         }
     }
     
+    promileaantal2 = promileaantal;
+    
     if ([StandaardGlazen.text isEqualToString:@"0"]) {
         PromileLabel.text = @"0";
         [self NiksOp];
@@ -185,7 +192,11 @@
     
     
     
-    [self checkpromilewithtime];
+    plus = 0;
+    plus2 = 0;
+    [self performSelector:@selector(checkpromile) withObject:nil afterDelay:0.001];
+    [self performSelector:@selector(checkpromileland2) withObject:nil afterDelay:0.001];
+
 }
 
 
@@ -260,242 +271,134 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
 
 -(void)awakeFromNib {
 }
--(void)checkpromilewithtime {
-    if ([StandaardGlazen.text isEqualToString:@"1"]) {
-        date = 2;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-        
-        
-        
-    } else {
-        timeRestLabel.text = [NSString stringWithFormat:@"We can't calculate your time..."];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"2"]) {
-        date = 4;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"3"]) {
-        date = 6;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"4"]) {
-        date = 8;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"5"]) {
-        date = 9;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"6"]) {
-        date = 11;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"7"]) {
-        date = 13;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"8"]) {
-        date = 14;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"9"]) {
-        date = 16;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"10"]) {
-        date = 18;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"11"]) {
-        date = 19;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"12"]) {
-        date = 21;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"13"]) {
-        date = 23;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"14"]) {
-        date = 24;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"15"]) {
-        date = 26;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"16"]) {
-        date = 27;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"17"]) {
-        date = 29;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"18"]) {
-        date = 31;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"19"]) {
-        date = 33;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    if ([StandaardGlazen.text isEqualToString:@"20"]) {
-        date = 35;
-        date = date - UrenFloat;
-        timeRestLabel.text= [NSString stringWithFormat:@"Your BAC is out of your blood in %i hours!", date];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    
-    if (date < 1) {
-        timeRestLabel.text = [NSString stringWithFormat:@""];
-        UIApplication *app = [UIApplication sharedApplication];
-        NSArray *oldNotifications = [app scheduledLocalNotifications];
-        if ([oldNotifications count] > 0) {
-            [app cancelAllLocalNotifications];
-        }
-    }
-    
-    [[NSUserDefaults standardUserDefaults] setInteger:date forKey:@"date"];
 
-}
+
 
 -(void) checkpromile {
-    
+    plusfloat = UrenFloat;
     plus = plus + 1;
     GewichtFloat = [_Gewicht floatValue];
     GlazenFloat = [_StandaardGlazenString floatValue];
     UrenFloat = [_AantalurenGeleden floatValue];
     
-    float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
+    float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (plus - 0.5) * (GewichtFloat *0.002);
+    
+    if (test < 0 | test == 0) {
+        NSLog(@"Tijd is berekend");
+        plus = plus - plusfloat;
+        NSLog(@"Plus - urenfloat is %i", plus);
+        [[NSUserDefaults standardUserDefaults] setInteger:plus forKey:@"plus"];
+        plus = 0;
+    } else {
+        [self performSelector:@selector(checkpromile2) withObject:nil afterDelay:0.1];
+        NSLog(@"Tijd is niet berekend, +1 uur, %i", plus);
+    }
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    NSArray *oldNotifications = [app scheduledLocalNotifications];
+    if ([oldNotifications count] > 0) {
+        [app cancelAllLocalNotifications];
     
     
+    
+    
+}
+}
+-(void) checkpromile2 {
+    plusfloat = UrenFloat;
+    plus = plus + 1;
+    GewichtFloat = [_Gewicht floatValue];
+    GlazenFloat = [_StandaardGlazenString floatValue];
+    UrenFloat = [_AantalurenGeleden floatValue];
+    
+    float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (plus - 0.5) * (GewichtFloat *0.002);
+    
+    if (test < 0 | test == 0) {
+        NSLog(@"Tijd is berekend");
+        plus = plus - plusfloat;
+        NSLog(@"Plus - urenfloat is %i", plus);
+        [[NSUserDefaults standardUserDefaults] setInteger:plus forKey:@"plus"];
+        plus = 0;
+    } else {
+        [self performSelector:@selector(checkpromile) withObject:nil afterDelay:0.1];
+        NSLog(@"Tijd is niet berekend, +1 uur, %i", plus);
+    }
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    NSArray *oldNotifications = [app scheduledLocalNotifications];
+    if ([oldNotifications count] > 0) {
+        [app cancelAllLocalNotifications];
+        
+  
+    
+    
+}
+}
+
+-(void) checkpromileland {
+    promile = [[NSUserDefaults standardUserDefaults] floatForKey:@"PromileKey"];
+    NSLog(@"Promilaantal = %f", promile);
+    plusfloat2= UrenFloat;
+    plus2 = plus2 + 1;
+    GewichtFloat = [_Gewicht floatValue];
+    GlazenFloat = [_StandaardGlazenString floatValue];
+    UrenFloat = [_AantalurenGeleden floatValue];
+    
+    float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (plus2 - 0.5) * (GewichtFloat *0.002);
+    
+    if (test < promileaantal2| test == promileaantal2) {
+        NSLog(@"_Tijd is berekend");
+        plus2 = plus2 - plusfloat2;
+        NSLog(@"_Plus - urenfloat is %i", plus2);
+        [[NSUserDefaults standardUserDefaults] setInteger:plus2 forKey:@"plus2"];
+        plus2 = 0;
+        
+        
+    } else {
+        [self performSelector:@selector(checkpromileland2) withObject:nil afterDelay:0.1];
+        NSLog(@"_Tijd is niet berekend, +1 uur, %i", plus2);
+    }
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    NSArray *oldNotifications = [app scheduledLocalNotifications];
+    if ([oldNotifications count] > 0) {
+        [app cancelAllLocalNotifications];
+        
+        
+        
+        
+    }
+}
+-(void) checkpromileland2 {
+    promile = [[NSUserDefaults standardUserDefaults] floatForKey:@"PromileKey"];
+    plusfloat2= UrenFloat;
+    plus2 = plus2 + 1;
+    GewichtFloat = [_Gewicht floatValue];
+    GlazenFloat = [_StandaardGlazenString floatValue];
+    UrenFloat = [_AantalurenGeleden floatValue];
+    
+    float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (plus2 - 0.5) * (GewichtFloat *0.002);
+    
+    if (test < promileaantal2 | test == promileaantal2) {
+        NSLog(@"_Tijd is berekend");
+        plus2 = plus2 - plusfloat2;
+        NSLog(@"_Plus - urenfloat is %i", plus2);
+        [[NSUserDefaults standardUserDefaults] setInteger:plus2 forKey:@"plus2"];
+        
+    } else {
+        [self performSelector:@selector(checkpromileland) withObject:nil afterDelay:0.1];
+        NSLog(@"_Tijd is niet berekend, +1 uur, %i", plus2);
+    }
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    NSArray *oldNotifications = [app scheduledLocalNotifications];
+    if ([oldNotifications count] > 0) {
+        [app cancelAllLocalNotifications];
+        
+        
+        
+        
+    }
 }
 
 

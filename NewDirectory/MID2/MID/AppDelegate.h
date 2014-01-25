@@ -13,6 +13,9 @@
     int date;
     int enable;
     
+    int date2;
+    
+    
     
 }
 

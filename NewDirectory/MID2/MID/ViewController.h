@@ -32,19 +32,28 @@
     IBOutlet UIWebView *webView;
     
     __weak IBOutlet UITextView *timeRestLabel;
-    
+    float promileaantal;
     
     float manvrouw;
     float bestuurderfloat;
     IBOutlet UITextView *Info;
     IBOutlet UIPickerView *pick;
-    
+    float promileaantal2;
     int date;
+    int date2;
+    
+    
+    float promile;
+    
     float GewichtFloat;
     float GlazenFloat;
     float UrenFloat;
     
     int plus;
+    int plusfloat;
+    
+    int plus2;
+    int plusfloat2;
     
     
     int *switchinteger;
