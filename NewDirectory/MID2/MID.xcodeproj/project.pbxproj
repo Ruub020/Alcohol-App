@@ -43,7 +43,6 @@
 		6F50E934188ECCCA0029DAAE /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E933188ECCCA0029DAAE /* 80.png */; };
 		6F50E936188ECCDE0029DAAE /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E935188ECCDE0029DAAE /* 58.png */; };
 		6F50E939188ECE260029DAAE /* DCModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F50E938188ECE260029DAAE /* DCModalSegue.m */; };
-		6F53882518918EAB0016E40E /* jawbone-up-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F53882418918EAB0016E40E /* jawbone-up-4.jpg */; };
 		6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */; };
 		6F6A69FA188A821700E9E4B9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A69F9188A821700E9E4B9 /* FirstViewController.m */; };
 		6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */; };
@@ -115,7 +114,6 @@
 		6F50E935188ECCDE0029DAAE /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
 		6F50E937188ECE260029DAAE /* DCModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCModalSegue.h; sourceTree = "<group>"; };
 		6F50E938188ECE260029DAAE /* DCModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCModalSegue.m; sourceTree = "<group>"; };
-		6F53882418918EAB0016E40E /* jawbone-up-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jawbone-up-4.jpg"; sourceTree = "<group>"; };
 		6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "iOS7-3,5inch.storyboard"; path = "../iOS7-3,5inch.storyboard"; sourceTree = "<group>"; };
 		6F6A69F8188A821700E9E4B9 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../FirstViewController.h; sourceTree = "<group>"; };
 		6F6A69F9188A821700E9E4B9 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../FirstViewController.m; sourceTree = "<group>"; };
@@ -283,7 +281,6 @@
 		6F6A69F7188A7BBB00E9E4B9 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				6F53882418918EAB0016E40E /* jawbone-up-4.jpg */,
 				6F50E935188ECCDE0029DAAE /* 58.png */,
 				6F50E933188ECCCA0029DAAE /* 80.png */,
 				6F50E931188ECCB70029DAAE /* 120.png */,
@@ -381,7 +378,6 @@
 				6FDCFFAF188BC05A00D0DCEE /* alcohollanden.plist in Resources */,
 				45570626188ABA4400E9AA10 /* settings.png in Resources */,
 				6F3529EC1889E19300CFB7EA /* InfoPlist.strings in Resources */,
-				6F53882518918EAB0016E40E /* jawbone-up-4.jpg in Resources */,
 				6F50E936188ECCDE0029DAAE /* 58.png in Resources */,
 				6FDCFFA7188B31E900D0DCEE /* landen.plist in Resources */,
 				6FC66C69188A9B2000671FCC /* iOS7-4inch.storyboard in Resources */,

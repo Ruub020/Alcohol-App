@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import <UPPlatformSDK/UPPlatformSDK.h>
 
 
 
