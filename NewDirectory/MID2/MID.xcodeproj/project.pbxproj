@@ -43,7 +43,6 @@
 		6F50E936188ECCDE0029DAAE /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E935188ECCDE0029DAAE /* 58.png */; };
 		6F50E939188ECE260029DAAE /* DCModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F50E938188ECE260029DAAE /* DCModalSegue.m */; };
 		6F53882518918EAB0016E40E /* jawbone-up-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F53882418918EAB0016E40E /* jawbone-up-4.jpg */; };
-		6F5388A118919E7B0016E40E /* UPPlatformSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5388A018919E7B0016E40E /* UPPlatformSDK.framework */; };
 		6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */; };
 		6F6A69FA188A821700E9E4B9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A69F9188A821700E9E4B9 /* FirstViewController.m */; };
 		6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */; };
@@ -115,7 +114,6 @@
 		6F50E937188ECE260029DAAE /* DCModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCModalSegue.h; sourceTree = "<group>"; };
 		6F50E938188ECE260029DAAE /* DCModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCModalSegue.m; sourceTree = "<group>"; };
 		6F53882418918EAB0016E40E /* jawbone-up-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jawbone-up-4.jpg"; sourceTree = "<group>"; };
-		6F5388A018919E7B0016E40E /* UPPlatformSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UPPlatformSDK.framework; sourceTree = "<group>"; };
 		6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "iOS7-3,5inch.storyboard"; path = "../iOS7-3,5inch.storyboard"; sourceTree = "<group>"; };
 		6F6A69F8188A821700E9E4B9 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../FirstViewController.h; sourceTree = "<group>"; };
 		6F6A69F9188A821700E9E4B9 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../FirstViewController.m; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */,
 				6F3529E41889E19300CFB7EA /* CoreGraphics.framework in Frameworks */,
 				6F3529E61889E19300CFB7EA /* UIKit.framework in Frameworks */,
-				6F5388A118919E7B0016E40E /* UPPlatformSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +167,6 @@
 				6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */,
 				6F2B0580188D876A00363471 /* d.pdf */,
 				6FDCFFA6188B31E900D0DCEE /* landen.plist */,
-				6F5388A018919E7B0016E40E /* UPPlatformSDK.framework */,
 				6F6A69F7188A7BBB00E9E4B9 /* images */,
 				6F6A69F2188A73C600E9E4B9 /* Storyboards */,
 				6F3529E71889E19300CFB7EA /* MID */,
