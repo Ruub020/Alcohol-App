@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
-#import <UPPlatformSDK/UPPlatformSDK.h>
+
 
 
 @interface ViewController : UIViewController <UIAlertViewDelegate> {
@@ -43,6 +43,9 @@
     float GewichtFloat;
     float GlazenFloat;
     float UrenFloat;
+    
+    int plus;
+    
     
     int *switchinteger;
     float test;

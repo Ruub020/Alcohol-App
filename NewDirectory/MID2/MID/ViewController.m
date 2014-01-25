@@ -486,6 +486,18 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
 
 }
 
+-(void) checkpromile {
+    
+    plus = plus + 1;
+    GewichtFloat = [_Gewicht floatValue];
+    GlazenFloat = [_StandaardGlazenString floatValue];
+    UrenFloat = [_AantalurenGeleden floatValue];
+    
+    float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
+    
+    
+}
+
 
 
 
