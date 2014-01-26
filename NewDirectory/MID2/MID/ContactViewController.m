@@ -35,6 +35,9 @@
     NSURL *Url = [NSURL URLWithString:@"https://twitter.com/TheMIDapp"];
     [[UIApplication sharedApplication] openURL:Url];
 }
+- (IBAction)ReviewOurApp:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/mid-may-i-drive/id804121901?ls=1&mt=8"]];
+}
 -(void)SendTweet
 {
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {

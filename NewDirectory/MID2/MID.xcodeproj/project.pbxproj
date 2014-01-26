@@ -14,6 +14,8 @@
 		457A18C0188FF1FC000FDC2A /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 457A18BF188FF1FC000FDC2A /* contacts.png */; };
 		457A18C71890106E000FDC2A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457A18C61890106E000FDC2A /* StoreKit.framework */; };
 		45A2E368188F092600077D89 /* SetPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A2E367188F092600077D89 /* SetPhoneNumberViewController.m */; };
+		45AA1AA5189418BF009385C7 /* NSString+WhatsAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AA1AA2189418BE009385C7 /* NSString+WhatsAppKit.m */; };
+		45AA1AA6189418BF009385C7 /* WhatsAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AA1AA4189418BE009385C7 /* WhatsAppKit.m */; };
 		6F0145861893F91A003BACA2 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F0145851893F91A003BACA2 /* sound.mp3 */; };
 		6F1C9A6E188C33C5003F59E3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1C9A6D188C33C5003F59E3 /* AudioToolbox.framework */; };
 		6F1C9A71188C49E9003F59E3 /* WhereAmIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C9A70188C49E9003F59E3 /* WhereAmIViewController.m */; };
@@ -76,6 +78,10 @@
 		457A18C61890106E000FDC2A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		45A2E366188F092600077D89 /* SetPhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPhoneNumberViewController.h; sourceTree = "<group>"; };
 		45A2E367188F092600077D89 /* SetPhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPhoneNumberViewController.m; sourceTree = "<group>"; };
+		45AA1AA1189418BE009385C7 /* NSString+WhatsAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WhatsAppKit.h"; sourceTree = "<group>"; };
+		45AA1AA2189418BE009385C7 /* NSString+WhatsAppKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WhatsAppKit.m"; sourceTree = "<group>"; };
+		45AA1AA3189418BE009385C7 /* WhatsAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatsAppKit.h; sourceTree = "<group>"; };
+		45AA1AA4189418BE009385C7 /* WhatsAppKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatsAppKit.m; sourceTree = "<group>"; };
 		6F0145851893F91A003BACA2 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		6F1C9A6D188C33C5003F59E3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6F1C9A6F188C49E9003F59E3 /* WhereAmIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhereAmIViewController.h; path = ../WhereAmIViewController.h; sourceTree = "<group>"; };
@@ -163,6 +169,10 @@
 		6F3529D51889E19100CFB7EA = {
 			isa = PBXGroup;
 			children = (
+				45AA1AA1189418BE009385C7 /* NSString+WhatsAppKit.h */,
+				45AA1AA2189418BE009385C7 /* NSString+WhatsAppKit.m */,
+				45AA1AA3189418BE009385C7 /* WhatsAppKit.h */,
+				45AA1AA4189418BE009385C7 /* WhatsAppKit.m */,
 				457A18BF188FF1FC000FDC2A /* contacts.png */,
 				6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */,
 				6F2B0580188D876A00363471 /* d.pdf */,
@@ -405,6 +415,8 @@
 			files = (
 				6F3529F81889E19300CFB7EA /* ViewController.m in Sources */,
 				6F3529F21889E19300CFB7EA /* AppDelegate.m in Sources */,
+				45AA1AA5189418BF009385C7 /* NSString+WhatsAppKit.m in Sources */,
+				45AA1AA6189418BF009385C7 /* WhatsAppKit.m in Sources */,
 				45A2E368188F092600077D89 /* SetPhoneNumberViewController.m in Sources */,
 				6FDCFFAD188BBF0A00D0DCEE /* LandenViewController.m in Sources */,
 				6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */,

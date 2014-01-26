@@ -7,6 +7,7 @@
 //
 
 #import "WhereAmIViewController.h"
+#import "WhatsAppKit.h"
 
 @interface WhereAmIViewController ()
 
@@ -62,10 +63,24 @@
     // Pass the selected object to the new view controller.
 }
 */
--(IBAction)gethelp:(id)sender {
-
-
-    NSString *strFromInt = [NSString stringWithFormat:@"%d",phonenumber];
+-(IBAction)gethelp:(id)sender
+{
+    UIActionSheet *Choosesource = [[UIActionSheet alloc] initWithTitle:@"Choose source" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"SMS",@"WhatsApp", nil];
+    [Choosesource showInView:self.view];
+    
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==0) {
+        [self sourceSMS];
+    }
+    if (buttonIndex==1) {
+        [self sourceWhatsapp];
+    }
+}
+-(void)sourceSMS
+{
+    NSString *strFromInt = [NSString stringWithFormat:@"%@",phonenumber];
     NSString *urlAddress = [NSString stringWithFormat:@"https://maps.google.com/maps?q=%f,%f",latitude, longitude];
     if(![MFMessageComposeViewController canSendText]) {
         UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device doesn't support SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -83,9 +98,20 @@
     
     // Present message view controller on screen
     [self presentViewController:messageController animated:YES completion:nil];
-    
 }
+-(void)sourceWhatsapp
+{
+    NSString *urlAddress = [NSString stringWithFormat:@"https://maps.google.com/maps?q=%f,%f",latitude, longitude];
+    NSString *message = [NSString stringWithFormat:@"I've had to much to drink. Could you pick me up? %@", urlAddress];
+    if ([WhatsAppKit isWhatsAppInstalled]) {
+        //Whatsapp is installed
+        [WhatsAppKit launchWhatsAppWithMessage:message];
 
+    }else{
+        UIAlertView *WhatsAppNotInstalledError = [[UIAlertView alloc] initWithTitle:@"Not Installed" message:@"WhatsApp is not installed on this device." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [WhatsAppNotInstalledError show];
+    }
+}
 
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
