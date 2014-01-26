@@ -284,7 +284,9 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (plus - 0.5) * (GewichtFloat *0.002);
     
     if (test < 0 | test == 0) {
-        NSLog(@"Tijd is berekend");
+        
+        plus = plus - plusfloat;
+        NSLog(@"Tijd is berekend, %i", plus);
         plus = plus - plusfloat;
         NSLog(@"Plus - urenfloat is %i", plus);
         [[NSUserDefaults standardUserDefaults] setInteger:plus forKey:@"plus"];
@@ -314,7 +316,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (plus - 0.5) * (GewichtFloat *0.002);
     
     if (test < 0 | test == 0) {
-        NSLog(@"Tijd is berekend");
+        NSLog(@"Tijd is berekend, %i", plus);
         plus = plus - plusfloat;
         NSLog(@"Plus - urenfloat is %i", plus);
         [[NSUserDefaults standardUserDefaults] setInteger:plus forKey:@"plus"];
@@ -347,7 +349,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (plus2 - 0.5) * (GewichtFloat *0.002);
     
     if (test < promileaantal2| test == promileaantal2) {
-        NSLog(@"_Tijd is berekend");
+        NSLog(@"_Tijd is berekend, %i", plus2);
         plus2 = plus2 - plusfloat2;
         NSLog(@"_Plus - urenfloat is %i", plus2);
         [[NSUserDefaults standardUserDefaults] setInteger:plus2 forKey:@"plus2"];
@@ -380,7 +382,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (plus2 - 0.5) * (GewichtFloat *0.002);
     
     if (test < promileaantal2 | test == promileaantal2) {
-        NSLog(@"_Tijd is berekend");
+        NSLog(@"_Tijd is berekend, %i", plus2);
         plus2 = plus2 - plusfloat2;
         NSLog(@"_Plus - urenfloat is %i", plus2);
         [[NSUserDefaults standardUserDefaults] setInteger:plus2 forKey:@"plus2"];
