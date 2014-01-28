@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Albania</key>
+	<array/>
+	<key>Algeria</key>
+	<string>0.1</string>
+	<key>Argentina</key>
+	<string>0.5</string>
+	<key>Armenia</key>
+	<string>0.4</string>
+	<key>Australia</key>
+	<string>0.5</string>
+	<key>Austria</key>
+	<string>0.5</string>
+	<key>Azerbaijan</key>
+	<string>0.0</string>
+	<key>Barbados</key>
+	<string>0.2</string>
+	<key>Belarus</key>
+	<string>0.29</string>
+	<key>Belgium</key>
+	<string>0.5</string>
+	<key>Bolivia</key>
+	<string>0.49</string>
+	<key>Bosnia and Herzegovina</key>
+	<string>0.3</string>
+	<key>Botswana</key>
+	<string>0.8</string>
+	<key>Brazil</key>
+	<string>0.0</string>
+	<key>Bulgaria</key>
+	<string></string>
+	<key>Cambodia</key>
+	<string></string>
+	<key>Canada</key>
+	<string></string>
+	<key>Chile</key>
+	<string>Canada</string>
+	<key>China</key>
+	<string></string>
+	<key>Colombia</key>
+	<string></string>
+	<key>Costa Rica</key>
+	<string></string>
+	<key>Croatia</key>
+	<string></string>
+	<key>Czech Republic</key>
+	<string></string>
+	<key>Denmark</key>
+	<string></string>
+	<key>Ecuador</key>
+	<string></string>
+	<key>El Salvador</key>
+	<string></string>
+	<key>Estonia</key>
+	<string></string>
+	<key>Ethiopia</key>
+	<string>Estonia</string>
+	<key>Finland</key>
+	<string></string>
+	<key>France</key>
+	<string></string>
+	<key>Georgia</key>
+	<string></string>
+	<key>Germany</key>
+	<string></string>
+	<key>Greece</key>
+	<string></string>
+	<key>Guatemala</key>
+	<string></string>
+	<key>Guyana</key>
+	<string></string>
+	<key>Honduras</key>
+	<string></string>
+	<key>Hungary</key>
+	<string></string>
+	<key>Iceland</key>
+	<string></string>
+	<key>India</key>
+	<string></string>
+	<key>Ireland</key>
+	<string></string>
+	<key>Israel</key>
+	<string></string>
+	<key>Italy</key>
+	<string></string>
+	<key>Japan</key>
+	<string></string>
+	<key>Kenya</key>
+	<string></string>
+	<key>Kyrgyzstan</key>
+	<string></string>
+	<key>Latvia</key>
+	<string></string>
+	<key>Lithuania</key>
+	<string></string>
+	<key>Luxembourg</key>
+	<string></string>
+	<key>Macedonia</key>
+	<string></string>
+	<key>Malaysia</key>
+	<string></string>
+	<key>Malta</key>
+	<string></string>
+	<key>Mauritius</key>
+	<string></string>
+	<key>Mexico</key>
+	<string></string>
+	<key>Moldova</key>
+	<string>Mexico</string>
+	<key>Mongolia</key>
+	<string></string>
+	<key>Montenegro</key>
+	<string></string>
+	<key>Nepal</key>
+	<string></string>
+	<key>The Netherlands</key>
+	<string></string>
+	<key>New Zealand</key>
+	<string></string>
+	<key>Nicaragua</key>
+	<string></string>
+	<key>Norway</key>
+	<string></string>
+	<key>Panama</key>
+	<string></string>
+	<key>Paraguay</key>
+	<string></string>
+	<key>Peru</key>
+	<string></string>
+	<key>Philippines</key>
+	<string></string>
+	<key>Poland</key>
+	<string></string>
+	<key>Portugal</key>
+	<string></string>
+	<key>Puerto Rico</key>
+	<string></string>
+	<key>Romania</key>
+	<string></string>
+	<key>Russia</key>
+	<string></string>
+	<key>Serbia</key>
+	<string></string>
+	<key>Singapore</key>
+	<string></string>
+	<key>Slovakia</key>
+	<string></string>
+	<key>Slovenia</key>
+	<string></string>
+	<key>South Africa</key>
+	<string></string>
+	<key>South Korea, Rep of</key>
+	<string></string>
+	<key>Spain</key>
+	<string></string>
+	<key>Suriname</key>
+	<string></string>
+	<key>Sweden</key>
+	<string></string>
+	<key>Switzerland</key>
+	<string></string>
+	<key>Tanzania</key>
+	<string>Switzerland</string>
+	<key>Thailand</key>
+	<string>Switzerland</string>
+	<key>Turkey</key>
+	<string></string>
+	<key>Turkmenistan</key>
+	<string></string>
+	<key>Uganda</key>
+	<string></string>
+	<key>United Kingdom</key>
+	<string></string>
+	<key>United States</key>
+	<string></string>
+	<key>Uruguay</key>
+	<string></string>
+	<key>Venezuela</key>
+	<string>Uruguay</string>
+	<key>Zimbabwe</key>
+	<string>Uruguay</string>
+	<key>New item - 10</key>
+	<string></string>
+	<key>New item - 11</key>
+	<string></string>
+</dict>
+</plist>
