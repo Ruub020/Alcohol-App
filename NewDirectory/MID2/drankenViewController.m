@@ -87,6 +87,14 @@
     percentage.text = @"";
     hoeveel.text = @"";
     
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Drink added"
+                          message:[NSString stringWithFormat:@"Added %i glasses.", hoeveelint]
+                          delegate:nil
+                          cancelButtonTitle:@"Dismiss"
+                          otherButtonTitles:nil];
+    [alert show];
+    
     
     
 }
