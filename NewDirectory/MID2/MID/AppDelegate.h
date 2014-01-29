@@ -14,7 +14,7 @@
     int enable;
     
     int date2;
-    
+    int preciesglazen;
     
     
 }

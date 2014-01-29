@@ -27,15 +27,26 @@
     NSString *hoeveelstring;
     
     
+    int total;
+    IBOutlet UILabel *label;
     
+    
+    
+    __weak IBOutlet UIButton *addbutton;
+    
+    __weak IBOutlet UIButton *donebutton;
+    __weak IBOutlet UITextView *textfield;
+    UIAlertView *alert2;
     
     
 }
 
 -(void) load;
 -(void) load2;
+-(void) load3;
 - (IBAction)done:(id)sender;
 - (IBAction)addone:(id)sender;
+- (IBAction)reset:(id)sender;
 
 
 @end

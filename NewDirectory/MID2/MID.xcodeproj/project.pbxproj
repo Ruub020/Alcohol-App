@@ -227,6 +227,10 @@
 			isa = PBXGroup;
 			children = (
 				6F0145851893F91A003BACA2 /* sound.mp3 */,
+				6F1CB67A18995DC300FD4447 /* drankenTableViewController.h */,
+				6F1CB67B18995DC300FD4447 /* drankenTableViewController.m */,
+				6F1CB67718995DB100FD4447 /* drankenViewController.h */,
+				6F1CB67818995DB100FD4447 /* drankenViewController.m */,
 				45A2E366188F092600077D89 /* SetPhoneNumberViewController.h */,
 				45A2E367188F092600077D89 /* SetPhoneNumberViewController.m */,
 				6F50E937188ECE260029DAAE /* DCModalSegue.h */,
@@ -300,10 +304,6 @@
 			isa = PBXGroup;
 			children = (
 				6F1CB67518995DA400FD4447 /* dranken.plist */,
-				6F1CB67A18995DC300FD4447 /* drankenTableViewController.h */,
-				6F1CB67B18995DC300FD4447 /* drankenTableViewController.m */,
-				6F1CB67718995DB100FD4447 /* drankenViewController.h */,
-				6F1CB67818995DB100FD4447 /* drankenViewController.m */,
 				6F50E935188ECCDE0029DAAE /* 58.png */,
 				6F50E933188ECCCA0029DAAE /* 80.png */,
 				6F50E931188ECCB70029DAAE /* 120.png */,

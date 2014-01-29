@@ -95,8 +95,8 @@
     enable = [[NSUserDefaults standardUserDefaults] integerForKey:@"aan"];
     date = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus"];
     date2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus2"];
-    
-    
+    preciesglazen = 0;
+    preciesglazen = [[NSUserDefaults standardUserDefaults] integerForKey:@"glazenprom"];
     
     if ( enable == 2) {
         
