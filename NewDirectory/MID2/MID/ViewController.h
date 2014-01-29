@@ -66,6 +66,9 @@
     float *perfectint;
     
     
+    int preciesglazen;
+    
+    
     int een;
     int twee;
     //Define The alert.

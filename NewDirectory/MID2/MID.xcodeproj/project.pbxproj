@@ -21,6 +21,9 @@
 		6F1C9A71188C49E9003F59E3 /* WhereAmIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1C9A70188C49E9003F59E3 /* WhereAmIViewController.m */; };
 		6F1C9A73188C4ABF003F59E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1C9A72188C4ABF003F59E3 /* MapKit.framework */; };
 		6F1C9A75188C525A003F59E3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1C9A74188C525A003F59E3 /* MessageUI.framework */; };
+		6F1CB67618995DA400FD4447 /* dranken.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F1CB67518995DA400FD4447 /* dranken.plist */; };
+		6F1CB67918995DB100FD4447 /* drankenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1CB67818995DB100FD4447 /* drankenViewController.m */; };
+		6F1CB67C18995DC300FD4447 /* drankenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1CB67B18995DC300FD4447 /* drankenTableViewController.m */; };
 		6F224C42188AB64100684AA9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F224C41188AB64100684AA9 /* CoreLocation.framework */; };
 		6F2B0581188D876A00363471 /* d.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6F2B0580188D876A00363471 /* d.pdf */; };
 		6F2B0584188D95C700363471 /* disclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B0583188D95C700363471 /* disclaimerViewController.m */; };
@@ -88,6 +91,11 @@
 		6F1C9A70188C49E9003F59E3 /* WhereAmIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhereAmIViewController.m; path = ../WhereAmIViewController.m; sourceTree = "<group>"; };
 		6F1C9A72188C4ABF003F59E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6F1C9A74188C525A003F59E3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6F1CB67518995DA400FD4447 /* dranken.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = dranken.plist; path = ../dranken.plist; sourceTree = "<group>"; };
+		6F1CB67718995DB100FD4447 /* drankenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = drankenViewController.h; path = ../drankenViewController.h; sourceTree = "<group>"; };
+		6F1CB67818995DB100FD4447 /* drankenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = drankenViewController.m; path = ../drankenViewController.m; sourceTree = "<group>"; };
+		6F1CB67A18995DC300FD4447 /* drankenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = drankenTableViewController.h; path = ../drankenTableViewController.h; sourceTree = "<group>"; };
+		6F1CB67B18995DC300FD4447 /* drankenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = drankenTableViewController.m; path = ../drankenTableViewController.m; sourceTree = "<group>"; };
 		6F224C41188AB64100684AA9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6F2B0580188D876A00363471 /* d.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = d.pdf; sourceTree = "<group>"; };
 		6F2B0582188D95C700363471 /* disclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = disclaimerViewController.h; path = ../disclaimerViewController.h; sourceTree = "<group>"; };
@@ -291,6 +299,11 @@
 		6F6A69F7188A7BBB00E9E4B9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6F1CB67518995DA400FD4447 /* dranken.plist */,
+				6F1CB67A18995DC300FD4447 /* drankenTableViewController.h */,
+				6F1CB67B18995DC300FD4447 /* drankenTableViewController.m */,
+				6F1CB67718995DB100FD4447 /* drankenViewController.h */,
+				6F1CB67818995DB100FD4447 /* drankenViewController.m */,
 				6F50E935188ECCDE0029DAAE /* 58.png */,
 				6F50E933188ECCCA0029DAAE /* 80.png */,
 				6F50E931188ECCB70029DAAE /* 120.png */,
@@ -382,6 +395,7 @@
 				6F0145861893F91A003BACA2 /* sound.mp3 in Resources */,
 				6FCFA14818953AA000DEBAA9 /* iOS7-4inch.storyboard in Resources */,
 				6F50E934188ECCCA0029DAAE /* 80.png in Resources */,
+				6F1CB67618995DA400FD4447 /* dranken.plist in Resources */,
 				6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */,
 				6F2B0581188D876A00363471 /* d.pdf in Resources */,
 				6F3529FA1889E19300CFB7EA /* Images.xcassets in Resources */,
@@ -417,9 +431,11 @@
 				6F3529F21889E19300CFB7EA /* AppDelegate.m in Sources */,
 				45AA1AA5189418BF009385C7 /* NSString+WhatsAppKit.m in Sources */,
 				45AA1AA6189418BF009385C7 /* WhatsAppKit.m in Sources */,
+				6F1CB67918995DB100FD4447 /* drankenViewController.m in Sources */,
 				45A2E368188F092600077D89 /* SetPhoneNumberViewController.m in Sources */,
 				6FDCFFAD188BBF0A00D0DCEE /* LandenViewController.m in Sources */,
 				6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */,
+				6F1CB67C18995DC300FD4447 /* drankenTableViewController.m in Sources */,
 				6F1C9A71188C49E9003F59E3 /* WhereAmIViewController.m in Sources */,
 				4504D471188EA101005CE027 /* ContactViewController.m in Sources */,
 				6F50E939188ECE260029DAAE /* DCModalSegue.m in Sources */,
