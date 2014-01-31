@@ -257,7 +257,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
 }
 -(void)TeveelOp
 {
- _infolabel.text = NSLocalizedString(@"Oh Oh! You have had too much to drink! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!");
+ _infolabel.text = NSLocalizedString(@"Oh Oh! You had too much to drink! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You had too much to drink! We strongly advise you to take a cab or let someone else drive!");
     
    
     _infolabel.selectable = NO;

@@ -111,7 +111,7 @@
             
                 
                 UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-                localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:date];
+                localNotification.fireDate = [[NSDate date] dateByAddingTimeInterval:date];
                 localNotification.alertBody = @"Check your BAC, we think it's 0!";
                 localNotification.timeZone = [NSTimeZone defaultTimeZone];
                 localNotification.soundName = @"sound.mp3";
@@ -133,7 +133,7 @@
                 
                 
                     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-                    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:date2];
+                    localNotification.fireDate = [[NSDate date] dateByAddingTimeInterval:date2];
                     localNotification.alertBody = @"Check your BAC, we think it's legal again!";
                     localNotification.timeZone = [NSTimeZone defaultTimeZone];
                     localNotification.soundName = @"sound.mp3";
@@ -179,8 +179,7 @@
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
-    date2 = 0;
-    date = 0;
+    
     [[NSUserDefaults standardUserDefaults] setInteger:date2 forKey:@"plus2"];
     [[NSUserDefaults standardUserDefaults] setInteger:date forKey:@"plus"];
     

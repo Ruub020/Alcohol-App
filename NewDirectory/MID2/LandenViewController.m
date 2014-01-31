@@ -45,7 +45,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self.navigationController popViewControllerAnimated:YES];
      UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     NSString *ChosenCountry = cell.textLabel.text;
@@ -53,7 +53,7 @@
     NSString *MessageBody = [NSString stringWithFormat:@"%@%@%@",@"You have set ", ChosenCountry, @" as default country"];
     
     
-    UIAlertView *Chosen = [[UIAlertView alloc] initWithTitle:nil message:MessageBody delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK",nil];
+    Chosen = [[UIAlertView alloc] initWithTitle:nil message:MessageBody delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
     [Chosen show];
     
     [[NSUserDefaults standardUserDefaults] setObject:ChosenCountry forKey:@"COUNTRY"];
@@ -64,6 +64,7 @@
     
     [[NSUserDefaults standardUserDefaults] setFloat:country forKey:@"CountryKey"];
     [[NSUserDefaults standardUserDefaults] setFloat:promile forKey:@"PromileKey"];
+    [self performSelector:@selector(test) withObject:nil afterDelay:1.5];
     
 
 }
@@ -147,5 +148,8 @@
 }
 
  */
+-(void) test {
+    [Chosen dismissWithClickedButtonIndex:0 animated:YES];
+}
 
 @end
