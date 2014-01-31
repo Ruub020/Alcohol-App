@@ -64,6 +64,18 @@
     StandaardGlazen.text = [NSString stringWithFormat:@"%i", preciesglazen];
     
     NSLog(@"promileaantal == %i", array2);
+    
+    urlimage11 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage1"];
+    urlimage22 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage2"];
+    urlimage33 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage3"];
+    urlimage44 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage4"];
+    urlimage55 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage5"];
+    urlimage66 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage6"];
+    urlimage77 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage7"];
+    urlimage88 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage8"];
+    urlimage99 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage9"];
+    urlimage00 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage0"];
+    NSLog(@"Test %@", urlimage22);
 
 //Download het gewicht
     [self DownloadGewicht];
@@ -203,6 +215,7 @@
     plus2 = 0;
     [self performSelector:@selector(checkpromile) withObject:nil afterDelay:0.001];
     [self performSelector:@selector(checkpromileland2) withObject:nil afterDelay:0.001];
+    
 
 }
 
@@ -227,6 +240,7 @@
 {
 #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
     self.view.backgroundColor = Rgb2UIColor(125, 239, 74);
+    
 }
 -(void)NiksOp
 {
@@ -239,6 +253,53 @@
     
     NSLog(@"+1, %i", een);
     whereami.alpha = 0;
+    int randomimages = rand() % 9;
+    switch (randomimages) {
+        case 0:
+            imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage00];
+
+            NSLog(@"Background set");
+            break;
+        case 1:
+            imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage11];
+            NSLog(@"Background set");
+            break;
+        case 2:
+        imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage22];
+            NSLog(@"Background set");
+            break;
+        case 3:
+         imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage33];
+            NSLog(@"Background set");
+            break;
+        case 4:
+           imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage44];
+            NSLog(@"Background set");
+            break;
+        case 5:
+imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage99];
+            NSLog(@"Background set");
+            break;
+        case 6:
+          imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage55];
+            NSLog(@"Background set");
+            break;
+        case 7:
+           imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage66];
+            NSLog(@"Background set");
+            break;
+        case 8:
+            imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage77];
+            NSLog(@"Background set");
+            break;
+        case 9:
+          imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage88];
+            NSLog(@"Background set");
+            break;
+            
+        default:
+            break;
+    }
 
 }
 -(void)GemiddeldOp
@@ -257,7 +318,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
 }
 -(void)TeveelOp
 {
- _infolabel.text = NSLocalizedString(@"Oh Oh! You have had too much to drink! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You have drunk too much! We strongly advise you to take a cab or let someone else drive!");
+ _infolabel.text = NSLocalizedString(@"Oh Oh! You had too much to drink! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You had too much to drink! We strongly advise you to take a cab or let someone else drive!");
     
    
     _infolabel.selectable = NO;

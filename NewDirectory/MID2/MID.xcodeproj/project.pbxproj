@@ -57,6 +57,7 @@
 		6FDCFFAD188BBF0A00D0DCEE /* LandenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCFFAC188BBF0A00D0DCEE /* LandenViewController.m */; };
 		6FDCFFAF188BC05A00D0DCEE /* alcohollanden.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */; };
 		6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */; };
+		6FE57CBE189C2EAC00C60D53 /* DownloadImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,8 @@
 		6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = alcohollanden.plist; sourceTree = "<group>"; };
 		6FDCFFB0188BEBB500D0DCEE /* BeginlandenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeginlandenViewController.h; path = ../BeginlandenViewController.h; sourceTree = "<group>"; };
 		6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeginlandenViewController.m; path = ../BeginlandenViewController.m; sourceTree = "<group>"; };
+		6FE57CBC189C2EAC00C60D53 /* DownloadImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadImagesViewController.h; sourceTree = "<group>"; };
+		6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadImagesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +229,8 @@
 		6F3529E71889E19300CFB7EA /* MID */ = {
 			isa = PBXGroup;
 			children = (
+				6FE57CBC189C2EAC00C60D53 /* DownloadImagesViewController.h */,
+				6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */,
 				6F0145851893F91A003BACA2 /* sound.mp3 */,
 				6F1CB67A18995DC300FD4447 /* drankenTableViewController.h */,
 				6F1CB67B18995DC300FD4447 /* drankenTableViewController.m */,
@@ -437,6 +442,7 @@
 				6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */,
 				6F1CB67C18995DC300FD4447 /* drankenTableViewController.m in Sources */,
 				6F1C9A71188C49E9003F59E3 /* WhereAmIViewController.m in Sources */,
+				6FE57CBE189C2EAC00C60D53 /* DownloadImagesViewController.m in Sources */,
 				4504D471188EA101005CE027 /* ContactViewController.m in Sources */,
 				6F50E939188ECE260029DAAE /* DCModalSegue.m in Sources */,
 				6F2B0584188D95C700363471 /* disclaimerViewController.m in Sources */,
@@ -561,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ingrid Damhuis (TG6ZN2H3TY)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/BoikeDamhuis/Alcohol-App/NewDirectory/MID2",
@@ -584,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ingrid Damhuis (TG6ZN2H3TY)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/BoikeDamhuis/Alcohol-App/NewDirectory/MID2",
@@ -608,6 +616,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MID.app/MID";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ingrid Damhuis (TG6ZN2H3TY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ingrid Damhuis (WFHRFN7WSK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -631,6 +641,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MID.app/MID";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ingrid Damhuis (TG6ZN2H3TY)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -129,9 +129,9 @@
     
     alert2 = [[UIAlertView alloc]
                           initWithTitle:@"Drink added"
-                          message:@"Added your glasses."
+                          message:nil
                           delegate:nil
-                          cancelButtonTitle:@"Dismiss"
+                          cancelButtonTitle:nil
                           otherButtonTitles:nil];
     [alert2 show];
     [self performSelector:@selector(load3) withObject:nil afterDelay:1.0];

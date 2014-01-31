@@ -11,6 +11,7 @@
 @interface LandenViewController : UITableViewController {
     float country;
     float promile;
+    UIAlertView *Chosen;
     
 }
 @property (strong, nonatomic) NSArray *content;

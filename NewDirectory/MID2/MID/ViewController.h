@@ -57,6 +57,7 @@
     int plusfloat2;
     
     
+    __weak IBOutlet UIImageView *imageviewdelay;
     int *switchinteger;
     float test;
     
@@ -73,6 +74,20 @@
     int twee;
     //Define The alert.
     IBOutlet UIAlertView *ReviewMe;
+    
+    
+
+    NSString *urlimage11;
+
+    NSString *urlimage22;
+    NSString *urlimage33;
+    NSString *urlimage44;
+    NSString *urlimage55;
+    NSString *urlimage66;
+    NSString *urlimage77;
+    NSString *urlimage88;
+    NSString *urlimage99;
+    NSString *urlimage00;
     
     
     
