@@ -11,8 +11,13 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MessageUI/MessageUI.h>
 
+<<<<<<< HEAD
 @interface WhereAmIViewController : ViewController <MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate, UIActionSheetDelegate> {
     
+=======
+@interface WhereAmIViewController : ViewController <MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate, UIActionSheetDelegate, MKMapViewDelegate> {
+    MKMapView *mapview;
+>>>>>>> 85b38f89b7a10bb6d4cbb55136cd07fc6a62da2f
     CLLocationCoordinate2D getLocation;
     CLLocationManager *locationManager;
     
