@@ -56,6 +56,14 @@
     progress = 0;
     status.text = @"Status: Downloading";
     button.enabled = NO;
+    
+    alert = [[UIAlertView alloc]
+                          initWithTitle:@"Downloading..."
+                          message:nil
+                          delegate:nil
+                          cancelButtonTitle:nil
+                          otherButtonTitles:nil];
+    [alert show];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -125,7 +133,7 @@
 -(void) Again {
     if (count < 10) {
         count = count +1;
-        url = [NSString stringWithFormat:@"http://moreapple.comze.com/bg%d.png", count];
+        url = [NSString stringWithFormat:@"http://moreapple.comze.com/bg%d.jpg", count];
         self.imageData = [[NSMutableData alloc]init];
         [NSURLConnection connectionWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]delegate:self];
         
@@ -135,6 +143,15 @@
         status.text = @"Status: All Downloaded";
         [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"countkey"];
         button.enabled = NO;
+        [alert dismissWithClickedButtonIndex:0 animated:NO];
+        
+        alert = [[UIAlertView alloc]
+                 initWithTitle:@"Tip"
+                 message:@"You have to restart MID!"
+                 delegate:nil
+                 cancelButtonTitle:@"OK"
+                 otherButtonTitles:nil];
+        [alert show];
     }
     
     

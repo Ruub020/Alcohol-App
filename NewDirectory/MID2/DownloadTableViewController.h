@@ -22,6 +22,7 @@
     NSString *urlimage8;
     NSString *urlimage9;
     NSString *urlimage0;
+    UIAlertView *alert;
     int switch2;
     int progress;
     __weak IBOutlet UILabel *status;

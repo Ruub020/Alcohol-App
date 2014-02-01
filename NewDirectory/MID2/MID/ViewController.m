@@ -400,6 +400,14 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
     if (switchkey2 == 1) {
         
+        [PromileLabel setBackgroundColor:[UIColor blackColor]];
+        PromileLabel.alpha = .5;
+        
+        [timeRestLabel setBackgroundColor:[UIColor blackColor]];
+        timeRestLabel.alpha = .5;
+        
+        [_infolabel setBackgroundColor:[UIColor blackColor]];
+        _infolabel.alpha = .5;
         
         int randomimages = rand() % 9;
         switch (randomimages) {
