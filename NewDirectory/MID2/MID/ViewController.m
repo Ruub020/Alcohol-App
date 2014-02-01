@@ -110,112 +110,118 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    plus = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus"];
-    plus2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus2"];
     
-    NSUserDefaults *promile = [NSUserDefaults standardUserDefaults];
-    promileaantal = [promile floatForKey:@"PromileKey"];
-    
-    [self DownloadGewicht];
-    [StandaardGlazen resignFirstResponder];
-    [AantalUren resignFirstResponder];
-    if ([StandaardGlazen.text, AantalUren.text length] > 0) {
+    if ([StandaardGlazen.text length] > 0 && [AantalUren.text length] >0) {
+        plus = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus"];
+        plus2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"plus2"];
         
+        NSUserDefaults *promile = [NSUserDefaults standardUserDefaults];
+        promileaantal = [promile floatForKey:@"PromileKey"];
         
-        _StandaardGlazenString = StandaardGlazen.text;
-        _AantalurenGeleden = AantalUren.text;
-        
-        GewichtFloat = [_Gewicht floatValue];
-        GlazenFloat = [_StandaardGlazenString floatValue];
-        UrenFloat = [_AantalurenGeleden floatValue];
-        
-        float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
-        
-        
-        NSString *PromileString = [NSString stringWithFormat:@"%f",test];
-        _Promile = PromileString;
-        
-        NSRange stringRange = {0, MIN([_Promile length], 4)};
-        stringRange = [_Promile rangeOfComposedCharacterSequencesForRange:stringRange];
-        NSString *shortString = [_Promile substringWithRange:stringRange];
-        
-        PromileLabel.text = shortString;
-        
-        
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:1.0];
-        [PromileLabel setAlpha:1];
-        [UIView commitAnimations];
-        
-        if (test < 0) {
-            PromileLabel.text=@"0";
-            [self NiksOp];
-            [self GroeneAchtergrond];
+        [self DownloadGewicht];
+        [StandaardGlazen resignFirstResponder];
+        [AantalUren resignFirstResponder];
+        if ([StandaardGlazen.text, AantalUren.text length] > 0) {
             
             
+            _StandaardGlazenString = StandaardGlazen.text;
+            _AantalurenGeleden = AantalUren.text;
             
-            NSLog(@"TEST IS NUL");
-        }
-        if (test == 0) {
+            GewichtFloat = [_Gewicht floatValue];
+            GlazenFloat = [_StandaardGlazenString floatValue];
+            UrenFloat = [_AantalurenGeleden floatValue];
             
-            promiletest = 1;
-            _infolabel.selectable = YES;
-            
-            
-            PromileLabel.text=@"0";
-            [self NiksOp];
-            [self GroeneAchtergrond];
-            
-            NSLog(@"TEST IS PRECIES NUL");
-            
-        }
-        if (test < promileaantal && test > 0) {
-            promiletest = 2;
-            _infolabel.selectable = YES;
-            
-            self.view.backgroundColor = [UIColor greenColor];
-            [self GemiddeldOp];
-            [self GroeneAchtergrond];
-            
-            NSLog(@"TEST IS LAGER DAN PROMILE");
+            float test = (GlazenFloat *10) / (GewichtFloat *manvrouw) - (UrenFloat - 0.5) * (GewichtFloat *0.002);
             
             
-        }
-        if (test > promileaantal) {
+            NSString *PromileString = [NSString stringWithFormat:@"%f",test];
+            _Promile = PromileString;
             
-            promiletest = 3;
-            _infolabel.selectable = YES;
+            NSRange stringRange = {0, MIN([_Promile length], 4)};
+            stringRange = [_Promile rangeOfComposedCharacterSequencesForRange:stringRange];
+            NSString *shortString = [_Promile substringWithRange:stringRange];
             
-            [self TeveelOp];
+            PromileLabel.text = shortString;
             
-            NSLog(@"TEST IS HOGER DAN PROMILE");
             
-#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
-            self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:1.0];
+            [PromileLabel setAlpha:1];
+            [UIView commitAnimations];
             
-            if ([_StandaardGlazenString isEqualToString:@"0"]) {
-                PromileLabel.text = @"0";
+            if (test < 0) {
+                PromileLabel.text=@"0";
+                [self NiksOp];
+                [self GroeneAchtergrond];
+                
+                
+                
+                NSLog(@"TEST IS NUL");
+            }
+            if (test == 0) {
+                
+                promiletest = 1;
+                _infolabel.selectable = YES;
+                
+                
+                PromileLabel.text=@"0";
+                [self NiksOp];
+                [self GroeneAchtergrond];
+                
+                NSLog(@"TEST IS PRECIES NUL");
                 
             }
-            
+            if (test < promileaantal && test > 0) {
+                promiletest = 2;
+                _infolabel.selectable = YES;
+                
+                self.view.backgroundColor = [UIColor greenColor];
+                [self GemiddeldOp];
+                [self GroeneAchtergrond];
+                
+                NSLog(@"TEST IS LAGER DAN PROMILE");
+                
+                
+            }
+            if (test > promileaantal) {
+                
+                promiletest = 3;
+                _infolabel.selectable = YES;
+                
+                [self TeveelOp];
+                
+                NSLog(@"TEST IS HOGER DAN PROMILE");
+                
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+                self.view.backgroundColor = Rgb2UIColor(225, 74, 74);
+                
+                if ([_StandaardGlazenString isEqualToString:@"0"]) {
+                    PromileLabel.text = @"0";
+                    
+                }
+                
+            }
         }
+        
+        promileaantal2 = promileaantal;
+        
+        if ([StandaardGlazen.text isEqualToString:@"0"]) {
+            PromileLabel.text = @"0";
+            [self NiksOp];
+        }
+        [StandaardGlazen resignFirstResponder];
+        [AantalUren resignFirstResponder];
+        
+        
+        
+        plus = 0;
+        plus2 = 0;
+        [self performSelector:@selector(checkpromile) withObject:nil afterDelay:0.001];
+        [self performSelector:@selector(checkpromileland2) withObject:nil afterDelay:0.001];
     }
     
-    promileaantal2 = promileaantal;
-    
-    if ([StandaardGlazen.text isEqualToString:@"0"]) {
-        PromileLabel.text = @"0";
-        [self NiksOp];
-    }
     [StandaardGlazen resignFirstResponder];
     [AantalUren resignFirstResponder];
-    
-    
-    
-    plus = 0;
-    plus2 = 0;
-    [self performSelector:@selector(checkpromile) withObject:nil afterDelay:0.001];
-    [self performSelector:@selector(checkpromileland2) withObject:nil afterDelay:0.001];
     
 
 }
