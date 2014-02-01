@@ -46,6 +46,12 @@
         button.enabled = NO;
         status.text = @"Status: All Downloaded";
     }
+    
+    if (count > 9) {
+        reset.enabled = YES;
+    } else {
+        reset.enabled = NO;
+    }
 
     
 }
@@ -56,7 +62,7 @@
     progress = 0;
     status.text = @"Status: Downloading";
     button.enabled = NO;
-    
+    reset.enabled = YES;
     alert = [[UIAlertView alloc]
                           initWithTitle:@"Downloading..."
                           message:nil
@@ -147,16 +153,22 @@
         
         alert = [[UIAlertView alloc]
                  initWithTitle:@"Tip"
-                 message:@"You have to restart MID!"
+                 message:@"MID can't use the images before you have quit the app.!"
                  delegate:nil
                  cancelButtonTitle:@"OK"
                  otherButtonTitles:nil];
         [alert show];
-    }
+        
+        
+      
+}
     
     
     
     
+}
+-(void) quit {
+    exit(0);
 }
 -(IBAction)set:(id)sender {
     NSLog(@"%@", urlimage2);
@@ -216,4 +228,34 @@
 }
 
 
+- (IBAction)Reset:(id)sender {
+    
+    count = 0;
+    [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"countkey"];
+    reset.enabled = NO;
+    button.enabled = YES;
+    
+    alert = [[UIAlertView alloc]
+             initWithTitle:@"Reset..."
+             message:nil
+             delegate:nil
+             cancelButtonTitle:nil
+             otherButtonTitles:nil];
+    [alert show];
+    [self performSelector:@selector(quit2) withObject:nil afterDelay:4];
+}
+-(void)quit2 {
+    [alert dismissWithClickedButtonIndex:0 animated:NO];
+    switch2 = 2;
+    [[NSUserDefaults standardUserDefaults] setInteger:switch2 forKey:@"switchkey2"];
+    _switch2.on = NO;
+    button.enabled = NO;
+    
+    NSString *folderPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSError *error = nil;
+    for (NSString *file in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:folderPath error:&error]) {
+        [[NSFileManager defaultManager] removeItemAtPath:[folderPath stringByAppendingPathComponent:file] error:&error];
+    }
+    status.text = @"Status: All deleted";
+}
 @end

@@ -77,6 +77,65 @@
     urlimage00 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage0"];
     switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
     NSLog(@"Test %@", urlimage22);
+    
+    
+    
+    if (switchkey2 == 1) {
+        
+        _infolabel.alpha = .6;
+        _infolabel.backgroundColor = [UIColor blackColor];
+        
+        int randomimages = rand() % 9;
+        switch (randomimages) {
+            case 0:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage00];
+                
+                NSLog(@"Background set");
+                break;
+            case 1:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage11];
+                NSLog(@"Background set");
+                break;
+            case 2:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage22];
+                NSLog(@"Background set");
+                break;
+            case 3:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage33];
+                NSLog(@"Background set");
+                break;
+            case 4:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage44];
+                NSLog(@"Background set");
+                break;
+            case 5:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage99];
+                NSLog(@"Background set");
+                break;
+            case 6:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage55];
+                NSLog(@"Background set");
+                break;
+            case 7:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage66];
+                NSLog(@"Background set");
+                break;
+            case 8:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage77];
+                NSLog(@"Background set");
+                break;
+            case 9:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage88];
+                NSLog(@"Background set");
+                break;
+                
+            default:
+                break;
+        }
+
+    }else {
+        imageviewdelay.image = [UIImage imageNamed:@""];
+    }
 
 //Download het gewicht
     [self DownloadGewicht];
@@ -147,6 +206,16 @@
             [UIView beginAnimations:nil context:NULL];
             [UIView setAnimationDuration:1.0];
             [PromileLabel setAlpha:1];
+            [UIView commitAnimations];
+            
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:1.0];
+            [_infolabel setAlpha:1];
+            [UIView commitAnimations];
+            
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:1.0];
+            [timeRestLabel setAlpha:1];
             [UIView commitAnimations];
             
             if (test < 0) {
@@ -253,6 +322,7 @@
 {
     _infolabel.text = NSLocalizedString(@"Well Done! Drive safely!", @"Well Done! Drive safely!");
     
+    
     _infolabel.selectable = NO;
     een = een +1;
     [[NSUserDefaults standardUserDefaults] setInteger:een forKey:@"Perfect"];
@@ -264,14 +334,17 @@
     switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
     if (switchkey2 == 1) {
         
+        #define green(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+        greenred.backgroundColor = green(125, 239, 74);
+        
         [PromileLabel setBackgroundColor:[UIColor blackColor]];
-        PromileLabel.alpha = .5;
+        PromileLabel.alpha = .6;
         
         [timeRestLabel setBackgroundColor:[UIColor blackColor]];
-        timeRestLabel.alpha = .5;
+        timeRestLabel.alpha = .0;
         
         [_infolabel setBackgroundColor:[UIColor blackColor]];
-        _infolabel.alpha = .7;
+        _infolabel.alpha = .6;
         
         int randomimages = rand() % 9;
         switch (randomimages) {
@@ -321,6 +394,20 @@
                 break;
         }
         
+    } else {
+        imageviewdelay.image = [UIImage imageNamed:@""];
+        
+        [PromileLabel setBackgroundColor:[UIColor clearColor]];
+        PromileLabel.alpha = 1;
+        
+        [timeRestLabel setBackgroundColor:[UIColor clearColor]];
+        timeRestLabel.alpha = 1;
+        
+        [_infolabel setBackgroundColor:[UIColor clearColor]];
+        _infolabel.alpha = 1;
+        
+        greenred.backgroundColor = [UIColor clearColor];
+
     }
 
 
@@ -330,25 +417,29 @@
 _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take caution, but for now you are free to drive...", @"Well, You sure did drunk something! Take caution, but for now you are free to drive...");
     
     _infolabel.selectable = NO;
-    een = een +1;
-    [[NSUserDefaults standardUserDefaults] setInteger:een forKey:@"Perfect"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-
     
-    NSLog(@"+1, %i", een);
-    whereami.alpha = 0;
+
+    een = een +1;
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:twee forKey:@"Tomuch"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSLog(@"+1 %i", twee);
     
     switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
     if (switchkey2 == 1) {
         
+        #define green(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+        greenred.backgroundColor = green(125, 239, 74);
+       
         [PromileLabel setBackgroundColor:[UIColor blackColor]];
-        PromileLabel.alpha = .5;
+        PromileLabel.alpha = .6;
         
         [timeRestLabel setBackgroundColor:[UIColor blackColor]];
-        timeRestLabel.alpha = .5;
+        timeRestLabel.alpha = .0;
         
         [_infolabel setBackgroundColor:[UIColor blackColor]];
-        _infolabel.alpha = .7;
+        _infolabel.alpha = .6;
         
         int randomimages = rand() % 9;
         switch (randomimages) {
@@ -398,14 +489,29 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
                 break;
         }
         
+    } else {
+        imageviewdelay.image = [UIImage imageNamed:@""];
+        [PromileLabel setBackgroundColor:[UIColor clearColor]];
+        PromileLabel.alpha = 1;
+        
+        [timeRestLabel setBackgroundColor:[UIColor clearColor]];
+        timeRestLabel.alpha = 1;
+        
+        [_infolabel setBackgroundColor:[UIColor clearColor]];
+        _infolabel.alpha = 1;
+        
+        greenred.backgroundColor = [UIColor clearColor];
+        
     }
+
 
     
 }
 -(void)TeveelOp
 {
  _infolabel.text = NSLocalizedString(@"Oh Oh! You had too much to drink! We strongly advise you to take a cab or let someone else drive!", @"Oh Oh! You had too much to drink! We strongly advise you to take a cab or let someone else drive!");
-    
+
+
    
     _infolabel.selectable = NO;
     
@@ -424,14 +530,17 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
     if (switchkey2 == 1) {
         
+        #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+        greenred.backgroundColor = Rgb2UIColor(225, 74, 74);
+        
         [PromileLabel setBackgroundColor:[UIColor blackColor]];
-        PromileLabel.alpha = .5;
+        PromileLabel.alpha = .6;
         
         [timeRestLabel setBackgroundColor:[UIColor blackColor]];
-        timeRestLabel.alpha = .5;
+        timeRestLabel.alpha = .6;
         
         [_infolabel setBackgroundColor:[UIColor blackColor]];
-        _infolabel.alpha = .7;
+        _infolabel.alpha = .6;
         
         int randomimages = rand() % 9;
         switch (randomimages) {
@@ -481,6 +590,19 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
                 break;
         }
         
+    } else {
+        imageviewdelay.image = [UIImage imageNamed:@""];
+        [PromileLabel setBackgroundColor:[UIColor clearColor]];
+        PromileLabel.alpha = 1;
+        
+        [timeRestLabel setBackgroundColor:[UIColor clearColor]];
+        timeRestLabel.alpha = 1;
+        
+        [_infolabel setBackgroundColor:[UIColor clearColor]];
+        _infolabel.alpha = 1;
+        
+        greenred.backgroundColor = [UIColor clearColor];
+
     }
     
 }

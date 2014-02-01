@@ -13,6 +13,10 @@
     CLLocationCoordinate2D coordinate;
     NSString *title;
     NSString *subtitle;
+    
+    CLLocationCoordinate2D Spain;
+    NSString *titleSpain;
+    NSString *subtitleSpain;
 }
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;

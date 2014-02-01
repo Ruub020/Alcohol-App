@@ -19,6 +19,7 @@
     NSString *urlimage5;
     NSString *urlimage6;
     NSString *urlimage7;
+    __weak IBOutlet UIButton *reset;
     NSString *urlimage8;
     NSString *urlimage9;
     NSString *urlimage0;
@@ -28,6 +29,7 @@
     __weak IBOutlet UILabel *status;
     __weak IBOutlet UIButton *button;
 }
+- (IBAction)Reset:(id)sender;
 @property (weak, nonatomic) IBOutlet UISwitch *switch2;
 - (IBAction)switch2:(id)sender;
 @property(nonatomic, strong) NSMutableData *imageData;

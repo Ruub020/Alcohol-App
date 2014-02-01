@@ -109,7 +109,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:urlimage0 forKey:@"urlimage0"];
 }
 -(void) Again {
-    if (count < 10) {
+    if (count > 9) {
         count = count +1;
         url = [NSString stringWithFormat:@"http://moreapple.comze.com/bg%d.png", count];
         self.imageData = [[NSMutableData alloc]init];

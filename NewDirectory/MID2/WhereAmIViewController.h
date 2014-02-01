@@ -12,12 +12,13 @@
 #import <MessageUI/MessageUI.h>
 
 @interface WhereAmIViewController : ViewController <MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate, UIActionSheetDelegate> {
-    MKMapView *mapview;
+    
     CLLocationCoordinate2D getLocation;
     CLLocationManager *locationManager;
     
     float latitude;
     float longitude;
+    __weak IBOutlet MKMapView *mapview;
     
     NSString *phonenumber;
     NSArray *nummer;

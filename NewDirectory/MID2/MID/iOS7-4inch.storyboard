@@ -165,11 +165,19 @@
                                     <segue destination="6OQ-4T-yHs" kind="modal" id="X8T-Ch-CRA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lm2-oP-nT6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="The test" id="apL-gd-PHB">
+                        <barButtonItem key="leftBarButtonItem" id="TGs-lC-hja"/>
                         <barButtonItem key="rightBarButtonItem" image="settings.png" id="MpD-4v-bfi">
                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -181,6 +189,7 @@
                         <outlet property="AantalUren" destination="0gK-3n-b64" id="Rkg-yd-Oq7"/>
                         <outlet property="PromileLabel" destination="hAG-oh-eDL" id="UxP-BY-X3p"/>
                         <outlet property="StandaardGlazen" destination="phR-Ft-XKp" id="Lyg-Ze-ntS"/>
+                        <outlet property="greenred" destination="Lm2-oP-nT6" id="XSv-LA-iLY"/>
                         <outlet property="imageviewdelay" destination="GeK-Bv-ocY" id="NmL-P2-s7Q"/>
                         <outlet property="infolabel" destination="LU2-kx-YOO" id="QoW-pR-LSK"/>
                         <outlet property="loader" destination="lh5-EB-Lw9" id="ZvP-TX-xLX"/>
@@ -247,8 +256,28 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zjd-yB-kmA">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WYk-8j-Qfr">
                                         <rect key="frame" x="0.0" y="123" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WYk-8j-Qfr" id="JJF-2r-WP7">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKY-hw-jZE">
+                                                    <rect key="frame" x="20" y="7" width="44" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="Reset:" destination="9eM-jQ-yu1" eventType="touchUpInside" id="5ba-8T-Uve"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zjd-yB-kmA">
+                                        <rect key="frame" x="0.0" y="167" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zjd-yB-kmA" id="93m-eI-UgB">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -274,13 +303,14 @@
                     <navigationItem key="navigationItem" id="jbe-Hl-7By"/>
                     <connections>
                         <outlet property="button" destination="lrS-G4-9tG" id="bUU-FD-gHg"/>
+                        <outlet property="reset" destination="BKY-hw-jZE" id="Ne0-dm-V6D"/>
                         <outlet property="status" destination="AJK-Jx-x5h" id="eA7-ZA-e9l"/>
                         <outlet property="switch2" destination="bcv-Yz-mHw" id="QBu-Jn-LwH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIi-Qx-gnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="1051"/>
+            <point key="canvasLocation" x="198" y="1051"/>
         </scene>
         <!--Dranken View Controller-->
         <scene sceneID="wbd-Qp-50P">
@@ -947,7 +977,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Where am I?" id="fOb-5C-zuL"/>
                     <connections>
-                        <outlet property="mapview" destination="naq-kC-UpA" id="pXC-zK-CR0"/>
+                        <outlet property="mapview" destination="naq-kC-UpA" id="RMj-dB-zw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyq-yF-0Pc" userLabel="First Responder" sceneMemberID="firstResponder"/>

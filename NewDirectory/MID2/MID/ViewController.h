@@ -19,6 +19,7 @@
     //Input
     __weak IBOutlet UIActivityIndicatorView *loader;
     
+    __weak IBOutlet UIButton *greenred;
     __weak IBOutlet UITextField *StandaardGlazen;
     __weak IBOutlet UITextField *AantalUren;
     //calc
