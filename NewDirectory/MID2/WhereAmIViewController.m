@@ -30,8 +30,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    mapview.showsUserLocation = YES;
+    mapview.showsUserLocation = true;
     mapview.mapType = MKMapTypeStandard;
+    mapview.delegate = self;
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -47,12 +48,13 @@
     phonenumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"NUMBER"];
     NSLog(@"Phonnumber: %@", phonenumber);
     
-    [self performSelector:@selector(check) withObject:nil afterDelay:3];
+    [self performSelector:@selector(check) withObject:nil afterDelay:1];
+    [NSTimer timerWithTimeInterval:0.2 target:self selector:@selector(check) userInfo:nil repeats:YES];
 }
 -(void)check {
     [mapview setZoomEnabled:YES];
     [mapview setScrollEnabled:YES];
-    
+
     MKCoordinateRegion region = { {0.0, 0.0 }, {0.0, 0.0 } };
     region.center.latitude = latitude;
     region.center.longitude = longitude;
