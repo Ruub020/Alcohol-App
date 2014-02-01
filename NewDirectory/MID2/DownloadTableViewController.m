@@ -123,7 +123,7 @@
     urlimage7 = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"bg7.jpeg"]];
     urlimage8 = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"bg8.jpeg"]];
     urlimage9 = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"bg9.jpeg"]];
-    urlimage0 = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"bg0.jpeg"]];
+    urlimage0 = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"bg10.jpeg"]];
     [[NSUserDefaults standardUserDefaults] setObject:urlimage1 forKey:@"urlimage1"];
     [[NSUserDefaults standardUserDefaults] setObject:urlimage2 forKey:@"urlimage2"];
     [[NSUserDefaults standardUserDefaults] setObject:urlimage3 forKey:@"urlimage3"];
