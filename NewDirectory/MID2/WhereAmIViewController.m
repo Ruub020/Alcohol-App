@@ -30,16 +30,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-<<<<<<< HEAD
     mapview.showsUserLocation=YES;
     mapview.mapType=MKMapTypeStandard;
     [mapview setZoomEnabled:YES];
     [mapview setScrollEnabled:YES];
-=======
-    mapview.showsUserLocation = true;
-    mapview.mapType = MKMapTypeStandard;
-    mapview.delegate = self;
->>>>>>> 85b38f89b7a10bb6d4cbb55136cd07fc6a62da2f
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -55,30 +49,13 @@
     phonenumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"NUMBER"];
     NSLog(@"Phonnumber: %@", phonenumber);
     
-    [self performSelector:@selector(check) withObject:nil afterDelay:1];
-    [NSTimer timerWithTimeInterval:0.2 target:self selector:@selector(check) userInfo:nil repeats:YES];
+    [self performSelector:@selector(check) withObject:nil afterDelay:3];
 }
 -(void)check {
     mapview.showsUserLocation=YES;
     mapview.mapType=MKMapTypeStandard;
     [mapview setZoomEnabled:YES];
     [mapview setScrollEnabled:YES];
-<<<<<<< HEAD
-=======
-
-    MKCoordinateRegion region = { {0.0, 0.0 }, {0.0, 0.0 } };
-    region.center.latitude = latitude;
-    region.center.longitude = longitude;
-    region.span.longitudeDelta = 0.01f;
-    region.span.latitudeDelta = 0.01f;
-    [mapview setRegion:region animated:YES];
-    
-    NewClass *ann = [[NewClass alloc] init];
-    ann.title = @"Your location";
-    ann.subtitle = @"You are here";
-    ann.coordinate = region.center;
-    [mapview addAnnotation:ann];
->>>>>>> 85b38f89b7a10bb6d4cbb55136cd07fc6a62da2f
 }
 - (void)didReceiveMemoryWarning
 {
