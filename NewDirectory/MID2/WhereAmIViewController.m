@@ -8,6 +8,7 @@
 
 #import "WhereAmIViewController.h"
 #import "WhatsAppKit.h"
+#import "NewClass.h"
 
 @interface WhereAmIViewController ()
 
@@ -45,8 +46,26 @@
     
     phonenumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"NUMBER"];
     NSLog(@"Phonnumber: %@", phonenumber);
+    
+    [self performSelector:@selector(check) withObject:nil afterDelay:3];
 }
-
+-(void)check {
+    [mapview setZoomEnabled:YES];
+    [mapview setScrollEnabled:YES];
+    
+    MKCoordinateRegion region = { {0.0, 0.0 }, {0.0, 0.0 } };
+    region.center.latitude = latitude;
+    region.center.longitude = longitude;
+    region.span.longitudeDelta = 0.01f;
+    region.span.latitudeDelta = 0.01f;
+    [mapview setRegion:region animated:YES];
+    
+    NewClass *ann = [[NewClass alloc] init];
+    ann.title = @"Your location";
+    ann.subtitle = @"You are here";
+    ann.coordinate = region.center;
+    [mapview addAnnotation:ann];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

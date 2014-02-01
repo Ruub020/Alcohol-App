@@ -258,74 +258,14 @@
     switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
     if (switchkey2 == 1) {
         
-    
-    int randomimages = rand() % 9;
-    switch (randomimages) {
-        case 0:
-            imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage00];
-
-            NSLog(@"Background set");
-            break;
-        case 1:
-            imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage11];
-            NSLog(@"Background set");
-            break;
-        case 2:
-        imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage22];
-            NSLog(@"Background set");
-            break;
-        case 3:
-         imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage33];
-            NSLog(@"Background set");
-            break;
-        case 4:
-           imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage44];
-            NSLog(@"Background set");
-            break;
-        case 5:
-imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage99];
-            NSLog(@"Background set");
-            break;
-        case 6:
-          imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage55];
-            NSLog(@"Background set");
-            break;
-        case 7:
-           imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage66];
-            NSLog(@"Background set");
-            break;
-        case 8:
-            imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage77];
-            NSLog(@"Background set");
-            break;
-        case 9:
-          imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage88];
-            NSLog(@"Background set");
-            break;
-            
-        default:
-            break;
-    }
+        [PromileLabel setBackgroundColor:[UIColor blackColor]];
+        PromileLabel.alpha = .5;
         
-    }
-
-}
--(void)GemiddeldOp
-{
-_infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take caution, but for now you are free to drive...", @"Well, You sure did drunk something! Take caution, but for now you are free to drive...");
-    
-    _infolabel.selectable = NO;
-    een = een +1;
-    [[NSUserDefaults standardUserDefaults] setInteger:een forKey:@"Perfect"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-
-    
-    NSLog(@"+1, %i", een);
-    whereami.alpha = 0;
-    
-    switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
-    if (switchkey2 == 1) {
+        [timeRestLabel setBackgroundColor:[UIColor blackColor]];
+        timeRestLabel.alpha = .5;
         
+        [_infolabel setBackgroundColor:[UIColor blackColor]];
+        _infolabel.alpha = .7;
         
         int randomimages = rand() % 9;
         switch (randomimages) {
@@ -376,6 +316,84 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
         }
         
     }
+
+
+}
+-(void)GemiddeldOp
+{
+_infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take caution, but for now you are free to drive...", @"Well, You sure did drunk something! Take caution, but for now you are free to drive...");
+    
+    _infolabel.selectable = NO;
+    een = een +1;
+    [[NSUserDefaults standardUserDefaults] setInteger:een forKey:@"Perfect"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    
+    NSLog(@"+1, %i", een);
+    whereami.alpha = 0;
+    
+    switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
+    if (switchkey2 == 1) {
+        
+        [PromileLabel setBackgroundColor:[UIColor blackColor]];
+        PromileLabel.alpha = .5;
+        
+        [timeRestLabel setBackgroundColor:[UIColor blackColor]];
+        timeRestLabel.alpha = .5;
+        
+        [_infolabel setBackgroundColor:[UIColor blackColor]];
+        _infolabel.alpha = .7;
+        
+        int randomimages = rand() % 9;
+        switch (randomimages) {
+            case 0:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage00];
+                
+                NSLog(@"Background set");
+                break;
+            case 1:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage11];
+                NSLog(@"Background set");
+                break;
+            case 2:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage22];
+                NSLog(@"Background set");
+                break;
+            case 3:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage33];
+                NSLog(@"Background set");
+                break;
+            case 4:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage44];
+                NSLog(@"Background set");
+                break;
+            case 5:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage99];
+                NSLog(@"Background set");
+                break;
+            case 6:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage55];
+                NSLog(@"Background set");
+                break;
+            case 7:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage66];
+                NSLog(@"Background set");
+                break;
+            case 8:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage77];
+                NSLog(@"Background set");
+                break;
+            case 9:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage88];
+                NSLog(@"Background set");
+                break;
+                
+            default:
+                break;
+        }
+        
+    }
+
     
 }
 -(void)TeveelOp
@@ -407,7 +425,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
         timeRestLabel.alpha = .5;
         
         [_infolabel setBackgroundColor:[UIColor blackColor]];
-        _infolabel.alpha = .5;
+        _infolabel.alpha = .7;
         
         int randomimages = rand() % 9;
         switch (randomimages) {

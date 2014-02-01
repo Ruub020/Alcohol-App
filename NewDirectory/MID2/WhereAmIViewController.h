@@ -21,9 +21,17 @@
     
     NSString *phonenumber;
     NSArray *nummer;
+    
+    CLLocationCoordinate2D coordinate;
+    NSString *title;
+    NSString *subtitle;
 
 }
 @property (weak, nonatomic) IBOutlet MKMapView *mapview;
 -(IBAction)gethelp:(id)sender;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
+
 
 @end
