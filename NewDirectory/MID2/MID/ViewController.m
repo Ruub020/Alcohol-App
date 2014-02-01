@@ -75,6 +75,7 @@
     urlimage88 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage8"];
     urlimage99 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage9"];
     urlimage00 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage0"];
+    switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
     NSLog(@"Test %@", urlimage22);
 
 //Download het gewicht
@@ -253,6 +254,11 @@
     
     NSLog(@"+1, %i", een);
     whereami.alpha = 0;
+    
+    switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
+    if (switchkey2 == 1) {
+        
+    
     int randomimages = rand() % 9;
     switch (randomimages) {
         case 0:
@@ -300,6 +306,8 @@ imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage99];
         default:
             break;
     }
+        
+    }
 
 }
 -(void)GemiddeldOp
@@ -314,6 +322,60 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     
     NSLog(@"+1, %i", een);
     whereami.alpha = 0;
+    
+    switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
+    if (switchkey2 == 1) {
+        
+        
+        int randomimages = rand() % 9;
+        switch (randomimages) {
+            case 0:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage00];
+                
+                NSLog(@"Background set");
+                break;
+            case 1:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage11];
+                NSLog(@"Background set");
+                break;
+            case 2:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage22];
+                NSLog(@"Background set");
+                break;
+            case 3:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage33];
+                NSLog(@"Background set");
+                break;
+            case 4:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage44];
+                NSLog(@"Background set");
+                break;
+            case 5:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage99];
+                NSLog(@"Background set");
+                break;
+            case 6:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage55];
+                NSLog(@"Background set");
+                break;
+            case 7:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage66];
+                NSLog(@"Background set");
+                break;
+            case 8:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage77];
+                NSLog(@"Background set");
+                break;
+            case 9:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage88];
+                NSLog(@"Background set");
+                break;
+                
+            default:
+                break;
+        }
+        
+    }
     
 }
 -(void)TeveelOp
@@ -335,10 +397,64 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     
     NSLog(@"+1 %i", twee);
     
+    switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
+    if (switchkey2 == 1) {
+        
+        
+        int randomimages = rand() % 9;
+        switch (randomimages) {
+            case 0:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage00];
+                
+                NSLog(@"Background set");
+                break;
+            case 1:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage11];
+                NSLog(@"Background set");
+                break;
+            case 2:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage22];
+                NSLog(@"Background set");
+                break;
+            case 3:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage33];
+                NSLog(@"Background set");
+                break;
+            case 4:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage44];
+                NSLog(@"Background set");
+                break;
+            case 5:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage99];
+                NSLog(@"Background set");
+                break;
+            case 6:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage55];
+                NSLog(@"Background set");
+                break;
+            case 7:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage66];
+                NSLog(@"Background set");
+                break;
+            case 8:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage77];
+                NSLog(@"Background set");
+                break;
+            case 9:
+                imageviewdelay.image = [UIImage imageWithContentsOfFile:urlimage88];
+                NSLog(@"Background set");
+                break;
+                
+            default:
+                break;
+        }
+        
+    }
+    
 }
 
 -(void)awakeFromNib {
-    
+    switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
 }
 
 

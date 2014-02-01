@@ -1,14 +1,14 @@
 //
-//  DownloadImagesViewController.h
+//  DownloadTableViewController.h
 //  MID
 //
-//  Created by Boike Damhuis on 31-01-14.
+//  Created by Boike Damhuis on 01-02-14.
 //  Copyright (c) 2014 Cawwi Development. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface DownloadImagesViewController : ViewController {
+@interface DownloadTableViewController : UITableViewController {
     int count;
     NSString *url;
     NSString *urlimage;
@@ -24,6 +24,8 @@
     NSString *urlimage0;
     int switch2;
     int progress;
+    __weak IBOutlet UILabel *status;
+    __weak IBOutlet UIButton *button;
 }
 @property (weak, nonatomic) IBOutlet UISwitch *switch2;
 - (IBAction)switch2:(id)sender;
@@ -37,3 +39,5 @@
 -(IBAction)download:(id)sender;
 -(IBAction)set:(id)sender;
 @end
+
+

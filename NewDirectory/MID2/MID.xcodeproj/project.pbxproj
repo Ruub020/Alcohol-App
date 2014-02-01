@@ -58,6 +58,7 @@
 		6FDCFFAF188BC05A00D0DCEE /* alcohollanden.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */; };
 		6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */; };
 		6FE57CBE189C2EAC00C60D53 /* DownloadImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */; };
+		6FE57CC1189CED4300C60D53 /* DownloadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CC0189CED4300C60D53 /* DownloadTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeginlandenViewController.m; path = ../BeginlandenViewController.m; sourceTree = "<group>"; };
 		6FE57CBC189C2EAC00C60D53 /* DownloadImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadImagesViewController.h; sourceTree = "<group>"; };
 		6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadImagesViewController.m; sourceTree = "<group>"; };
+		6FE57CBF189CED4300C60D53 /* DownloadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadTableViewController.h; path = ../DownloadTableViewController.h; sourceTree = "<group>"; };
+		6FE57CC0189CED4300C60D53 /* DownloadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadTableViewController.m; path = ../DownloadTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +232,8 @@
 		6F3529E71889E19300CFB7EA /* MID */ = {
 			isa = PBXGroup;
 			children = (
+				6FE57CBF189CED4300C60D53 /* DownloadTableViewController.h */,
+				6FE57CC0189CED4300C60D53 /* DownloadTableViewController.m */,
 				6FE57CBC189C2EAC00C60D53 /* DownloadImagesViewController.h */,
 				6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */,
 				6F0145851893F91A003BACA2 /* sound.mp3 */,
@@ -432,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FE57CC1189CED4300C60D53 /* DownloadTableViewController.m in Sources */,
 				6F3529F81889E19300CFB7EA /* ViewController.m in Sources */,
 				6F3529F21889E19300CFB7EA /* AppDelegate.m in Sources */,
 				45AA1AA5189418BF009385C7 /* NSString+WhatsAppKit.m in Sources */,

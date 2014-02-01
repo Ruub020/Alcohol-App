@@ -43,7 +43,7 @@
     int date;
     int date2;
     
-    
+    int switchkey2;
     float promile;
     
     float GewichtFloat;

@@ -1,18 +1,18 @@
 //
-//  DownloadImagesViewController.m
+//  DownloadTableViewController.m
 //  MID
 //
-//  Created by Boike Damhuis on 31-01-14.
+//  Created by Boike Damhuis on 01-02-14.
 //  Copyright (c) 2014 Cawwi Development. All rights reserved.
 //
 
-#import "DownloadImagesViewController.h"
+#import "DownloadTableViewController.h"
 
-@interface DownloadImagesViewController ()
+@interface DownloadTableViewController ()
 
 @end
 
-@implementation DownloadImagesViewController
+@implementation DownloadTableViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,20 +30,32 @@
     _imageView.image = [UIImage imageNamed:urlimage];
     count = -1;
     switch2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
+    count = [[NSUserDefaults standardUserDefaults] integerForKey:@"countkey"];
     if (switch2 == 1) {
         _switch2.on = YES;
         
+        if (count == 10 | count >9) {
+            button.enabled = NO;
+            status.text = @"Status: All Downloaded";
+        } else {
+            button.enabled = YES;
+        }
         
     } else {
         _switch2.on = NO;
+        button.enabled = NO;
+        status.text = @"Status: All Downloaded";
     }
 
+    
 }
 -(IBAction)download:(id)sender {
-
+    
     [self Again];
     _imageView.image = [UIImage imageNamed:@"../CF5B8833-CA7C-45FF-8873-25FB2FA9364C/Documents/bg2.jpeg"];
     progress = 0;
+    status.text = @"Status: Downloading";
+    button.enabled = NO;
 }
 - (void)didReceiveMemoryWarning
 {
@@ -65,6 +77,7 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     NSLog(@"didFailWithError");
+    status.text = @"Status: Error";
 }
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
@@ -107,6 +120,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:urlimage8 forKey:@"urlimage8"];
     [[NSUserDefaults standardUserDefaults] setObject:urlimage9 forKey:@"urlimage9"];
     [[NSUserDefaults standardUserDefaults] setObject:urlimage0 forKey:@"urlimage0"];
+    
 }
 -(void) Again {
     if (count < 10) {
@@ -114,10 +128,17 @@
         url = [NSString stringWithFormat:@"http://moreapple.comze.com/bg%d.png", count];
         self.imageData = [[NSMutableData alloc]init];
         [NSURLConnection connectionWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]delegate:self];
+        
+        
+    }
+    if (count > 9) {
+        status.text = @"Status: All Downloaded";
+        [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"countkey"];
+        button.enabled = NO;
     }
     
     
-  
+    
     
 }
 -(IBAction)set:(id)sender {
@@ -135,8 +156,18 @@
     urlimage8 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage8"];
     urlimage9 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage9"];
     urlimage0 = [[NSUserDefaults standardUserDefaults] objectForKey:@"urlimage0"];
-     switch2  =  [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
-    NSLog(@"%i", switch2);
+    switch2  =  [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
+    count = [[NSUserDefaults standardUserDefaults] integerForKey:@"countkey"];
+    
+    if (count > 9) {
+        status.text = @"Status: All Downloaded";
+        [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"countkey"];
+        button.enabled = NO;
+        
+        NSLog(@">10");
+    }
+    
+    NSLog(@"%i", count);
     NSLog(@"Awake");
     NSLog(@"Urlimage is: %@", urlimage);
 }
@@ -146,13 +177,26 @@
         switch2 = 1;
         NSLog(@"ON");
         [[NSUserDefaults standardUserDefaults] setInteger:switch2 forKey:@"switchkey2"];
+        if (count == 10 | count >9) {
+            button.enabled = NO;
+            status.text = @"Status: All Downloaded";
+        } else {
+            button.enabled = YES;
+        }
+
     } else {
         switch2 = 2;
         NSLog(@"OFF");
         [[NSUserDefaults standardUserDefaults] setInteger:switch2 forKey:@"switchkey2"];
+        
+        button.enabled = NO;
+      
+
     }
     
     [[NSUserDefaults standardUserDefaults] setInteger:switch2 forKey:@"switchkey2"];
-  
+    
 }
+
+
 @end
