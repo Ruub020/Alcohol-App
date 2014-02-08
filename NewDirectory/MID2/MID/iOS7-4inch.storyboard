@@ -1010,7 +1010,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Extra" id="Ien-5x-3rt">
+                            <tableViewSection headerTitle="Information" id="Ien-5x-3rt">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="nT9-3F-MFW">
                                         <rect key="frame" x="0.0" y="727" width="320" height="44"/>

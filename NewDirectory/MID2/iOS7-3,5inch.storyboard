@@ -747,7 +747,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Extra" id="GDy-Fe-kca">
+                            <tableViewSection headerTitle="Information" id="GDy-Fe-kca">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="POg-Ue-ylr">
                                         <rect key="frame" x="0.0" y="727" width="320" height="44"/>
