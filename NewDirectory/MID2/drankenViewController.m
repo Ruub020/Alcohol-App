@@ -30,6 +30,9 @@
     
     textfield.editable = NO;
     textfield.selectable = NO;
+    
+    
+    add.enabled = NO;
 
 }
 
