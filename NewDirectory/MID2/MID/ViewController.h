@@ -79,7 +79,7 @@
     float *perfectint;
     
     
-    int preciesglazen;
+    float preciesglazen;
     
     
     int een;

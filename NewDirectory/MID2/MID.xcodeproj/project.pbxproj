@@ -48,6 +48,13 @@
 		6F50E934188ECCCA0029DAAE /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E933188ECCCA0029DAAE /* 80.png */; };
 		6F50E936188ECCDE0029DAAE /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50E935188ECCDE0029DAAE /* 58.png */; };
 		6F50E939188ECE260029DAAE /* DCModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F50E938188ECE260029DAAE /* DCModalSegue.m */; };
+		6F59639818A6602900710E7D /* beer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F59639218A6602900710E7D /* beer.jpg */; };
+		6F59639918A6602900710E7D /* beer6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F59639318A6602900710E7D /* beer6.jpg */; };
+		6F59639A18A6602900710E7D /* beer5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F59639418A6602900710E7D /* beer5.jpg */; };
+		6F59639B18A6602900710E7D /* beer4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F59639518A6602900710E7D /* beer4.jpg */; };
+		6F59639C18A6602900710E7D /* beer3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F59639618A6602900710E7D /* beer3.jpg */; };
+		6F59639D18A6602900710E7D /* beer2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F59639718A6602900710E7D /* beer2.jpg */; };
+		6F59639F18A6632200710E7D /* beer7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F59639E18A6632200710E7D /* beer7.jpg */; };
 		6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */; };
 		6F6A69FA188A821700E9E4B9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A69F9188A821700E9E4B9 /* FirstViewController.m */; };
 		6F6A6A05188A923D00E9E4B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6A6A04188A923D00E9E4B9 /* SystemConfiguration.framework */; };
@@ -132,6 +139,13 @@
 		6F50E935188ECCDE0029DAAE /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
 		6F50E937188ECE260029DAAE /* DCModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCModalSegue.h; sourceTree = "<group>"; };
 		6F50E938188ECE260029DAAE /* DCModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCModalSegue.m; sourceTree = "<group>"; };
+		6F59639218A6602900710E7D /* beer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer.jpg; sourceTree = "<group>"; };
+		6F59639318A6602900710E7D /* beer6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer6.jpg; sourceTree = "<group>"; };
+		6F59639418A6602900710E7D /* beer5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer5.jpg; sourceTree = "<group>"; };
+		6F59639518A6602900710E7D /* beer4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer4.jpg; sourceTree = "<group>"; };
+		6F59639618A6602900710E7D /* beer3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer3.jpg; sourceTree = "<group>"; };
+		6F59639718A6602900710E7D /* beer2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer2.jpg; sourceTree = "<group>"; };
+		6F59639E18A6632200710E7D /* beer7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer7.jpg; sourceTree = "<group>"; };
 		6F6A69F3188A740300E9E4B9 /* iOS7-3,5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "iOS7-3,5inch.storyboard"; path = "../iOS7-3,5inch.storyboard"; sourceTree = "<group>"; };
 		6F6A69F8188A821700E9E4B9 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../FirstViewController.h; sourceTree = "<group>"; };
 		6F6A69F9188A821700E9E4B9 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../FirstViewController.m; sourceTree = "<group>"; };
@@ -323,6 +337,13 @@
 		6F6A69F7188A7BBB00E9E4B9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6F59639218A6602900710E7D /* beer.jpg */,
+				6F59639318A6602900710E7D /* beer6.jpg */,
+				6F59639418A6602900710E7D /* beer5.jpg */,
+				6F59639518A6602900710E7D /* beer4.jpg */,
+				6F59639618A6602900710E7D /* beer3.jpg */,
+				6F59639718A6602900710E7D /* beer2.jpg */,
+				6F59639E18A6632200710E7D /* beer7.jpg */,
 				6F1CB67518995DA400FD4447 /* dranken.plist */,
 				6F50E935188ECCDE0029DAAE /* 58.png */,
 				6F50E933188ECCCA0029DAAE /* 80.png */,
@@ -412,9 +433,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F59639B18A6602900710E7D /* beer4.jpg in Resources */,
+				6F59639D18A6602900710E7D /* beer2.jpg in Resources */,
 				6F0145861893F91A003BACA2 /* sound.mp3 in Resources */,
 				6FCFA14818953AA000DEBAA9 /* iOS7-4inch.storyboard in Resources */,
 				6F50E934188ECCCA0029DAAE /* 80.png in Resources */,
+				6F59639A18A6602900710E7D /* beer5.jpg in Resources */,
+				6F59639C18A6602900710E7D /* beer3.jpg in Resources */,
 				6F1CB67618995DA400FD4447 /* dranken.plist in Resources */,
 				6F6A69F4188A740300E9E4B9 /* iOS7-3,5inch.storyboard in Resources */,
 				6F2B0581188D876A00363471 /* d.pdf in Resources */,
@@ -423,10 +448,13 @@
 				6FDCFFAF188BC05A00D0DCEE /* alcohollanden.plist in Resources */,
 				45570626188ABA4400E9AA10 /* settings.png in Resources */,
 				6F3529EC1889E19300CFB7EA /* InfoPlist.strings in Resources */,
+				6F59639918A6602900710E7D /* beer6.jpg in Resources */,
 				6F50E936188ECCDE0029DAAE /* 58.png in Resources */,
 				6FDCFFA7188B31E900D0DCEE /* landen.plist in Resources */,
+				6F59639818A6602900710E7D /* beer.jpg in Resources */,
 				6F50E932188ECCB70029DAAE /* 120.png in Resources */,
 				6F50E930188ECA240029DAAE /* blauw.png in Resources */,
+				6F59639F18A6632200710E7D /* beer7.jpg in Resources */,
 				6F50E92B188EC8650029DAAE /* splash25.png in Resources */,
 				457A18C0188FF1FC000FDC2A /* contacts.png in Resources */,
 			);

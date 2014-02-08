@@ -32,8 +32,8 @@
     [super viewDidLoad];
     
     
-    preciesglazen = [[NSUserDefaults standardUserDefaults] integerForKey:@"glazenprom"];
-    NSLog(@"Preciesglazen is %i", preciesglazen);
+    preciesglazen = [[NSUserDefaults standardUserDefaults] floatForKey:@"glazenprom"];
+    NSLog(@"Preciesglazen is %f", preciesglazen);
     #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
     loader.hidden=YES;
     self.view.backgroundColor = Rgb2UIColor(83, 152, 255);
@@ -65,8 +65,11 @@
     twee = [[NSUserDefaults standardUserDefaults] integerForKey:@"Tomuch"];
     een = [[NSUserDefaults standardUserDefaults] integerForKey:@"Perfect"];
     
-    preciesglazen = [[NSUserDefaults standardUserDefaults] integerForKey:@"glazenprom"];
-    StandaardGlazen.text = [NSString stringWithFormat:@"%i", preciesglazen];
+    preciesglazen = [[NSUserDefaults standardUserDefaults] floatForKey:@"glazenprom"];
+    
+    preciesglazen = (preciesglazen * 100.0 ) / 100.0;
+    
+    StandaardGlazen.text = [NSString stringWithFormat:@"%.0f", preciesglazen];
     
     NSLog(@"promileaantal == %i", array2);
     
@@ -164,6 +167,28 @@
     UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc] init];
     group.motionEffects = @[leftright, updown];
     
+    CGFloat leftRightMin2 = 55.0f;
+    CGFloat leftRightMax2 = -55.0f;
+    
+    CGFloat upDownMin2 = 55.0f;
+    CGFloat upDownPlus2 = -55.0f;
+    
+    UIInterpolatingMotionEffect * leftright2 = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    leftright2.minimumRelativeValue = @(leftRightMin2);
+    leftright2.maximumRelativeValue = @(leftRightMax2);
+    
+    UIInterpolatingMotionEffect *updown2 = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    
+    updown2.minimumRelativeValue = @(upDownMin2);
+    updown2.maximumRelativeValue = @(upDownPlus2);
+    
+    UIMotionEffectGroup *group2 = [[UIMotionEffectGroup alloc] init];
+    group.motionEffects = @[leftright, updown];
+    
+    
+    
+    
+
     [imageviewdelay addMotionEffect:group];
     
     
@@ -231,7 +256,7 @@
             stringRange = [_Promile rangeOfComposedCharacterSequencesForRange:stringRange];
             NSString *shortString = [_Promile substringWithRange:stringRange];
             
-            PromileLabel.text = shortString;
+            PromileLabel.text = [NSString stringWithFormat:@"%.2f", test];
             
             
             [UIView beginAnimations:nil context:NULL];

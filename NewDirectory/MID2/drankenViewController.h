@@ -15,29 +15,35 @@
     __weak IBOutlet UITextField *percentage;
     __weak IBOutlet UITextField *hoeveel;
     
-    int percentageint;
-    int hoeveelint;
+    float percentageint;
+    float hoeveelint;
     
-    int percentageint2;
-    int hoeveelint2;
+    float percentageint2;
+    float hoeveelint2;
     
-    int aantal;
+    float aantal;
     
     NSString *percentagestring;
     NSString *hoeveelstring;
     
+    float glasses;
     
+    __weak IBOutlet UIButton *add;
     int total;
     IBOutlet UILabel *label;
     
+    float milliliters;
     
     
+    __weak IBOutlet UISegmentedControl *segmentmilli;
+    float percentagefloat;
     __weak IBOutlet UIButton *addbutton;
     
     __weak IBOutlet UIButton *donebutton;
     __weak IBOutlet UITextView *textfield;
     UIAlertView *alert2;
     
+    __weak IBOutlet UIButton *reset;
     
 }
 
@@ -47,6 +53,7 @@
 - (IBAction)done:(id)sender;
 - (IBAction)addone:(id)sender;
 - (IBAction)reset:(id)sender;
+- (IBAction)SegmentMilliliters:(id)sender;
 
 
 @end
