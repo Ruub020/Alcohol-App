@@ -42,6 +42,7 @@
 -(IBAction)download:(id)sender {
 
     [self Again];
+    
     _imageView.image = [UIImage imageNamed:@"../CF5B8833-CA7C-45FF-8873-25FB2FA9364C/Documents/bg2.jpeg"];
     progress = 0;
 }

@@ -7,9 +7,14 @@
 //
 
 #import "ViewController.h"
-
+#import <math.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
+
+
+
+
 @property (nonatomic, retain) IBOutlet NSString *Gewicht;
 @property (nonatomic, retain) IBOutlet NSString *StandaardGlazenString;
 @property (nonatomic, retain) IBOutlet NSString *AantalurenGeleden;
@@ -136,6 +141,32 @@
     }else {
         imageviewdelay.image = [UIImage imageNamed:@""];
     }
+    
+    
+    
+    //Parralax efect1
+    
+    CGFloat leftRightMin = 55.0f;
+    CGFloat leftRightMax = -55.0f;
+    
+    CGFloat upDownMin = 35.0f;
+    CGFloat upDownPlus = -35.0f;
+    
+    UIInterpolatingMotionEffect * leftright = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    leftright.minimumRelativeValue = @(leftRightMin);
+    leftright.maximumRelativeValue = @(leftRightMax);
+    
+    UIInterpolatingMotionEffect *updown = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    
+    updown.minimumRelativeValue = @(upDownMin);
+    updown.maximumRelativeValue = @(upDownPlus);
+    
+    UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc] init];
+    group.motionEffects = @[leftright, updown];
+    
+    [imageviewdelay addMotionEffect:group];
+    
+    
 
 //Download het gewicht
     [self DownloadGewicht];

@@ -60,6 +60,7 @@
 		6FE57CBE189C2EAC00C60D53 /* DownloadImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */; };
 		6FE57CC1189CED4300C60D53 /* DownloadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CC0189CED4300C60D53 /* DownloadTableViewController.m */; };
 		6FE57CC4189D24CC00C60D53 /* NewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CC3189D24CC00C60D53 /* NewClass.m */; };
+		6FFD531518A62DFA00B31CE1 /* ACAttitude.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FFD531418A62DFA00B31CE1 /* ACAttitude.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,8 @@
 		6FE57CC0189CED4300C60D53 /* DownloadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadTableViewController.m; path = ../DownloadTableViewController.m; sourceTree = "<group>"; };
 		6FE57CC2189D24CC00C60D53 /* NewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewClass.h; sourceTree = "<group>"; };
 		6FE57CC3189D24CC00C60D53 /* NewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewClass.m; sourceTree = "<group>"; };
+		6FFD531318A62DFA00B31CE1 /* ACAttitude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAttitude.h; sourceTree = "<group>"; };
+		6FFD531418A62DFA00B31CE1 /* ACAttitude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAttitude.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +271,8 @@
 				6F6A69F9188A821700E9E4B9 /* FirstViewController.m */,
 				6F3529F61889E19300CFB7EA /* ViewController.h */,
 				6F3529F71889E19300CFB7EA /* ViewController.m */,
+				6FFD531318A62DFA00B31CE1 /* ACAttitude.h */,
+				6FFD531418A62DFA00B31CE1 /* ACAttitude.m */,
 				45570627188ABADF00E9AA10 /* SettingsViewController.h */,
 				45570628188ABADF00E9AA10 /* SettingsViewController.m */,
 				6F3529F91889E19300CFB7EA /* Images.xcassets */,
@@ -445,6 +450,7 @@
 				6FE57CC1189CED4300C60D53 /* DownloadTableViewController.m in Sources */,
 				6F3529F81889E19300CFB7EA /* ViewController.m in Sources */,
 				6F3529F21889E19300CFB7EA /* AppDelegate.m in Sources */,
+				6FFD531518A62DFA00B31CE1 /* ACAttitude.m in Sources */,
 				45AA1AA5189418BF009385C7 /* NSString+WhatsAppKit.m in Sources */,
 				45AA1AA6189418BF009385C7 /* WhatsAppKit.m in Sources */,
 				6F1CB67918995DB100FD4447 /* drankenViewController.m in Sources */,

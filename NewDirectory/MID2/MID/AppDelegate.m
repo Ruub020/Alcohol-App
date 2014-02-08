@@ -58,11 +58,13 @@
            
             
             if (![[NSUserDefaults standardUserDefaults] boolForKey:@"root2"]) {
-                //First launch, passing to "Root" in storyboard
+
                 UIViewController *viewController = [iPhone4Storyboard instantiateViewControllerWithIdentifier:@"root"];
                 
                 self.window.rootViewController = viewController;
                 [self.window makeKeyAndVisible];
+                
+                
                 
                
             }

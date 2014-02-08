@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GeK-Bv-ocY">
-                                <rect key="frame" x="0.0" y="-59" width="320" height="672"/>
+                                <rect key="frame" x="-50" y="-101" width="420" height="672"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elS-fI-DbD">
@@ -1468,7 +1468,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="gMz-OQ-5C3"/>
+        <segue reference="eOp-XT-X8B"/>
         <segue reference="toD-0F-I01"/>
-        <segue reference="exG-sL-adu"/>
     </inferredMetricsTieBreakers>
 </document>
