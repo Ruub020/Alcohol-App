@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <AddressBookUI/AddressBookUI.h>
 #import "AppDelegate.h"
+#import <iAd/iAd.h>
 
-@interface SettingsViewController : UITableViewController <ABPeoplePickerNavigationControllerDelegate>
+
+@interface SettingsViewController : UITableViewController <ABPeoplePickerNavigationControllerDelegate, ADBannerViewDelegate>
 {
     float manvrouw2;
     __weak IBOutlet UILabel *ChosenCountryLabel;
@@ -33,6 +35,8 @@
     int tweescore;
     IBOutlet UITextField *numbertextfield;
     NSString *phoneNumber;
+    IBOutlet ADBannerView *BannerAd;
+
     
     
     __weak IBOutlet UISwitch *switchjawbone;

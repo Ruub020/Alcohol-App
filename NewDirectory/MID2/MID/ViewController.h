@@ -10,6 +10,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "ACAttitude.h"
 #import <QuartzCore/QuartzCore.h>
+#import <iAd/iAd.h>
 
 
 @class ACParallaxView;
@@ -22,7 +23,7 @@
 - (void)parallaxView:(ACParallaxView*)parallaxView didChangeRelativeAttitude:(ACAttitude)attitude;
 @end
 
-@interface ViewController : UIViewController <UIAlertViewDelegate> {
+@interface ViewController : UIViewController <UIAlertViewDelegate, ADBannerViewDelegate> {
     UIViewController *firstViewController;
     NSMutableArray *array2;
     NSMutableDictionary *myDataDictionary;
@@ -39,6 +40,7 @@
     __weak IBOutlet UIButton *CalculateBtn;
     //output
     __weak IBOutlet UILabel *PromileLabel;
+    IBOutlet ADBannerView *BannerAd;
     
     int promiletest;
     

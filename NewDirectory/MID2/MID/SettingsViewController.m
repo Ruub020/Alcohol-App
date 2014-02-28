@@ -88,6 +88,7 @@
     
    
     
+    BannerAd.delegate = self;
 
 
     NSUserDefaults *Defaults = [NSUserDefaults standardUserDefaults];
@@ -431,6 +432,15 @@
 }
 
 
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"%@", error);
+    [banner setHidden:YES];
+}
+-(void)bannerViewWillLoadAd:(ADBannerView *)banner
+{
+    [banner setHidden:NO];
+}
 
 
 @end
