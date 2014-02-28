@@ -133,7 +133,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fz-YP-1MQ">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="389" width="320" height="48"/>
+=======
+                                <rect key="frame" x="0.0" y="384" width="320" height="48"/>
+>>>>>>> 29dd0b36cb5672dcede1a842eef3db3012f1a075
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
