@@ -436,10 +436,13 @@
 {
     NSLog(@"%@", error);
     [banner setHidden:YES];
+     tableview.tableHeaderView = nil;
+
 }
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner
 {
     [banner setHidden:NO];
+   
 }
 
 

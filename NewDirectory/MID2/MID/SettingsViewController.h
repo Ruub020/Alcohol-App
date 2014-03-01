@@ -19,6 +19,7 @@
     __weak IBOutlet UISwitch *Switch;
     
     
+    IBOutlet UITableView *tableview;
     float *switchint;
     
     NSString *switchcheck;

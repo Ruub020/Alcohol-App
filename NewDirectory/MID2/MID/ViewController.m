@@ -343,13 +343,19 @@
         
         plus = 0;
         plus2 = 0;
+        
+    }
+    if ([AantalUren.text length] > 0 ) {
         [self performSelector:@selector(checkpromile) withObject:nil afterDelay:0.001];
         [self performSelector:@selector(checkpromileland2) withObject:nil afterDelay:0.001];
+        NSLog(@"Perform selectors!");
+        timeRestLabel.hidden = YES;
+        _infolabel.hidden = YES;
+        PromileLabel.hidden = YES;
     }
-    
     [StandaardGlazen resignFirstResponder];
     [AantalUren resignFirstResponder];
-    
+
 
 }
 
@@ -687,10 +693,11 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
         plus = plus - plusfloat;
         NSLog(@"Plus - urenfloat is %i", plus);
         [[NSUserDefaults standardUserDefaults] setInteger:plus forKey:@"plus"];
-        loader.hidden=YES;
-        [loader stopAnimating];
-        timeRestLabel.hidden=NO;
-        
+        [self performSelector:@selector(doneload) withObject:nil afterDelay:4];
+        timeRestLabel.hidden=YES;
+        timeRestLabel.hidden = YES;
+        _infolabel.hidden = YES;
+        PromileLabel.hidden = NO;
         
     } else {
         [self performSelector:@selector(checkpromile2) withObject:nil afterDelay:0.01];
@@ -698,7 +705,9 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
         [self performSelector:@selector(promiledone) withObject:nil afterDelay:0.01];
         [loader startAnimating];
         timeRestLabel.hidden=YES;
-        loader.hidden=NO;
+        timeRestLabel.hidden = YES;
+        _infolabel.hidden = YES;
+        PromileLabel.hidden = NO;
     }
     
     UIApplication *app = [UIApplication sharedApplication];
@@ -726,16 +735,21 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
         NSLog(@"Plus - urenfloat is %i", plus);
         [[NSUserDefaults standardUserDefaults] setInteger:plus forKey:@"plus"];
         [loader startAnimating];
-        loader.hidden=YES;
-        timeRestLabel.hidden=NO;
+        timeRestLabel.hidden=YES;
+        timeRestLabel.hidden = YES;
+        _infolabel.hidden = YES;
+        PromileLabel.hidden = NO;
+       
+        [self performSelector:@selector(doneload) withObject:nil afterDelay:4];
         
     } else {
         [self performSelector:@selector(checkpromile) withObject:nil afterDelay:0.01];
         NSLog(@"Tijd is niet berekend, +1 uur, %i", plus);
         [loader startAnimating];
         timeRestLabel.hidden=YES;
-        loader.hidden=NO;
-    }
+        timeRestLabel.hidden = YES;
+        _infolabel.hidden = YES;
+        PromileLabel.hidden = NO;    }
     
     UIApplication *app = [UIApplication sharedApplication];
     NSArray *oldNotifications = [app scheduledLocalNotifications];
@@ -746,6 +760,12 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
         
         
     }
+}
+-(void)doneload {
+    timeRestLabel.hidden=NO;
+    _infolabel.hidden = NO;
+    PromileLabel.hidden = NO;
+    loader.hidden=YES;
 }
 
 -(void) checkpromileland {
@@ -765,8 +785,11 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
         NSLog(@"_Plus - urenfloat is %i", plus2);
         [[NSUserDefaults standardUserDefaults] setInteger:plus2 forKey:@"plus2"];
         [loader startAnimating];
-        loader.hidden=YES;
-        
+        [self performSelector:@selector(doneload) withObject:nil afterDelay:4];
+        timeRestLabel.hidden=YES;
+        timeRestLabel.hidden = YES;
+        _infolabel.hidden = YES;
+        PromileLabel.hidden = NO;
         
         
         
@@ -804,8 +827,11 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
         NSLog(@"_Plus - urenfloat is %i", plus2);
         [[NSUserDefaults standardUserDefaults] setInteger:plus2 forKey:@"plus2"];
         [loader startAnimating];
-        loader.hidden=YES;
-        timeRestLabel.hidden=NO;
+        [self performSelector:@selector(doneload) withObject:nil afterDelay:4];
+        timeRestLabel.hidden=YES;
+        timeRestLabel.hidden = YES;
+        _infolabel.hidden = YES;
+        PromileLabel.hidden = NO;
         
     } else {
         [self performSelector:@selector(checkpromileland) withObject:nil afterDelay:0.01];

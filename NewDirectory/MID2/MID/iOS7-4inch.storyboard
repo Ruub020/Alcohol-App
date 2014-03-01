@@ -1081,6 +1081,7 @@
                         <outlet property="perfect" destination="EEB-uq-tAC" id="akO-XS-I47"/>
                         <outlet property="segment" destination="fQ2-rk-995" id="T5H-sh-eoy"/>
                         <outlet property="switchjawbone" destination="yeJ-CG-4F0" id="byh-RR-21L"/>
+                        <outlet property="tableview" destination="fyP-0Z-9oz" id="zCL-lz-QIj"/>
                         <outlet property="tomuch" destination="tyM-e1-nMq" id="O2B-8O-S3b"/>
                     </connections>
                 </tableViewController>
