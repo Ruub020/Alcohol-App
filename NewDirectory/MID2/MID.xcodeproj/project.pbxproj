@@ -65,6 +65,8 @@
 		6FDCFFAD188BBF0A00D0DCEE /* LandenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCFFAC188BBF0A00D0DCEE /* LandenViewController.m */; };
 		6FDCFFAF188BC05A00D0DCEE /* alcohollanden.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */; };
 		6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */; };
+		6FE2588418C272E0003CA4EB /* RemoveAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2588318C272E0003CA4EB /* RemoveAdsViewController.m */; };
+		6FE2588718C277F9003CA4EB /* PurchasedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2588618C277F9003CA4EB /* PurchasedViewController.m */; };
 		6FE57CBE189C2EAC00C60D53 /* DownloadImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */; };
 		6FE57CC1189CED4300C60D53 /* DownloadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CC0189CED4300C60D53 /* DownloadTableViewController.m */; };
 		6FE57CC4189D24CC00C60D53 /* NewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CC3189D24CC00C60D53 /* NewClass.m */; };
@@ -160,6 +162,10 @@
 		6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = alcohollanden.plist; sourceTree = "<group>"; };
 		6FDCFFB0188BEBB500D0DCEE /* BeginlandenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeginlandenViewController.h; path = ../BeginlandenViewController.h; sourceTree = "<group>"; };
 		6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeginlandenViewController.m; path = ../BeginlandenViewController.m; sourceTree = "<group>"; };
+		6FE2588218C272E0003CA4EB /* RemoveAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveAdsViewController.h; sourceTree = "<group>"; };
+		6FE2588318C272E0003CA4EB /* RemoveAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveAdsViewController.m; sourceTree = "<group>"; };
+		6FE2588518C277F9003CA4EB /* PurchasedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchasedViewController.h; sourceTree = "<group>"; };
+		6FE2588618C277F9003CA4EB /* PurchasedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchasedViewController.m; sourceTree = "<group>"; };
 		6FE57CBC189C2EAC00C60D53 /* DownloadImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadImagesViewController.h; sourceTree = "<group>"; };
 		6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadImagesViewController.m; sourceTree = "<group>"; };
 		6FE57CBF189CED4300C60D53 /* DownloadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadTableViewController.h; path = ../DownloadTableViewController.h; sourceTree = "<group>"; };
@@ -175,8 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4532B27F18C1144000CFCFB2 /* iAd.framework in Frameworks */,
 				457A18C71890106E000FDC2A /* StoreKit.framework in Frameworks */,
+				4532B27F18C1144000CFCFB2 /* iAd.framework in Frameworks */,
 				4504D474188EA208005CE027 /* Social.framework in Frameworks */,
 				6F1C9A75188C525A003F59E3 /* MessageUI.framework in Frameworks */,
 				6F224C42188AB64100684AA9 /* CoreLocation.framework in Frameworks */,
@@ -289,6 +295,10 @@
 				6F6A69F9188A821700E9E4B9 /* FirstViewController.m */,
 				6F3529F61889E19300CFB7EA /* ViewController.h */,
 				6F3529F71889E19300CFB7EA /* ViewController.m */,
+				6FE2588218C272E0003CA4EB /* RemoveAdsViewController.h */,
+				6FE2588318C272E0003CA4EB /* RemoveAdsViewController.m */,
+				6FE2588518C277F9003CA4EB /* PurchasedViewController.h */,
+				6FE2588618C277F9003CA4EB /* PurchasedViewController.m */,
 				6FFD531318A62DFA00B31CE1 /* ACAttitude.h */,
 				6FFD531418A62DFA00B31CE1 /* ACAttitude.m */,
 				45570627188ABADF00E9AA10 /* SettingsViewController.h */,
@@ -408,6 +418,14 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Cawwi Development";
 				TargetAttributes = {
+					6F3529DD1889E19200CFB7EA = {
+						DevelopmentTeam = TG6ZN2H3TY;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
 					6F3529FE1889E19300CFB7EA = {
 						TestTargetID = 6F3529DD1889E19200CFB7EA;
 					};
@@ -480,9 +498,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FE57CC1189CED4300C60D53 /* DownloadTableViewController.m in Sources */,
+				6FE2588418C272E0003CA4EB /* RemoveAdsViewController.m in Sources */,
 				6F3529F81889E19300CFB7EA /* ViewController.m in Sources */,
 				6F3529F21889E19300CFB7EA /* AppDelegate.m in Sources */,
 				6FFD531518A62DFA00B31CE1 /* ACAttitude.m in Sources */,
+				6FE2588718C277F9003CA4EB /* PurchasedViewController.m in Sources */,
 				45AA1AA5189418BF009385C7 /* NSString+WhatsAppKit.m in Sources */,
 				45AA1AA6189418BF009385C7 /* WhatsAppKit.m in Sources */,
 				6F1CB67918995DB100FD4447 /* drankenViewController.m in Sources */,

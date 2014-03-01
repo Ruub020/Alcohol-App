@@ -367,6 +367,77 @@
             </objects>
             <point key="canvasLocation" x="211" y="1733"/>
         </scene>
+        <!--Remove Ads View Controller-->
+        <scene sceneID="Lbs-Uo-ApD">
+            <objects>
+                <viewController id="etJ-mF-y56" customClass="RemoveAdsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pxs-AO-e3C"/>
+                        <viewControllerLayoutGuide type="bottom" id="kMy-yx-Keb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bj3-tZ-htO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5D-Nm-xEm">
+                                <rect key="frame" x="0.0" y="162" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                <state key="normal" title="Buy - $0,99">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonPressed:" destination="etJ-mF-y56" eventType="touchUpInside" id="77c-QN-PIi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSh-EK-35Y">
+                                <rect key="frame" x="0.0" y="210" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                <state key="normal" title="restore">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restore:" destination="etJ-mF-y56" eventType="touchUpInside" id="R6d-bw-LOb"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Do you hate the ads on top of the screen? Purchase the ad free version of MID! " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IyG-nK-2Fh">
+                                <rect key="frame" x="40" y="274" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vu-0k-3mV">
+                                <rect key="frame" x="133" y="358" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not purchased yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ga-Wb-blF">
+                                <rect key="frame" x="34" y="381" width="253" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EJK-vE-qTj"/>
+                    <connections>
+                        <outlet property="label" destination="6ga-Wb-blF" id="Hzc-0l-pa3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Beu-LJ-uu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="547" y="797"/>
+        </scene>
         <!--Dranken View Controller-->
         <scene sceneID="wbd-Qp-50P">
             <objects>
@@ -943,12 +1014,39 @@
                                             <segue destination="BIF-Wf-hny" kind="push" id="XYK-qn-vic"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="nbF-CS-7xn">
+                                        <rect key="frame" x="0.0" y="549" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nbF-CS-7xn" id="lXu-xb-lMY">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4f-mV-xwt">
+                                                    <rect key="frame" x="0.0" y="919" width="267" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remove ads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8J1-aR-vdK">
+                                                    <rect key="frame" x="20" y="11" width="267" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="etJ-mF-y56" kind="push" id="oSC-RS-gvp"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Stats" id="SVf-qW-ot9">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" id="Nt5-3Z-4qw">
-                                        <rect key="frame" x="0.0" y="597" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="641" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nt5-3Z-4qw" id="j5f-S1-35c">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -972,7 +1070,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" id="n19-Im-bFt">
-                                        <rect key="frame" x="0.0" y="641" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="685" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n19-Im-bFt" id="QWP-bu-Lsb">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -996,7 +1094,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" id="Fsv-VP-1rG">
-                                        <rect key="frame" x="0.0" y="685" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="729" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fsv-VP-1rG" id="VR7-wP-QAT">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1022,7 +1120,7 @@
                             <tableViewSection headerTitle="Information" id="Ien-5x-3rt">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="nT9-3F-MFW">
-                                        <rect key="frame" x="0.0" y="777" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="821" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nT9-3F-MFW" id="uXd-E1-BCa">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1042,7 +1140,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="pfB-LT-2e7">
-                                        <rect key="frame" x="0.0" y="821" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="865" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pfB-LT-2e7" id="8Ob-Aa-17t">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1087,7 +1185,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCV-fb-v7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="411"/>
+            <point key="canvasLocation" x="882" y="27"/>
         </scene>
         <!--Contact View Controller - Contact Us!-->
         <scene sceneID="iEb-TS-VzC">
@@ -1213,7 +1311,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MvC-8g-fKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840" y="411"/>
+            <point key="canvasLocation" x="2088" y="699"/>
         </scene>
         <!--Landen View Controller - Country settings-->
         <scene sceneID="7S6-1x-BJU">
@@ -1979,7 +2077,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caJ-BQ-igU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="256"/>
+            <point key="canvasLocation" x="806" y="257"/>
         </scene>
     </scenes>
     <resources>

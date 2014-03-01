@@ -70,7 +70,7 @@
     int plus2;
     int plusfloat2;
     
-    
+    BOOL ads;
     __weak IBOutlet UIImageView *imageviewdelay;
     int *switchinteger;
     float test;

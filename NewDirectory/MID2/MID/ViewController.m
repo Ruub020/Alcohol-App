@@ -32,7 +32,7 @@
     [super viewDidLoad];
     [BannerAd setHidden:NO];
     BannerAd.delegate = self;
-
+    ads = [[NSUserDefaults standardUserDefaults] boolForKey:@"ads"];
     
     preciesglazen = [[NSUserDefaults standardUserDefaults] floatForKey:@"glazenprom"];
     NSLog(@"Preciesglazen is %f", preciesglazen);
@@ -895,12 +895,22 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
 }
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
+    
     NSLog(@"%@", error);
     [banner setHidden:YES];
+   
+    
 }
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner
 {
-    [banner setHidden:NO];
+    if (ads == YES) {
+        [banner setHidden:YES];
+        
+    } else {
+        [banner setHidden:NO];
+    }
+    
+    
 }
 
 

@@ -10,6 +10,7 @@
 #import <AddressBookUI/AddressBookUI.h>
 #import "AppDelegate.h"
 #import <iAd/iAd.h>
+#import <StoreKit/StoreKit.h>
 
 
 @interface SettingsViewController : UITableViewController <ABPeoplePickerNavigationControllerDelegate, ADBannerViewDelegate>
@@ -45,11 +46,14 @@
     int jawboneuit;
     UIViewController *AdmissionsViewController;
   
-    
+    BOOL ads;
     
     
     
 }
+
+
+
 - (IBAction)didTapLogin:(UIButton *)sender;
 - (IBAction)JawboneUP:(id)sender;
 - (IBAction)Switch2:(id)sender;

@@ -43,6 +43,7 @@
                 
                 self.window.rootViewController = viewController;
                 [self.window makeKeyAndVisible];
+                
             }
             
       

@@ -10,7 +10,7 @@
 
 
 
-
+#define kRemoveAdsProductIdentifier @"001";
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *WeightField;
@@ -85,8 +85,15 @@
 }
 - (void)viewDidLoad
 {
+    ads = [[NSUserDefaults standardUserDefaults] boolForKey:@"ads"];
+   /* areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAddsRemoved"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    //this will load wether or not they bought the in-app purchase
     
-   
+    if(areAdsRemoved){
+        [self.view setBackgroundColor:[UIColor blueColor]];
+        //if they did buy it, set the background to blue, if your using the code above to set the background to blue, if your removing ads, your going to have to make your own code here
+    }*/
     
     BannerAd.delegate = self;
 
@@ -434,6 +441,7 @@
 
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
+  
     NSLog(@"%@", error);
     [banner setHidden:YES];
      tableview.tableHeaderView = nil;
@@ -441,7 +449,13 @@
 }
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner
 {
-    [banner setHidden:NO];
+    if (ads == YES) {
+        [banner setHidden:YES];
+        tableview.tableHeaderView = nil;
+    } else {
+       [banner setHidden:NO];
+    }
+   
    
 }
 

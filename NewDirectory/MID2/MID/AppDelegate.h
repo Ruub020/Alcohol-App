@@ -15,7 +15,7 @@
     
     int date2;
     int preciesglazen;
-    
+    BOOL ads;
     
 }
 
