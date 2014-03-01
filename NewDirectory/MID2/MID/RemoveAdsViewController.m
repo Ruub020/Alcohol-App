@@ -30,6 +30,9 @@
     ads = [[NSUserDefaults standardUserDefaults] boolForKey:@"ads"];
     if (ads == YES) {
         label.text = @"Purchased";
+        buy.alpha = 0.4;
+        buy.enabled = NO;
+        
     }
 }
 

@@ -65,6 +65,7 @@
 		6FDCFFAD188BBF0A00D0DCEE /* LandenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCFFAC188BBF0A00D0DCEE /* LandenViewController.m */; };
 		6FDCFFAF188BC05A00D0DCEE /* alcohollanden.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */; };
 		6FDCFFB2188BEBB500D0DCEE /* BeginlandenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */; };
+		6FE0AF4A18C2924400BABDA7 /* SegueDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE0AF4918C2924400BABDA7 /* SegueDown.m */; };
 		6FE2588418C272E0003CA4EB /* RemoveAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2588318C272E0003CA4EB /* RemoveAdsViewController.m */; };
 		6FE2588718C277F9003CA4EB /* PurchasedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2588618C277F9003CA4EB /* PurchasedViewController.m */; };
 		6FE57CBE189C2EAC00C60D53 /* DownloadImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE57CBD189C2EAC00C60D53 /* DownloadImagesViewController.m */; };
@@ -162,6 +163,8 @@
 		6FDCFFAE188BC05A00D0DCEE /* alcohollanden.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = alcohollanden.plist; sourceTree = "<group>"; };
 		6FDCFFB0188BEBB500D0DCEE /* BeginlandenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeginlandenViewController.h; path = ../BeginlandenViewController.h; sourceTree = "<group>"; };
 		6FDCFFB1188BEBB500D0DCEE /* BeginlandenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeginlandenViewController.m; path = ../BeginlandenViewController.m; sourceTree = "<group>"; };
+		6FE0AF4818C2924400BABDA7 /* SegueDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueDown.h; sourceTree = "<group>"; };
+		6FE0AF4918C2924400BABDA7 /* SegueDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueDown.m; sourceTree = "<group>"; };
 		6FE2588218C272E0003CA4EB /* RemoveAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveAdsViewController.h; sourceTree = "<group>"; };
 		6FE2588318C272E0003CA4EB /* RemoveAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveAdsViewController.m; sourceTree = "<group>"; };
 		6FE2588518C277F9003CA4EB /* PurchasedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchasedViewController.h; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 		6F3529E71889E19300CFB7EA /* MID */ = {
 			isa = PBXGroup;
 			children = (
+				6FE0AF4818C2924400BABDA7 /* SegueDown.h */,
+				6FE0AF4918C2924400BABDA7 /* SegueDown.m */,
 				6FE57CBF189CED4300C60D53 /* DownloadTableViewController.h */,
 				6FE57CC0189CED4300C60D53 /* DownloadTableViewController.m */,
 				6FE57CBC189C2EAC00C60D53 /* DownloadImagesViewController.h */,
@@ -504,6 +509,7 @@
 				6FFD531518A62DFA00B31CE1 /* ACAttitude.m in Sources */,
 				6FE2588718C277F9003CA4EB /* PurchasedViewController.m in Sources */,
 				45AA1AA5189418BF009385C7 /* NSString+WhatsAppKit.m in Sources */,
+				6FE0AF4A18C2924400BABDA7 /* SegueDown.m in Sources */,
 				45AA1AA6189418BF009385C7 /* WhatsAppKit.m in Sources */,
 				6F1CB67918995DB100FD4447 /* drankenViewController.m in Sources */,
 				45A2E368188F092600077D89 /* SetPhoneNumberViewController.m in Sources */,

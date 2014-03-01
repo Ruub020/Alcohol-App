@@ -30,7 +30,7 @@
             
             self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
             
-            if (![[NSUserDefaults standardUserDefaults] boolForKey:@"root1"]) {
+            if (![[NSUserDefaults standardUserDefaults] boolForKey:@"root3"]) {
                 //First launch, passing to "Root" in storyboard
                 UIViewController *viewController = [iPhone35Storyboard instantiateViewControllerWithIdentifier:@"root"];
                 
@@ -45,7 +45,10 @@
                 [self.window makeKeyAndVisible];
                 
             }
-            
+            if ([[NSUserDefaults standardUserDefaults] boolForKey:@"root1"]) {
+                ads = YES;
+                [[NSUserDefaults standardUserDefaults] setBool:ads forKey:@"ads"];
+            }
       
         }
         
@@ -58,7 +61,7 @@
             [self.window makeKeyAndVisible];
            
             
-            if (![[NSUserDefaults standardUserDefaults] boolForKey:@"root2"]) {
+            if (![[NSUserDefaults standardUserDefaults] boolForKey:@"root4"]) {
 
                 UIViewController *viewController = [iPhone4Storyboard instantiateViewControllerWithIdentifier:@"root"];
                 
@@ -77,7 +80,10 @@
                 [self.window makeKeyAndVisible];
                 
             }
-            
+            if ([[NSUserDefaults standardUserDefaults] boolForKey:@"root2"]) {
+                ads = YES;
+                [[NSUserDefaults standardUserDefaults] setBool:ads forKey:@"ads"];
+            }
             return YES;
     }
     }

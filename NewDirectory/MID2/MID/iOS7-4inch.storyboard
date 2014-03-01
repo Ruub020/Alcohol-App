@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-248" y="-554"/>
+            <point key="canvasLocation" x="-532" y="-654"/>
         </scene>
         <!--View Controller - The test-->
         <scene sceneID="DXP-zU-NIV">
@@ -431,6 +431,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EJK-vE-qTj"/>
                     <connections>
+                        <outlet property="buy" destination="i5D-Nm-xEm" id="qvz-GL-HRA"/>
                         <outlet property="label" destination="6ga-Wb-blF" id="Hzc-0l-pa3"/>
                     </connections>
                 </viewController>
@@ -1870,7 +1871,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlE-ez-BSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-575" y="-518"/>
+            <point key="canvasLocation" x="-843" y="-4"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="viM-QP-4BX">
@@ -2102,6 +2103,6 @@
         <segue reference="toD-0F-I01"/>
         <segue reference="exG-sL-adu"/>
         <segue reference="X8T-Ch-CRA"/>
-        <segue reference="Lzx-Vx-qD9"/>
+        <segue reference="gMz-OQ-5C3"/>
     </inferredMetricsTieBreakers>
 </document>

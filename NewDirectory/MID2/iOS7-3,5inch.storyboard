@@ -2038,6 +2038,7 @@
                     <navigationItem key="navigationItem" id="zDy-od-K3z"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="buy" destination="Hap-DR-0rf" id="XEh-oc-0Zb"/>
                         <outlet property="label" destination="RmA-K0-5eX" id="alp-gj-L0n"/>
                     </connections>
                 </viewController>

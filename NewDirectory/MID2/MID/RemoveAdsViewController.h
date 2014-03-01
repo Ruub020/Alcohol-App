@@ -12,6 +12,7 @@
 @interface RemoveAdsViewController : UIViewController <SKProductsRequestDelegate,SKPaymentTransactionObserver> {
     BOOL ads;
     __weak IBOutlet UILabel *label;
+    __weak IBOutlet UIButton *buy;
 }
 -(IBAction)ButtonPressed:(id)sender;
 -(IBAction)restore:(id)sender;
