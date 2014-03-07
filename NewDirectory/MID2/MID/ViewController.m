@@ -30,6 +30,31 @@
 {
 
     [super viewDidLoad];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"root1"])
+    {
+        //GEKOCHTE VERSIE!
+        ads = YES;
+        [[NSUserDefaults standardUserDefaults] setBool:ads forKey:@"ADS"];
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"ad2s2"])
+        {
+            NSLog(@"Already launched");
+        }
+        else
+        {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ad2s2"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"ALERT!"
+                                  message:@"You've got the premium version of this app!"
+                                  delegate:nil
+                                  cancelButtonTitle:@"Dismiss"
+                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    }
+
+    
     [BannerAd setHidden:NO];
     BannerAd.delegate = self;
     ads = [[NSUserDefaults standardUserDefaults] boolForKey:@"ads"];
@@ -673,9 +698,27 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
 
 -(void)awakeFromNib {
     switchkey2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"switchkey2"];
+    
+    launchcount = launchcount + 1;
+    [[NSUserDefaults standardUserDefaults] setInteger:launchcount forKey:@"launch"];
+    
+    
 }
 
-
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication]
+         openURL:[NSURL URLWithString:@"http://www.geekylemon.com"]];
+    }
+    if (buttonIndex == 2) {
+        [[UIApplication sharedApplication]
+         openURL:[NSURL URLWithString:@"http://www.youtube.com/geekylemon"]];
+    }
+    if (buttonIndex == 3) {
+        [[UIApplication sharedApplication]
+         openURL:[NSURL URLWithString:@"http://www.facebook.com/geekylemondevelopment"]];
+    }
+}
 
 -(void) checkpromile {
     plusfloat = UrenFloat;
