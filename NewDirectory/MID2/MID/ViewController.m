@@ -306,31 +306,35 @@
                 [self NiksOp];
                 [self GroeneAchtergrond];
                 
-                
-                
+                [loader startAnimating];
+                if ([AantalUren.text length] > 0 ) {
+                    _infolabel.hidden = NO;
+                }
                 NSLog(@"TEST IS NUL");
             }
             if (test == 0) {
-                
-                promiletest = 1;
+                promiletest = 2;
                 _infolabel.selectable = YES;
-                
-                
-                PromileLabel.text=@"0";
-                [self NiksOp];
+                [loader startAnimating];
+                self.view.backgroundColor = [UIColor greenColor];
+                [self GemiddeldOp];
                 [self GroeneAchtergrond];
-                
-                NSLog(@"TEST IS PRECIES NUL");
+                if ([AantalUren.text length] > 0 ) {
+                    _infolabel.hidden = NO;
+                }
+                NSLog(@"TEST IS LAGER DAN PROMILE");
                 
             }
             if (test < promileaantal && test > 0) {
                 promiletest = 2;
                 _infolabel.selectable = YES;
-                
+                 [loader startAnimating];
                 self.view.backgroundColor = [UIColor greenColor];
                 [self GemiddeldOp];
                 [self GroeneAchtergrond];
-                
+                if ([AantalUren.text length] > 0 ) {
+                    _infolabel.hidden = NO;
+                }
                 NSLog(@"TEST IS LAGER DAN PROMILE");
                 
                 
@@ -341,6 +345,7 @@
                 _infolabel.selectable = YES;
                 
                 [self TeveelOp];
+               [loader startAnimating];
                 
                 NSLog(@"TEST IS HOGER DAN PROMILE");
                 
@@ -370,16 +375,18 @@
         plus2 = 0;
         
     }
-    if ([AantalUren.text length] > 0 ) {
+    if ([AantalUren.text length] > 0 && preciesglazen > 0) {
         [self performSelector:@selector(checkpromile) withObject:nil afterDelay:0.001];
         [self performSelector:@selector(checkpromileland2) withObject:nil afterDelay:0.001];
         NSLog(@"Perform selectors!");
-        timeRestLabel.hidden = YES;
+      
         _infolabel.hidden = YES;
         PromileLabel.hidden = YES;
     }
     [StandaardGlazen resignFirstResponder];
     [AantalUren resignFirstResponder];
+    
+
 
 
 }
@@ -499,7 +506,7 @@
 
     }
 
-
+    _infolabel.hidden = NO;
 }
 -(void)GemiddeldOp
 {
@@ -593,7 +600,7 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
         
     }
 
-
+_infolabel.hidden = NO;
     
 }
 -(void)TeveelOp
@@ -809,6 +816,9 @@ _infolabel.text = NSLocalizedString(@"Well, You sure did drink something! Take c
     _infolabel.hidden = NO;
     PromileLabel.hidden = NO;
     loader.hidden=YES;
+    if ([PromileLabel.text isEqualToString:@"0"]) {
+        timeRestLabel.text = @"";
+    }
 }
 
 -(void) checkpromileland {
